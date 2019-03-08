@@ -37,15 +37,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // pnl_contenedor
             // 
             this.pnl_contenedor.BackColor = System.Drawing.Color.DimGray;
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_contenedor.Location = new System.Drawing.Point(0, 294);
+            this.pnl_contenedor.Location = new System.Drawing.Point(0, 251);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 129);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 290);
             this.pnl_contenedor.TabIndex = 0;
             // 
             // label1
@@ -126,12 +128,86 @@
             this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
             // 
+            // btn_Salir
+            // 
+            this.btn_Salir.Activecolor = System.Drawing.Color.Crimson;
+            this.btn_Salir.AllowDrop = true;
+            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Salir.BackColor = System.Drawing.Color.Silver;
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Salir.BorderRadius = 7;
+            this.btn_Salir.ButtonText = "Eliminar";
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Salir.Iconimage = null;
+            this.btn_Salir.Iconimage_right = null;
+            this.btn_Salir.Iconimage_right_Selected = null;
+            this.btn_Salir.Iconimage_Selected = null;
+            this.btn_Salir.IconMarginLeft = 0;
+            this.btn_Salir.IconMarginRight = 0;
+            this.btn_Salir.IconRightVisible = true;
+            this.btn_Salir.IconRightZoom = 0D;
+            this.btn_Salir.IconVisible = true;
+            this.btn_Salir.IconZoom = 90D;
+            this.btn_Salir.IsTab = false;
+            this.btn_Salir.Location = new System.Drawing.Point(752, 125);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Normalcolor = System.Drawing.Color.Silver;
+            this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Salir.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Salir.selected = false;
+            this.btn_Salir.Size = new System.Drawing.Size(179, 48);
+            this.btn_Salir.TabIndex = 9;
+            this.btn_Salir.Text = "Eliminar";
+            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Salir.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Crimson;
+            this.bunifuFlatButton1.AllowDrop = true;
+            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Silver;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 7;
+            this.bunifuFlatButton1.ButtonText = "Eliminar";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(548, 125);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Silver;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(179, 48);
+            this.bunifuFlatButton1.TabIndex = 10;
+            this.bunifuFlatButton1.Text = "Eliminar";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // frm_AdminSucursales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 423);
+            this.ClientSize = new System.Drawing.Size(1366, 541);
+            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox2);
@@ -160,5 +236,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
     }
 }
