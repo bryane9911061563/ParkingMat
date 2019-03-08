@@ -43,9 +43,9 @@
             // 
             this.pnl_contenedor.BackColor = System.Drawing.Color.DimGray;
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_contenedor.Location = new System.Drawing.Point(0, 341);
+            this.pnl_contenedor.Location = new System.Drawing.Point(0, 294);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 82);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 129);
             this.pnl_contenedor.TabIndex = 0;
             // 
             // label1
