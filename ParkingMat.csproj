@@ -54,9 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\Class1.cs" />
+    <Compile Include="BO\EjemploBO.cs" />
+    <Compile Include="DAO\CLS_EJEMPLODAO.cs" />
     <Compile Include="DAO\Conexion_DAO.cs" />
-    <Compile Include="DAO\ejemplo_DAO.cs" />
     <Compile Include="GUI\frm_AdminSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +118,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Add_16px.png" />
   </ItemGroup>
