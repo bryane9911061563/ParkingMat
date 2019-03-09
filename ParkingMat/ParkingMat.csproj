@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Conexion_DAO.cs" />
+    <Compile Include="DAO\ejemplo_DAO.cs" />
     <Compile Include="GUI\frm_AdminSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
