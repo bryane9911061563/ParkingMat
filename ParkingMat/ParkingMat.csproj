@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\Conexion_DAO.cs" />
     <Compile Include="GUI\frm_AdminSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BO\" />
-    <Folder Include="DAO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add_16px.png" />
