@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.pnl_centro = new System.Windows.Forms.Panel();
             this.pnl_fontLogin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,8 +39,10 @@
             this.txt_contrase = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_correo = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.login = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_centro.SuspendLayout();
             this.pnl_fontLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_centro
@@ -54,15 +57,16 @@
             // 
             // pnl_fontLogin
             // 
-            this.pnl_fontLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnl_fontLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnl_fontLogin.BackColor = System.Drawing.Color.White;
+            this.pnl_fontLogin.Controls.Add(this.pictureBox1);
             this.pnl_fontLogin.Controls.Add(this.label2);
             this.pnl_fontLogin.Controls.Add(this.label1);
             this.pnl_fontLogin.Controls.Add(this.btn_Cerrar);
             this.pnl_fontLogin.Controls.Add(this.btn_IniciarSesion);
             this.pnl_fontLogin.Controls.Add(this.txt_contrase);
             this.pnl_fontLogin.Controls.Add(this.txt_correo);
-            this.pnl_fontLogin.Location = new System.Drawing.Point(46, 138);
+            this.pnl_fontLogin.Location = new System.Drawing.Point(50, 138);
             this.pnl_fontLogin.Name = "pnl_fontLogin";
             this.pnl_fontLogin.Size = new System.Drawing.Size(485, 437);
             this.pnl_fontLogin.TabIndex = 0;
@@ -73,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Product Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(169, 91);
+            this.label2.Location = new System.Drawing.Point(169, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 30);
             this.label2.TabIndex = 4;
@@ -85,11 +89,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Product Sans", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(111, 17);
+            this.label1.Location = new System.Drawing.Point(172, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 61);
+            this.label1.Size = new System.Drawing.Size(236, 61);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ParkingMat";
+            this.label1.Text = "arkingMat";
             // 
             // btn_Cerrar
             // 
@@ -114,7 +118,7 @@
             this.btn_Cerrar.IconVisible = true;
             this.btn_Cerrar.IconZoom = 90D;
             this.btn_Cerrar.IsTab = false;
-            this.btn_Cerrar.Location = new System.Drawing.Point(60, 326);
+            this.btn_Cerrar.Location = new System.Drawing.Point(60, 349);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Normalcolor = System.Drawing.Color.White;
             this.btn_Cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -151,7 +155,7 @@
             this.btn_IniciarSesion.IconVisible = true;
             this.btn_IniciarSesion.IconZoom = 90D;
             this.btn_IniciarSesion.IsTab = false;
-            this.btn_IniciarSesion.Location = new System.Drawing.Point(245, 326);
+            this.btn_IniciarSesion.Location = new System.Drawing.Point(245, 349);
             this.btn_IniciarSesion.Name = "btn_IniciarSesion";
             this.btn_IniciarSesion.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
             this.btn_IniciarSesion.OnHovercolor = System.Drawing.Color.OrangeRed;
@@ -176,7 +180,7 @@
             this.txt_contrase.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_contrase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_contrase.isPassword = false;
-            this.txt_contrase.Location = new System.Drawing.Point(57, 225);
+            this.txt_contrase.Location = new System.Drawing.Point(57, 248);
             this.txt_contrase.Margin = new System.Windows.Forms.Padding(4);
             this.txt_contrase.Name = "txt_contrase";
             this.txt_contrase.Size = new System.Drawing.Size(370, 44);
@@ -197,7 +201,7 @@
             this.txt_correo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_correo.isPassword = false;
-            this.txt_correo.Location = new System.Drawing.Point(57, 152);
+            this.txt_correo.Location = new System.Drawing.Point(57, 175);
             this.txt_correo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(370, 44);
@@ -212,6 +216,16 @@
             this.login.ElipseRadius = 25;
             this.login.TargetControl = this.pnl_fontLogin;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(77, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +239,7 @@
             this.pnl_centro.ResumeLayout(false);
             this.pnl_fontLogin.ResumeLayout(false);
             this.pnl_fontLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +255,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cerrar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_IniciarSesion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
