@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParkingMat.BO
+namespace ParkingMat.DAO
 {
-    class jihughg
+    class CLS_EJEMPLODAO
     {
     }
 }

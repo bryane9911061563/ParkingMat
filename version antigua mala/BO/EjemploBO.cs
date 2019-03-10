@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ParkingMat.BO
 {
-    class LOlll
+    class EjemploBO
     {
     }
+   ///comentario de jorge adrian cambio 2
 }
