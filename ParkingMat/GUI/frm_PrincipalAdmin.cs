@@ -99,6 +99,8 @@ namespace ParkingMat.GUI
             objRUnning.AppExecut1 = 3;
             pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
             lbl_inrunning.Text = "Admin. Pensionados";
+
+            AbrirFormularios<frm_AdminPensionados>();
         }
 
         private void btn_adminRecibos_Click(object sender, EventArgs e)

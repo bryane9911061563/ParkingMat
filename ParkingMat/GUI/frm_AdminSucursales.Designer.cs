@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl_contenedor = new System.Windows.Forms.Panel();
+            this.btn_vervehiculo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,7 +45,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_vervehiculo = new System.Windows.Forms.Button();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnl_contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,6 +65,16 @@
             this.pnl_contenedor.Name = "pnl_contenedor";
             this.pnl_contenedor.Size = new System.Drawing.Size(1366, 376);
             this.pnl_contenedor.TabIndex = 0;
+            // 
+            // btn_vervehiculo
+            // 
+            this.btn_vervehiculo.Location = new System.Drawing.Point(874, 15);
+            this.btn_vervehiculo.Name = "btn_vervehiculo";
+            this.btn_vervehiculo.Size = new System.Drawing.Size(174, 23);
+            this.btn_vervehiculo.TabIndex = 13;
+            this.btn_vervehiculo.Text = "ejemplo ver vehiculo";
+            this.btn_vervehiculo.UseVisualStyleBackColor = true;
+            this.btn_vervehiculo.Click += new System.EventHandler(this.btn_vervehiculo_Click);
             // 
             // label5
             // 
@@ -140,7 +152,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(384, 60);
+            this.label2.Location = new System.Drawing.Point(177, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 23);
             this.label2.TabIndex = 3;
@@ -150,7 +162,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(631, 60);
+            this.label3.Location = new System.Drawing.Point(424, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 23);
             this.label3.TabIndex = 4;
@@ -177,7 +189,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(549, 57);
+            this.maskedTextBox1.Location = new System.Drawing.Point(342, 56);
             this.maskedTextBox1.Mask = "00:00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(64, 29);
@@ -188,7 +200,7 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(773, 57);
+            this.maskedTextBox2.Location = new System.Drawing.Point(566, 56);
             this.maskedTextBox2.Mask = "00:00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(64, 29);
@@ -198,6 +210,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.maskedTextBox3);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.bunifuFlatButton1);
             this.groupBox1.Controls.Add(this.btn_Cerrar);
             this.groupBox1.Controls.Add(this.label1);
@@ -287,15 +301,25 @@
             this.btn_Cerrar.Textcolor = System.Drawing.Color.White;
             this.btn_Cerrar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btn_vervehiculo
+            // maskedTextBox3
             // 
-            this.btn_vervehiculo.Location = new System.Drawing.Point(874, 15);
-            this.btn_vervehiculo.Name = "btn_vervehiculo";
-            this.btn_vervehiculo.Size = new System.Drawing.Size(174, 23);
-            this.btn_vervehiculo.TabIndex = 13;
-            this.btn_vervehiculo.Text = "ejemplo ver vehiculo";
-            this.btn_vervehiculo.UseVisualStyleBackColor = true;
-            this.btn_vervehiculo.Click += new System.EventHandler(this.btn_vervehiculo_Click);
+            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(880, 56);
+            this.maskedTextBox3.Mask = "(999)000-0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(163, 29);
+            this.maskedTextBox3.TabIndex = 13;
+            this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(700, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 23);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Número telefónico:";
             // 
             // frm_AdminSucursales
             // 
@@ -337,5 +361,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_vervehiculo;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label6;
     }
 }
