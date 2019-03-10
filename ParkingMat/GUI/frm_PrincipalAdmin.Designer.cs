@@ -33,6 +33,9 @@
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_centro = new System.Windows.Forms.Panel();
             this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pick_iconRunning = new System.Windows.Forms.PictureBox();
+            this.lbl_inrunning = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaReportes = new System.Windows.Forms.Panel();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_reportes = new System.Windows.Forms.Button();
@@ -65,18 +68,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.MoverBarraEstado = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pick_iconRunning = new System.Windows.Forms.PictureBox();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_BarraEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnl_tarjetaReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnl_tarjetaRecibos.SuspendLayout();
@@ -87,8 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_tarjetaCoches.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_contenedor
@@ -116,7 +116,7 @@
             this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
             this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_BarraEstado.Controls.Add(this.pick_iconRunning);
-            this.pnl_BarraEstado.Controls.Add(this.label12);
+            this.pnl_BarraEstado.Controls.Add(this.lbl_inrunning);
             this.pnl_BarraEstado.Controls.Add(this.pictureBox6);
             this.pnl_BarraEstado.Controls.Add(this.pnl_tarjetaReportes);
             this.pnl_BarraEstado.Controls.Add(this.pnl_tarjetaRecibos);
@@ -136,6 +136,41 @@
             this.pnl_BarraEstado.Quality = 10;
             this.pnl_BarraEstado.Size = new System.Drawing.Size(1366, 205);
             this.pnl_BarraEstado.TabIndex = 0;
+            // 
+            // pick_iconRunning
+            // 
+            this.pick_iconRunning.BackColor = System.Drawing.Color.Transparent;
+            this.pick_iconRunning.Image = ((System.Drawing.Image)(resources.GetObject("pick_iconRunning.Image")));
+            this.pick_iconRunning.Location = new System.Drawing.Point(580, 9);
+            this.pick_iconRunning.Name = "pick_iconRunning";
+            this.pick_iconRunning.Size = new System.Drawing.Size(25, 25);
+            this.pick_iconRunning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pick_iconRunning.TabIndex = 16;
+            this.pick_iconRunning.TabStop = false;
+            // 
+            // lbl_inrunning
+            // 
+            this.lbl_inrunning.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_inrunning.AutoSize = true;
+            this.lbl_inrunning.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_inrunning.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inrunning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_inrunning.Location = new System.Drawing.Point(611, 9);
+            this.lbl_inrunning.Name = "lbl_inrunning";
+            this.lbl_inrunning.Size = new System.Drawing.Size(144, 24);
+            this.lbl_inrunning.TabIndex = 22;
+            this.lbl_inrunning.Text = "programrunning";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
             // 
             // pnl_tarjetaReportes
             // 
@@ -177,6 +212,7 @@
             this.btn_reportes.TabIndex = 15;
             this.btn_reportes.Text = "Admin. Reportes";
             this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // label9
             // 
@@ -254,6 +290,7 @@
             this.btn_adminRecibos.TabIndex = 15;
             this.btn_adminRecibos.Text = "Admin. Recibos";
             this.btn_adminRecibos.UseVisualStyleBackColor = true;
+            this.btn_adminRecibos.Click += new System.EventHandler(this.btn_adminRecibos_Click);
             // 
             // label5
             // 
@@ -331,6 +368,7 @@
             this.btn_adminPensionados.TabIndex = 15;
             this.btn_adminPensionados.Text = "Admin. Pensionados";
             this.btn_adminPensionados.UseVisualStyleBackColor = true;
+            this.btn_adminPensionados.Click += new System.EventHandler(this.btn_adminPensionados_Click);
             // 
             // label3
             // 
@@ -408,6 +446,7 @@
             this.btn_adminEmpleados.TabIndex = 15;
             this.btn_adminEmpleados.Text = "Admin. Empleados";
             this.btn_adminEmpleados.UseVisualStyleBackColor = true;
+            this.btn_adminEmpleados.Click += new System.EventHandler(this.btn_adminEmpleados_Click);
             // 
             // label1
             // 
@@ -593,6 +632,19 @@
             this.btn_cerrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(40, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 24);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "arkingMat";
+            // 
             // MoverBarraEstado
             // 
             this.MoverBarraEstado.Fixed = true;
@@ -625,53 +677,6 @@
             this.ElipseReportes.ElipseRadius = 25;
             this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 21;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(40, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 24);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "arkingMat";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(611, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(144, 24);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "programrunning";
-            // 
-            // pick_iconRunning
-            // 
-            this.pick_iconRunning.Image = ((System.Drawing.Image)(resources.GetObject("pick_iconRunning.Image")));
-            this.pick_iconRunning.Location = new System.Drawing.Point(580, 9);
-            this.pick_iconRunning.Name = "pick_iconRunning";
-            this.pick_iconRunning.Size = new System.Drawing.Size(25, 25);
-            this.pick_iconRunning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pick_iconRunning.TabIndex = 16;
-            this.pick_iconRunning.TabStop = false;
-            // 
             // frm_PrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,6 +692,8 @@
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_BarraEstado.ResumeLayout(false);
             this.pnl_BarraEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pnl_tarjetaReportes.ResumeLayout(false);
             this.pnl_tarjetaReportes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -702,8 +709,6 @@
             this.pnl_tarjetaCoches.ResumeLayout(false);
             this.pnl_tarjetaCoches.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -754,6 +759,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pick_iconRunning;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_inrunning;
     }
 }

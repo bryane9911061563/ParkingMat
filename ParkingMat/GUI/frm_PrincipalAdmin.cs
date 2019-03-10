@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ParkingMat.BO;
 
 namespace ParkingMat.GUI
 {
     public partial class frm_PrincipalAdmin : Form
     {
+        Cls_AppRunning objRUnning = new Cls_AppRunning();
 
         public frm_PrincipalAdmin()
         {
@@ -21,6 +23,7 @@ namespace ParkingMat.GUI
             //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             AbrirFormularios<frm_AdminSucursales>();
+            lbl_inrunning.Text = "Admin. Sucursal";
         }
 
         private void frm_PrincipalAdmin_Load(object sender, EventArgs e)
@@ -75,17 +78,39 @@ namespace ParkingMat.GUI
 
         private void btn_vermasCars_Click(object sender, EventArgs e)
         {
+            objRUnning.AppExecut1 = 1;
+            pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
+            lbl_inrunning.Text = "Admin. Sucursal";
             AbrirFormularios<frm_AdminSucursales>();
+
         }
-        //COLOR Y GRIP DE RECTANGULO INFERIOR
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    SolidBrush blueBrush = new SolidBrush(Color.FromArgb(64, 64, 64));
-        //    e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
 
-        //    //base.OnPaint(e);
-        //    //ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
-        //}
+        private void btn_adminEmpleados_Click(object sender, EventArgs e)
+        {
+            objRUnning.AppExecut1 = 2;
+            pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
+            lbl_inrunning.Text = "Admin. Empleados";
+        }
 
+        private void btn_adminPensionados_Click(object sender, EventArgs e)
+        {
+            objRUnning.AppExecut1 = 3;
+            pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
+            lbl_inrunning.Text = "Admin. Pensionados";
+        }
+
+        private void btn_adminRecibos_Click(object sender, EventArgs e)
+        {
+            objRUnning.AppExecut1 = 4;
+            pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
+            lbl_inrunning.Text = "Admin. Recibos";
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            objRUnning.AppExecut1 = 5;
+            pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
+            lbl_inrunning.Text = "Admin. Reportes";
+        }
     }
 }
