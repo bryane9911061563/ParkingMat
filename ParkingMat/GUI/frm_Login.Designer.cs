@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.pnl_centro = new System.Windows.Forms.Panel();
             this.pnl_fontLogin = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -39,7 +40,6 @@
             this.txt_contrase = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_correo = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.login = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_centro.SuspendLayout();
             this.pnl_fontLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,10 +66,20 @@
             this.pnl_fontLogin.Controls.Add(this.btn_IniciarSesion);
             this.pnl_fontLogin.Controls.Add(this.txt_contrase);
             this.pnl_fontLogin.Controls.Add(this.txt_correo);
-            this.pnl_fontLogin.Location = new System.Drawing.Point(50, 138);
+            this.pnl_fontLogin.Location = new System.Drawing.Point(50, 75);
             this.pnl_fontLogin.Name = "pnl_fontLogin";
             this.pnl_fontLogin.Size = new System.Drawing.Size(485, 437);
             this.pnl_fontLogin.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(77, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -121,7 +131,7 @@
             this.btn_Cerrar.Location = new System.Drawing.Point(60, 349);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Normalcolor = System.Drawing.Color.White;
-            this.btn_Cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_Cerrar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Cerrar.selected = false;
             this.btn_Cerrar.Size = new System.Drawing.Size(179, 48);
@@ -215,16 +225,6 @@
             // 
             this.login.ElipseRadius = 25;
             this.login.TargetControl = this.pnl_fontLogin;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // frm_Login
             // 
