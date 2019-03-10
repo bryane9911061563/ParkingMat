@@ -71,6 +71,10 @@
             this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pick_iconRunning = new System.Windows.Forms.PictureBox();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_BarraEstado.SuspendLayout();
             this.pnl_tarjetaReportes.SuspendLayout();
@@ -83,6 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_tarjetaCoches.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_contenedor
@@ -109,6 +115,9 @@
             // 
             this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
             this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BarraEstado.Controls.Add(this.pick_iconRunning);
+            this.pnl_BarraEstado.Controls.Add(this.label12);
+            this.pnl_BarraEstado.Controls.Add(this.pictureBox6);
             this.pnl_BarraEstado.Controls.Add(this.pnl_tarjetaReportes);
             this.pnl_BarraEstado.Controls.Add(this.pnl_tarjetaRecibos);
             this.pnl_BarraEstado.Controls.Add(this.pnl_tarjetaPensionados);
@@ -116,6 +125,7 @@
             this.pnl_BarraEstado.Controls.Add(this.pnl_tarjetaCoches);
             this.pnl_BarraEstado.Controls.Add(this.btn_minimizar);
             this.pnl_BarraEstado.Controls.Add(this.btn_cerrar);
+            this.pnl_BarraEstado.Controls.Add(this.label11);
             this.pnl_BarraEstado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_BarraEstado.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
             this.pnl_BarraEstado.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -615,6 +625,53 @@
             this.ElipseReportes.ElipseRadius = 25;
             this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(40, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 24);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "arkingMat";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(611, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(144, 24);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "programrunning";
+            // 
+            // pick_iconRunning
+            // 
+            this.pick_iconRunning.Image = ((System.Drawing.Image)(resources.GetObject("pick_iconRunning.Image")));
+            this.pick_iconRunning.Location = new System.Drawing.Point(580, 9);
+            this.pick_iconRunning.Name = "pick_iconRunning";
+            this.pick_iconRunning.Size = new System.Drawing.Size(25, 25);
+            this.pick_iconRunning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pick_iconRunning.TabIndex = 16;
+            this.pick_iconRunning.TabStop = false;
+            // 
             // frm_PrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -629,6 +686,7 @@
             this.Load += new System.EventHandler(this.frm_PrincipalAdmin_Load);
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_BarraEstado.ResumeLayout(false);
+            this.pnl_BarraEstado.PerformLayout();
             this.pnl_tarjetaReportes.ResumeLayout(false);
             this.pnl_tarjetaReportes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -644,6 +702,8 @@
             this.pnl_tarjetaCoches.ResumeLayout(false);
             this.pnl_tarjetaCoches.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,5 +751,9 @@
         private Bunifu.Framework.UI.BunifuElipse elipsePensionados;
         private Bunifu.Framework.UI.BunifuElipse ElipseRecibos;
         private Bunifu.Framework.UI.BunifuElipse ElipseReportes;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pick_iconRunning;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -16,11 +16,11 @@ namespace ParkingMat.GUI
         public frm_PrincipalAdmin()
         {
             InitializeComponent();
-            
+
 
             //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            
+            AbrirFormularios<frm_AdminSucursales>();
         }
 
         private void frm_PrincipalAdmin_Load(object sender, EventArgs e)
