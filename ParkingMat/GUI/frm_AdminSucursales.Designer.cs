@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.pnl_contenedor = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,21 +42,19 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_vervehiculo = new System.Windows.Forms.Button();
             this.pnl_contenedor.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_contenedor
             // 
             this.pnl_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnl_contenedor.Controls.Add(this.btn_vervehiculo);
             this.pnl_contenedor.Controls.Add(this.label5);
             this.pnl_contenedor.Controls.Add(this.comboBox1);
             this.pnl_contenedor.Controls.Add(this.panel1);
@@ -61,6 +63,60 @@
             this.pnl_contenedor.Name = "pnl_contenedor";
             this.pnl_contenedor.Size = new System.Drawing.Size(1366, 376);
             this.pnl_contenedor.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(579, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 23);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Sección:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O"});
+            this.comboBox1.Location = new System.Drawing.Point(666, 11);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(122, 31);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "Seleccione";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 49);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1366, 327);
+            this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1366, 327);
+            this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
@@ -159,42 +215,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion general";
             // 
-            // btn_Cerrar
-            // 
-            this.btn_Cerrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btn_Cerrar.AllowDrop = true;
-            this.btn_Cerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Cerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cerrar.BorderRadius = 7;
-            this.btn_Cerrar.ButtonText = "Guardar cambios";
-            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cerrar.DisabledColor = System.Drawing.Color.White;
-            this.btn_Cerrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Cerrar.Iconimage = null;
-            this.btn_Cerrar.Iconimage_right = null;
-            this.btn_Cerrar.Iconimage_right_Selected = null;
-            this.btn_Cerrar.Iconimage_Selected = null;
-            this.btn_Cerrar.IconMarginLeft = 0;
-            this.btn_Cerrar.IconMarginRight = 0;
-            this.btn_Cerrar.IconRightVisible = true;
-            this.btn_Cerrar.IconRightZoom = 0D;
-            this.btn_Cerrar.IconVisible = true;
-            this.btn_Cerrar.IconZoom = 90D;
-            this.btn_Cerrar.IsTab = false;
-            this.btn_Cerrar.Location = new System.Drawing.Point(613, 102);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_Cerrar.OnHovercolor = System.Drawing.Color.DodgerBlue;
-            this.btn_Cerrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Cerrar.selected = false;
-            this.btn_Cerrar.Size = new System.Drawing.Size(179, 48);
-            this.btn_Cerrar.TabIndex = 10;
-            this.btn_Cerrar.Text = "Guardar cambios";
-            this.btn_Cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Cerrar.Textcolor = System.Drawing.Color.White;
-            this.btn_Cerrar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.White;
@@ -231,59 +251,51 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel1
+            // btn_Cerrar
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 327);
-            this.panel1.TabIndex = 0;
+            this.btn_Cerrar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_Cerrar.AllowDrop = true;
+            this.btn_Cerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Cerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cerrar.BorderRadius = 7;
+            this.btn_Cerrar.ButtonText = "Guardar cambios";
+            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cerrar.DisabledColor = System.Drawing.Color.White;
+            this.btn_Cerrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Cerrar.Iconimage = null;
+            this.btn_Cerrar.Iconimage_right = null;
+            this.btn_Cerrar.Iconimage_right_Selected = null;
+            this.btn_Cerrar.Iconimage_Selected = null;
+            this.btn_Cerrar.IconMarginLeft = 0;
+            this.btn_Cerrar.IconMarginRight = 0;
+            this.btn_Cerrar.IconRightVisible = true;
+            this.btn_Cerrar.IconRightZoom = 0D;
+            this.btn_Cerrar.IconVisible = true;
+            this.btn_Cerrar.IconZoom = 90D;
+            this.btn_Cerrar.IsTab = false;
+            this.btn_Cerrar.Location = new System.Drawing.Point(613, 102);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Normalcolor = System.Drawing.Color.RoyalBlue;
+            this.btn_Cerrar.OnHovercolor = System.Drawing.Color.DodgerBlue;
+            this.btn_Cerrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Cerrar.selected = false;
+            this.btn_Cerrar.Size = new System.Drawing.Size(179, 48);
+            this.btn_Cerrar.TabIndex = 10;
+            this.btn_Cerrar.Text = "Guardar cambios";
+            this.btn_Cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Cerrar.Textcolor = System.Drawing.Color.White;
+            this.btn_Cerrar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // comboBox1
+            // btn_vervehiculo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 14.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O"});
-            this.comboBox1.Location = new System.Drawing.Point(666, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 31);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Seleccione";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(579, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 23);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Sección:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1366, 327);
-            this.dataGridView1.TabIndex = 0;
+            this.btn_vervehiculo.Location = new System.Drawing.Point(874, 15);
+            this.btn_vervehiculo.Name = "btn_vervehiculo";
+            this.btn_vervehiculo.Size = new System.Drawing.Size(174, 23);
+            this.btn_vervehiculo.TabIndex = 13;
+            this.btn_vervehiculo.Text = "ejemplo ver vehiculo";
+            this.btn_vervehiculo.UseVisualStyleBackColor = true;
+            this.btn_vervehiculo.Click += new System.EventHandler(this.btn_vervehiculo_Click);
             // 
             // frm_AdminSucursales
             // 
@@ -298,10 +310,10 @@
             this.Text = "frm_AdminSucursales";
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_contenedor.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -324,5 +336,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_vervehiculo;
     }
 }

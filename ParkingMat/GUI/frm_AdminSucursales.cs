@@ -16,5 +16,11 @@ namespace ParkingMat.GUI
         {
             InitializeComponent();
         }
+
+        private void btn_vervehiculo_Click(object sender, EventArgs e)
+        {
+            frmAdminVehiculo objVehiculo = new frmAdminVehiculo();
+            objVehiculo.ShowDialog();
+        }
     }
 }
