@@ -1,0 +1,5 @@
+c:\users\lovom\onedrive\documentos\visual studio 2015\Projects\ParkingMat-master\ParkingMat-master\bin\Debug\ParkingMat-master.exe.config
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat-master\bin\Debug\ParkingMat-master.exe.config
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat-master\obj\Debug\ParkingMat-master.csprojResolveAssemblyReference.cache
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat-master\obj\Debug\ParkingMat_master.Properties.Resources.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat-master\obj\Debug\ParkingMat-master.csproj.GenerateResource.Cache

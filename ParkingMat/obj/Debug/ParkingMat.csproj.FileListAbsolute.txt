@@ -1,0 +1,29 @@
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\bin\Debug\ParkingMat.exe.config
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\bin\Debug\ParkingMat.exe
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\bin\Debug\ParkingMat.pdb
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.csprojAssemblyReference.cache
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PrincipalAdmin.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.Properties.Resources.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.csproj.GenerateResource.cache
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.exe
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.pdb
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.csproj.CopyComplete
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\bin\Debug\MySql.Data.dll
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.GUI.frm_Login.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminSucursales.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ParkingMat2\ParkingMat\ParkingMat\obj\Debug\ParkingMat.GUI.frm_SalirDialog.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\bin\Debug\ParkingMat.exe.config
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\bin\Debug\ParkingMat.exe
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\bin\Debug\ParkingMat.pdb
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.csprojResolveAssemblyReference.cache
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminSucursales.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_Login.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PrincipalAdmin.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_SalirDialog.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.Properties.Resources.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.csproj.GenerateResource.Cache
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.csproj.CoreCompileInputs.cache
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.exe
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.pdb
