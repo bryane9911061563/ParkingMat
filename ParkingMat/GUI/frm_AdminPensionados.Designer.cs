@@ -106,7 +106,7 @@
             this.bunifuFlatButton3.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.AllowDrop = true;
             this.bunifuFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.White;
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 7;
             this.bunifuFlatButton3.ButtonText = "Actualizar";
@@ -142,7 +142,7 @@
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.AllowDrop = true;
             this.bunifuFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 7;
             this.bunifuFlatButton2.ButtonText = "Nuevo";
@@ -178,7 +178,7 @@
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.AllowDrop = true;
             this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 7;
             this.bunifuFlatButton1.ButtonText = "Eliminar";
