@@ -18,8 +18,8 @@ namespace ParkingMat.GUI
             InitializeComponent();
             
 
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             
         }
 

@@ -94,7 +94,7 @@
             this.pnl_contenedor.Location = new System.Drawing.Point(0, 0);
             this.pnl_contenedor.MinimumSize = new System.Drawing.Size(885, 345);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 561);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 768);
             this.pnl_contenedor.TabIndex = 0;
             // 
             // pnl_centro
@@ -102,7 +102,7 @@
             this.pnl_centro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_centro.Location = new System.Drawing.Point(0, 205);
             this.pnl_centro.Name = "pnl_centro";
-            this.pnl_centro.Size = new System.Drawing.Size(1366, 356);
+            this.pnl_centro.Size = new System.Drawing.Size(1366, 563);
             this.pnl_centro.TabIndex = 2;
             // 
             // pnl_BarraEstado
@@ -473,7 +473,7 @@
             this.btn_vermasCars.Name = "btn_vermasCars";
             this.btn_vermasCars.Size = new System.Drawing.Size(234, 41);
             this.btn_vermasCars.TabIndex = 15;
-            this.btn_vermasCars.Text = "Admin. Sucursales";
+            this.btn_vermasCars.Text = "Admin. Sucursal";
             this.btn_vermasCars.UseVisualStyleBackColor = true;
             this.btn_vermasCars.Click += new System.EventHandler(this.btn_vermasCars_Click);
             // 
@@ -619,7 +619,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 561);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.pnl_contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(885, 545);
