@@ -20,8 +20,8 @@ namespace ParkingMat.GUI
             InitializeComponent();
 
 
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             AbrirFormularios<frm_AdminSucursales>();
             lbl_inrunning.Text = "Admin. Sucursal";
         }
@@ -108,6 +108,8 @@ namespace ParkingMat.GUI
             objRUnning.AppExecut1 = 4;
             pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
             lbl_inrunning.Text = "Admin. Recibos";
+
+            AbrirFormularios<frm_AdminRecibos>();
         }
 
         private void btn_reportes_Click(object sender, EventArgs e)

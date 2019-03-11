@@ -22,5 +22,11 @@ namespace ParkingMat.GUI
             frmAdminVehiculo objVehiculo = new frmAdminVehiculo();
             objVehiculo.ShowDialog();
         }
+
+        private void btn_agregarvehiculo_Click(object sender, EventArgs e)
+        {
+            frm_AgregarVehiculo objAgregarVehiculo = new frm_AgregarVehiculo();
+            objAgregarVehiculo.ShowDialog();
+        }
     }
 }

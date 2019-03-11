@@ -43,10 +43,11 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_agregarvehiculo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,23 +57,24 @@
             // pnl_contenedor
             // 
             this.pnl_contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnl_contenedor.Controls.Add(this.btn_agregarvehiculo);
             this.pnl_contenedor.Controls.Add(this.btn_vervehiculo);
             this.pnl_contenedor.Controls.Add(this.label5);
             this.pnl_contenedor.Controls.Add(this.comboBox1);
             this.pnl_contenedor.Controls.Add(this.panel1);
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_contenedor.Location = new System.Drawing.Point(0, 187);
+            this.pnl_contenedor.Location = new System.Drawing.Point(0, 238);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 376);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1366, 325);
             this.pnl_contenedor.TabIndex = 0;
             // 
             // btn_vervehiculo
             // 
-            this.btn_vervehiculo.Location = new System.Drawing.Point(874, 15);
+            this.btn_vervehiculo.Location = new System.Drawing.Point(821, 15);
             this.btn_vervehiculo.Name = "btn_vervehiculo";
             this.btn_vervehiculo.Size = new System.Drawing.Size(174, 23);
             this.btn_vervehiculo.TabIndex = 13;
-            this.btn_vervehiculo.Text = "ejemplo ver vehiculo";
+            this.btn_vervehiculo.Text = "ejemplo administrar vehiculo";
             this.btn_vervehiculo.UseVisualStyleBackColor = true;
             this.btn_vervehiculo.Click += new System.EventHandler(this.btn_vervehiculo_Click);
             // 
@@ -118,16 +120,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 327);
+            this.panel1.Size = new System.Drawing.Size(1366, 276);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1366, 327);
+            this.dataGridView1.Size = new System.Drawing.Size(1366, 275);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -222,12 +224,32 @@
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(82, 12);
+            this.groupBox1.Location = new System.Drawing.Point(82, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1220, 169);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion general";
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(880, 56);
+            this.maskedTextBox3.Mask = "(999)000-0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(163, 29);
+            this.maskedTextBox3.TabIndex = 13;
+            this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(700, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 23);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Número telefónico:";
             // 
             // bunifuFlatButton1
             // 
@@ -301,25 +323,42 @@
             this.btn_Cerrar.Textcolor = System.Drawing.Color.White;
             this.btn_Cerrar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // maskedTextBox3
+            // btn_agregarvehiculo
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(880, 56);
-            this.maskedTextBox3.Mask = "(999)000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(163, 29);
-            this.maskedTextBox3.TabIndex = 13;
-            this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(700, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 23);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Número telefónico:";
+            this.btn_agregarvehiculo.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_agregarvehiculo.AllowDrop = true;
+            this.btn_agregarvehiculo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_agregarvehiculo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_agregarvehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregarvehiculo.BorderRadius = 7;
+            this.btn_agregarvehiculo.ButtonText = "Agregar vehiculo";
+            this.btn_agregarvehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregarvehiculo.DisabledColor = System.Drawing.Color.White;
+            this.btn_agregarvehiculo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_agregarvehiculo.Iconimage = null;
+            this.btn_agregarvehiculo.Iconimage_right = null;
+            this.btn_agregarvehiculo.Iconimage_right_Selected = null;
+            this.btn_agregarvehiculo.Iconimage_Selected = null;
+            this.btn_agregarvehiculo.IconMarginLeft = 0;
+            this.btn_agregarvehiculo.IconMarginRight = 0;
+            this.btn_agregarvehiculo.IconRightVisible = true;
+            this.btn_agregarvehiculo.IconRightZoom = 0D;
+            this.btn_agregarvehiculo.IconVisible = true;
+            this.btn_agregarvehiculo.IconZoom = 90D;
+            this.btn_agregarvehiculo.IsTab = false;
+            this.btn_agregarvehiculo.Location = new System.Drawing.Point(377, 10);
+            this.btn_agregarvehiculo.Name = "btn_agregarvehiculo";
+            this.btn_agregarvehiculo.Normalcolor = System.Drawing.Color.RoyalBlue;
+            this.btn_agregarvehiculo.OnHovercolor = System.Drawing.Color.DodgerBlue;
+            this.btn_agregarvehiculo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_agregarvehiculo.selected = false;
+            this.btn_agregarvehiculo.Size = new System.Drawing.Size(179, 33);
+            this.btn_agregarvehiculo.TabIndex = 14;
+            this.btn_agregarvehiculo.Text = "Agregar vehiculo";
+            this.btn_agregarvehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_agregarvehiculo.Textcolor = System.Drawing.Color.White;
+            this.btn_agregarvehiculo.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregarvehiculo.Click += new System.EventHandler(this.btn_agregarvehiculo_Click);
             // 
             // frm_AdminSucursales
             // 
@@ -363,5 +402,6 @@
         private System.Windows.Forms.Button btn_vervehiculo;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_agregarvehiculo;
     }
 }

@@ -69,7 +69,6 @@
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.MoverBarraEstado = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -645,13 +644,6 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "arkingMat";
             // 
-            // MoverBarraEstado
-            // 
-            this.MoverBarraEstado.Fixed = true;
-            this.MoverBarraEstado.Horizontal = true;
-            this.MoverBarraEstado.TargetControl = this.pnl_BarraEstado;
-            this.MoverBarraEstado.Vertical = true;
-            // 
             // ElipsetarjetaCoches
             // 
             this.ElipsetarjetaCoches.ElipseRadius = 25;
@@ -717,7 +709,6 @@
 
         private System.Windows.Forms.Panel pnl_contenedor;
         private Bunifu.Framework.UI.BunifuGradientPanel pnl_BarraEstado;
-        private Bunifu.Framework.UI.BunifuDragControl MoverBarraEstado;
         private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
         private System.Windows.Forms.Panel pnl_centro;
         private Bunifu.Framework.UI.BunifuFlatButton btn_minimizar;
