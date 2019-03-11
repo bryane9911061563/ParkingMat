@@ -56,6 +56,7 @@ namespace ParkingMat.GUI
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
+            this.Close();
             frm_SalirDialog objSalir = new frm_SalirDialog();
             objSalir.ShowDialog();
         }

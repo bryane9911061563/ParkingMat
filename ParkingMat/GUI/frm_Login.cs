@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkingMat.BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,9 +65,16 @@ namespace ParkingMat.GUI
 
         private void btn_IniciarSesion_Click(object sender, EventArgs e)
         {
-            frm_PrincipalAdmin obj = new frm_PrincipalAdmin();
-            obj.Show();
-            this.Hide();
+            Jefe_BO jefe = new Jefe_BO();
+            if (jefe.Nombre==txt_correo.Text && jefe.Clave==txt_contrase.Text) {
+                frm_PrincipalAdmin obj = new frm_PrincipalAdmin();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario invalido");
+            }
         }
     }
 }
