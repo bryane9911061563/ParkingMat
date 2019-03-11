@@ -74,6 +74,7 @@
             this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_BarraEstado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).BeginInit();
@@ -114,6 +115,7 @@
             // 
             this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
             this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BarraEstado.Controls.Add(this.btn_Salir);
             this.pnl_BarraEstado.Controls.Add(this.pick_iconRunning);
             this.pnl_BarraEstado.Controls.Add(this.lbl_inrunning);
             this.pnl_BarraEstado.Controls.Add(this.pictureBox6);
@@ -669,6 +671,42 @@
             this.ElipseReportes.ElipseRadius = 25;
             this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
             // 
+            // btn_Salir
+            // 
+            this.btn_Salir.Activecolor = System.Drawing.Color.Crimson;
+            this.btn_Salir.AllowDrop = true;
+            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Salir.BackColor = System.Drawing.Color.Crimson;
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Salir.BorderRadius = 7;
+            this.btn_Salir.ButtonText = "Administrador";
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Salir.Iconimage = null;
+            this.btn_Salir.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Iconimage_right")));
+            this.btn_Salir.Iconimage_right_Selected = null;
+            this.btn_Salir.Iconimage_Selected = null;
+            this.btn_Salir.IconMarginLeft = 0;
+            this.btn_Salir.IconMarginRight = 0;
+            this.btn_Salir.IconRightVisible = true;
+            this.btn_Salir.IconRightZoom = 0D;
+            this.btn_Salir.IconVisible = true;
+            this.btn_Salir.IconZoom = 35D;
+            this.btn_Salir.IsTab = false;
+            this.btn_Salir.Location = new System.Drawing.Point(1121, 3);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Normalcolor = System.Drawing.Color.Crimson;
+            this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Salir.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Salir.selected = false;
+            this.btn_Salir.Size = new System.Drawing.Size(179, 31);
+            this.btn_Salir.TabIndex = 23;
+            this.btn_Salir.Text = "Administrador";
+            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Salir.Textcolor = System.Drawing.Color.White;
+            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // frm_PrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,5 +789,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pick_iconRunning;
         private System.Windows.Forms.Label lbl_inrunning;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
     }
 }
