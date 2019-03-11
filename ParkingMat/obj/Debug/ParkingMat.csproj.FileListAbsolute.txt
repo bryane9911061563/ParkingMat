@@ -27,3 +27,8 @@ C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.csproj.
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.csproj.CoreCompileInputs.cache
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.exe
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.pdb
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frmAdminVehiculo.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminEmpleados.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminPensionados.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminRecibos.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AgregarVehiculo.resources

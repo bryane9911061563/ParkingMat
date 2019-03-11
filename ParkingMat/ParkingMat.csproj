@@ -54,11 +54,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Cls_AppRunning.cs" />
+    <Compile Include="BO\Empleado_BO.cs" />
+    <Compile Include="BO\Jefe_BO.cs" />
+    <Compile Include="DAO\Conexion_DAO.cs" />
+    <Compile Include="DAO\Empleado_DAO.cs" />
+    <Compile Include="GUI\frmAdminVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAdminVehiculo.Designer.cs">
+      <DependentUpon>frmAdminVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_AdminEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AdminEmpleados.Designer.cs">
+      <DependentUpon>frm_AdminEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_AdminPensionados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AdminPensionados.Designer.cs">
+      <DependentUpon>frm_AdminPensionados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_AdminRecibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AdminRecibos.Designer.cs">
+      <DependentUpon>frm_AdminRecibos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_AdminSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frm_AdminSucursales.Designer.cs">
       <DependentUpon>frm_AdminSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_AgregarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AgregarVehiculo.Designer.cs">
+      <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_Login.cs">
       <SubType>Form</SubType>
@@ -80,8 +115,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmAdminVehiculo.resx">
+      <DependentUpon>frmAdminVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdminEmpleados.resx">
+      <DependentUpon>frm_AdminEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdminPensionados.resx">
+      <DependentUpon>frm_AdminPensionados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdminRecibos.resx">
+      <DependentUpon>frm_AdminRecibos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AdminSucursales.resx">
       <DependentUpon>frm_AdminSucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AgregarVehiculo.resx">
+      <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -115,10 +165,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BO\" />
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Add_16px.png" />
   </ItemGroup>
