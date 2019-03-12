@@ -123,5 +123,10 @@ namespace ParkingMat.GUI
         {
             AbrirFormularios<A_EjemploBotonCajon>();
         }
+
+        private void pnl_tarjetaCoches_MouseHover(object sender, EventArgs e)
+        {
+            pnl_tarjetaCoches.BackColor = Color.Red;
+        }
     }
 }

@@ -32,12 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PrincipalAdmin));
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_centro = new System.Windows.Forms.Panel();
-            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_vercajones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pick_iconRunning = new System.Windows.Forms.PictureBox();
             this.lbl_inrunning = new System.Windows.Forms.Label();
@@ -75,7 +71,11 @@
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.btn_vercajones = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_contenedor.SuspendLayout();
             this.pnl_BarraEstado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).BeginInit();
@@ -112,31 +112,6 @@
             this.pnl_centro.Size = new System.Drawing.Size(1366, 563);
             this.pnl_centro.TabIndex = 2;
             // 
-            // ElipsetarjetaCoches
-            // 
-            this.ElipsetarjetaCoches.ElipseRadius = 25;
-            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
-            // 
-            // RlipseEmpleados
-            // 
-            this.RlipseEmpleados.ElipseRadius = 25;
-            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
-            // 
-            // elipsePensionados
-            // 
-            this.elipsePensionados.ElipseRadius = 25;
-            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
-            // 
-            // ElipseRecibos
-            // 
-            this.ElipseRecibos.ElipseRadius = 25;
-            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
-            // 
-            // ElipseReportes
-            // 
-            this.ElipseReportes.ElipseRadius = 25;
-            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
-            // 
             // pnl_BarraEstado
             // 
             this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
@@ -164,6 +139,43 @@
             this.pnl_BarraEstado.Quality = 10;
             this.pnl_BarraEstado.Size = new System.Drawing.Size(1366, 205);
             this.pnl_BarraEstado.TabIndex = 0;
+            // 
+            // btn_vercajones
+            // 
+            this.btn_vercajones.Activecolor = System.Drawing.Color.LimeGreen;
+            this.btn_vercajones.AllowDrop = true;
+            this.btn_vercajones.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_vercajones.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_vercajones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_vercajones.BorderRadius = 7;
+            this.btn_vercajones.ButtonText = "Ver cajones";
+            this.btn_vercajones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_vercajones.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_vercajones.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_vercajones.Iconimage = null;
+            this.btn_vercajones.Iconimage_right = null;
+            this.btn_vercajones.Iconimage_right_Selected = null;
+            this.btn_vercajones.Iconimage_Selected = null;
+            this.btn_vercajones.IconMarginLeft = 0;
+            this.btn_vercajones.IconMarginRight = 0;
+            this.btn_vercajones.IconRightVisible = true;
+            this.btn_vercajones.IconRightZoom = 0D;
+            this.btn_vercajones.IconVisible = true;
+            this.btn_vercajones.IconZoom = 35D;
+            this.btn_vercajones.IsTab = false;
+            this.btn_vercajones.Location = new System.Drawing.Point(153, 12);
+            this.btn_vercajones.Name = "btn_vercajones";
+            this.btn_vercajones.Normalcolor = System.Drawing.Color.LimeGreen;
+            this.btn_vercajones.OnHovercolor = System.Drawing.Color.Lime;
+            this.btn_vercajones.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_vercajones.selected = false;
+            this.btn_vercajones.Size = new System.Drawing.Size(179, 31);
+            this.btn_vercajones.TabIndex = 24;
+            this.btn_vercajones.Text = "Ver cajones";
+            this.btn_vercajones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_vercajones.Textcolor = System.Drawing.Color.White;
+            this.btn_vercajones.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vercajones.Click += new System.EventHandler(this.btn_vercajones_Click);
             // 
             // btn_Salir
             // 
@@ -561,6 +573,7 @@
             this.pnl_tarjetaCoches.Name = "pnl_tarjetaCoches";
             this.pnl_tarjetaCoches.Size = new System.Drawing.Size(234, 135);
             this.pnl_tarjetaCoches.TabIndex = 7;
+            this.pnl_tarjetaCoches.MouseHover += new System.EventHandler(this.pnl_tarjetaCoches_MouseHover);
             // 
             // bunifuSeparator1
             // 
@@ -709,42 +722,30 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "arkingMat";
             // 
-            // btn_vercajones
+            // ElipsetarjetaCoches
             // 
-            this.btn_vercajones.Activecolor = System.Drawing.Color.LimeGreen;
-            this.btn_vercajones.AllowDrop = true;
-            this.btn_vercajones.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_vercajones.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_vercajones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_vercajones.BorderRadius = 7;
-            this.btn_vercajones.ButtonText = "Ver cajones";
-            this.btn_vercajones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_vercajones.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_vercajones.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_vercajones.Iconimage = null;
-            this.btn_vercajones.Iconimage_right = null;
-            this.btn_vercajones.Iconimage_right_Selected = null;
-            this.btn_vercajones.Iconimage_Selected = null;
-            this.btn_vercajones.IconMarginLeft = 0;
-            this.btn_vercajones.IconMarginRight = 0;
-            this.btn_vercajones.IconRightVisible = true;
-            this.btn_vercajones.IconRightZoom = 0D;
-            this.btn_vercajones.IconVisible = true;
-            this.btn_vercajones.IconZoom = 35D;
-            this.btn_vercajones.IsTab = false;
-            this.btn_vercajones.Location = new System.Drawing.Point(153, 12);
-            this.btn_vercajones.Name = "btn_vercajones";
-            this.btn_vercajones.Normalcolor = System.Drawing.Color.LimeGreen;
-            this.btn_vercajones.OnHovercolor = System.Drawing.Color.Lime;
-            this.btn_vercajones.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_vercajones.selected = false;
-            this.btn_vercajones.Size = new System.Drawing.Size(179, 31);
-            this.btn_vercajones.TabIndex = 24;
-            this.btn_vercajones.Text = "Ver cajones";
-            this.btn_vercajones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_vercajones.Textcolor = System.Drawing.Color.White;
-            this.btn_vercajones.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_vercajones.Click += new System.EventHandler(this.btn_vercajones_Click);
+            this.ElipsetarjetaCoches.ElipseRadius = 25;
+            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
+            // 
+            // RlipseEmpleados
+            // 
+            this.RlipseEmpleados.ElipseRadius = 25;
+            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
+            // 
+            // elipsePensionados
+            // 
+            this.elipsePensionados.ElipseRadius = 25;
+            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
+            // 
+            // ElipseRecibos
+            // 
+            this.ElipseRecibos.ElipseRadius = 25;
+            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
+            // 
+            // ElipseReportes
+            // 
+            this.ElipseReportes.ElipseRadius = 25;
+            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
             // 
             // frm_PrincipalAdmin
             // 
