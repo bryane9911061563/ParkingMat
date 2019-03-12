@@ -118,5 +118,10 @@ namespace ParkingMat.GUI
             pick_iconRunning.Image = Image.FromFile(objRUnning.CambiaFoto());
             lbl_inrunning.Text = "Admin. Reportes";
         }
+
+        private void btn_vercajones_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<A_EjemploBotonCajon>();
+        }
     }
 }

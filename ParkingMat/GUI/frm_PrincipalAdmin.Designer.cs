@@ -32,7 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PrincipalAdmin));
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_centro = new System.Windows.Forms.Panel();
+            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pick_iconRunning = new System.Windows.Forms.PictureBox();
             this.lbl_inrunning = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -69,12 +75,7 @@
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_vercajones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_BarraEstado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pick_iconRunning)).BeginInit();
@@ -111,10 +112,36 @@
             this.pnl_centro.Size = new System.Drawing.Size(1366, 563);
             this.pnl_centro.TabIndex = 2;
             // 
+            // ElipsetarjetaCoches
+            // 
+            this.ElipsetarjetaCoches.ElipseRadius = 25;
+            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
+            // 
+            // RlipseEmpleados
+            // 
+            this.RlipseEmpleados.ElipseRadius = 25;
+            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
+            // 
+            // elipsePensionados
+            // 
+            this.elipsePensionados.ElipseRadius = 25;
+            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
+            // 
+            // ElipseRecibos
+            // 
+            this.ElipseRecibos.ElipseRadius = 25;
+            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
+            // 
+            // ElipseReportes
+            // 
+            this.ElipseReportes.ElipseRadius = 25;
+            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
+            // 
             // pnl_BarraEstado
             // 
             this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
             this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BarraEstado.Controls.Add(this.btn_vercajones);
             this.pnl_BarraEstado.Controls.Add(this.btn_Salir);
             this.pnl_BarraEstado.Controls.Add(this.pick_iconRunning);
             this.pnl_BarraEstado.Controls.Add(this.lbl_inrunning);
@@ -137,6 +164,42 @@
             this.pnl_BarraEstado.Quality = 10;
             this.pnl_BarraEstado.Size = new System.Drawing.Size(1366, 205);
             this.pnl_BarraEstado.TabIndex = 0;
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.Activecolor = System.Drawing.Color.Crimson;
+            this.btn_Salir.AllowDrop = true;
+            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Salir.BackColor = System.Drawing.Color.Crimson;
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Salir.BorderRadius = 7;
+            this.btn_Salir.ButtonText = "Administrador";
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Salir.Iconimage = null;
+            this.btn_Salir.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Iconimage_right")));
+            this.btn_Salir.Iconimage_right_Selected = null;
+            this.btn_Salir.Iconimage_Selected = null;
+            this.btn_Salir.IconMarginLeft = 0;
+            this.btn_Salir.IconMarginRight = 0;
+            this.btn_Salir.IconRightVisible = true;
+            this.btn_Salir.IconRightZoom = 0D;
+            this.btn_Salir.IconVisible = true;
+            this.btn_Salir.IconZoom = 35D;
+            this.btn_Salir.IsTab = false;
+            this.btn_Salir.Location = new System.Drawing.Point(1121, 3);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Normalcolor = System.Drawing.Color.Crimson;
+            this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Salir.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Salir.selected = false;
+            this.btn_Salir.Size = new System.Drawing.Size(179, 31);
+            this.btn_Salir.TabIndex = 23;
+            this.btn_Salir.Text = "Administrador";
+            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Salir.Textcolor = System.Drawing.Color.White;
+            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // pick_iconRunning
             // 
@@ -646,66 +709,42 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "arkingMat";
             // 
-            // ElipsetarjetaCoches
+            // btn_vercajones
             // 
-            this.ElipsetarjetaCoches.ElipseRadius = 25;
-            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
-            // 
-            // RlipseEmpleados
-            // 
-            this.RlipseEmpleados.ElipseRadius = 25;
-            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
-            // 
-            // elipsePensionados
-            // 
-            this.elipsePensionados.ElipseRadius = 25;
-            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
-            // 
-            // ElipseRecibos
-            // 
-            this.ElipseRecibos.ElipseRadius = 25;
-            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
-            // 
-            // ElipseReportes
-            // 
-            this.ElipseReportes.ElipseRadius = 25;
-            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.Activecolor = System.Drawing.Color.Crimson;
-            this.btn_Salir.AllowDrop = true;
-            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Salir.BackColor = System.Drawing.Color.Crimson;
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Salir.BorderRadius = 7;
-            this.btn_Salir.ButtonText = "Administrador";
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Salir.Iconimage = null;
-            this.btn_Salir.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Iconimage_right")));
-            this.btn_Salir.Iconimage_right_Selected = null;
-            this.btn_Salir.Iconimage_Selected = null;
-            this.btn_Salir.IconMarginLeft = 0;
-            this.btn_Salir.IconMarginRight = 0;
-            this.btn_Salir.IconRightVisible = true;
-            this.btn_Salir.IconRightZoom = 0D;
-            this.btn_Salir.IconVisible = true;
-            this.btn_Salir.IconZoom = 35D;
-            this.btn_Salir.IsTab = false;
-            this.btn_Salir.Location = new System.Drawing.Point(1121, 3);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Normalcolor = System.Drawing.Color.Crimson;
-            this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Salir.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Salir.selected = false;
-            this.btn_Salir.Size = new System.Drawing.Size(179, 31);
-            this.btn_Salir.TabIndex = 23;
-            this.btn_Salir.Text = "Administrador";
-            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Salir.Textcolor = System.Drawing.Color.White;
-            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vercajones.Activecolor = System.Drawing.Color.LimeGreen;
+            this.btn_vercajones.AllowDrop = true;
+            this.btn_vercajones.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_vercajones.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_vercajones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_vercajones.BorderRadius = 7;
+            this.btn_vercajones.ButtonText = "Ver cajones";
+            this.btn_vercajones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_vercajones.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_vercajones.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_vercajones.Iconimage = null;
+            this.btn_vercajones.Iconimage_right = null;
+            this.btn_vercajones.Iconimage_right_Selected = null;
+            this.btn_vercajones.Iconimage_Selected = null;
+            this.btn_vercajones.IconMarginLeft = 0;
+            this.btn_vercajones.IconMarginRight = 0;
+            this.btn_vercajones.IconRightVisible = true;
+            this.btn_vercajones.IconRightZoom = 0D;
+            this.btn_vercajones.IconVisible = true;
+            this.btn_vercajones.IconZoom = 35D;
+            this.btn_vercajones.IsTab = false;
+            this.btn_vercajones.Location = new System.Drawing.Point(153, 12);
+            this.btn_vercajones.Name = "btn_vercajones";
+            this.btn_vercajones.Normalcolor = System.Drawing.Color.LimeGreen;
+            this.btn_vercajones.OnHovercolor = System.Drawing.Color.Lime;
+            this.btn_vercajones.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_vercajones.selected = false;
+            this.btn_vercajones.Size = new System.Drawing.Size(179, 31);
+            this.btn_vercajones.TabIndex = 24;
+            this.btn_vercajones.Text = "Ver cajones";
+            this.btn_vercajones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_vercajones.Textcolor = System.Drawing.Color.White;
+            this.btn_vercajones.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vercajones.Click += new System.EventHandler(this.btn_vercajones_Click);
             // 
             // frm_PrincipalAdmin
             // 
@@ -790,5 +829,6 @@
         private System.Windows.Forms.PictureBox pick_iconRunning;
         private System.Windows.Forms.Label lbl_inrunning;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_vercajones;
     }
 }
