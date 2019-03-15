@@ -121,7 +121,6 @@ namespace ParkingMat.GUI
 
         private void btn_vercajones_Click(object sender, EventArgs e)
         {
-            AbrirFormularios<A_EjemploBotonCajon>();
         }
 
         private void pnl_tarjetaCoches_MouseHover(object sender, EventArgs e)
