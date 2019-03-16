@@ -20,8 +20,8 @@ namespace ParkingMat.GUI
             InitializeComponent();
             panelHeight = pnl_top.Height;
             Hidden = false;
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
 
         //Metodo para abrir dentro del container
@@ -119,7 +119,8 @@ namespace ParkingMat.GUI
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frm_SalirDialog salir = new frm_SalirDialog();
+            salir.ShowDialog();
         }
 
         private void pnl_tarjetaCoches_MouseHover(object sender, EventArgs e)
@@ -187,17 +188,6 @@ namespace ParkingMat.GUI
 
         }
 
-        private void btn_Salir_MouseHover(object sender, EventArgs e)
-        {
-            btn_Salir.Iconimage_right = Image.FromFile("Expand Arrow_16px.png");
-        }
-
-        private void btn_Salir_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Salir.Iconimage_right = Image.FromFile("Chevron Down_16BlACKpx.png");
-
-        }
-
         private void pnl_tarjetaEmpleados_MouseClick(object sender, MouseEventArgs e)
         {
             AbrirFormularios<frm_AdminEmpleados>();
@@ -217,6 +207,47 @@ namespace ParkingMat.GUI
         private void btn_adminPensionadosMinimal_Click(object sender, EventArgs e)
         {
             AbrirFormularios<frm_AdminPensionados>();
+
+        }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            frm_CerrarSesionDialog objDialogSesion = new frm_CerrarSesionDialog();
+
+            objDialogSesion.ShowDialog();
+        }
+
+        private void btn_adminSucursalMinimal_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<frm_AdminSucursales>();
+
+        }
+
+        private void btn_adminRecibosminimal_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<frm_AdminRecibos>();
+
+        }
+
+        private void btn_adminReportMinimal_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<frm_AdmiReportes>();
+        }
+
+        private void pnl_tarjetaCoches_MouseClick(object sender, MouseEventArgs e)
+        {
+            AbrirFormularios<frm_AdminSucursales>();
+        }
+
+        private void pnl_tarjetaRecibos_MouseClick(object sender, MouseEventArgs e)
+        {
+            AbrirFormularios<frm_AdminRecibos>();
+
+        }
+
+        private void pnl_tarjetaReportes_MouseClick(object sender, MouseEventArgs e)
+        {
+            AbrirFormularios<frm_AdmiReportes>();
 
         }
     }

@@ -10,11 +10,8 @@ using System.Windows.Forms;
 
 namespace ParkingMat.GUI
 {
-
-    public partial class frm_SalirDialog : Form
+    public partial class frm_CerrarSesionDialog : Form
     {
-        
-
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
@@ -91,35 +88,25 @@ namespace ParkingMat.GUI
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-        
 
-
-
-
-        public frm_SalirDialog()
+        public frm_CerrarSesionDialog()
         {
             InitializeComponent();
-
-            
         }
 
-        
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btn_Salir_Click(object sender, EventArgs e)
+        private void btn_Cerrar_Sesion_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
-
-        }
-
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            Application.Restart();
         }
     }
 }

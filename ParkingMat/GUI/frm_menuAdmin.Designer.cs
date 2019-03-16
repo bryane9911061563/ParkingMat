@@ -29,33 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menuAdmin));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.pnl_tarjetaReportes = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaRecibos = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaPensionados = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaEmpleados = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaCoches = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pnl_contenedor = new System.Windows.Forms.Panel();
+            this.pnl_centro = new System.Windows.Forms.Panel();
+            this.pnl_barratop = new System.Windows.Forms.Panel();
+            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_expandir_contraer = new System.Windows.Forms.Button();
-            this.panel_slide = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.pnl_contenedor = new System.Windows.Forms.Panel();
-            this.pnl_barratop = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.btn_adminReportMinimal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_adminRecibosminimal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_adminPensionadosMinimal = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -64,29 +72,19 @@
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_expandir_contraer2 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pnl_centro = new System.Windows.Forms.Panel();
             this.pnl_top.SuspendLayout();
             this.pnl_tarjetaReportes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnl_tarjetaRecibos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnl_tarjetaPensionados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_tarjetaEmpleados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_tarjetaCoches.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_barratop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +97,6 @@
             this.pnl_top.Controls.Add(this.pnl_tarjetaEmpleados);
             this.pnl_top.Controls.Add(this.pnl_tarjetaCoches);
             this.pnl_top.Controls.Add(this.btn_expandir_contraer);
-            this.panel_slide.SetDecoration(this.pnl_top, BunifuAnimatorNS.DecorationType.None);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 46);
             this.pnl_top.Name = "pnl_top";
@@ -114,19 +111,31 @@
             this.pnl_tarjetaReportes.Controls.Add(this.label10);
             this.pnl_tarjetaReportes.Controls.Add(this.pictureBox5);
             this.pnl_tarjetaReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.pnl_tarjetaReportes, BunifuAnimatorNS.DecorationType.None);
             this.pnl_tarjetaReportes.Location = new System.Drawing.Point(1081, 2);
             this.pnl_tarjetaReportes.Name = "pnl_tarjetaReportes";
             this.pnl_tarjetaReportes.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaReportes.TabIndex = 24;
+            this.pnl_tarjetaReportes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnl_tarjetaReportes_MouseClick);
             this.pnl_tarjetaReportes.MouseLeave += new System.EventHandler(this.pnl_tarjetaReportes_MouseLeave);
             this.pnl_tarjetaReportes.MouseHover += new System.EventHandler(this.pnl_tarjetaReportes_MouseHover);
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(9, 85);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(99, 25);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "Reportes";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("Product Sans", 48F);
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(156, 7);
@@ -136,17 +145,6 @@
             this.label10.Text = "0";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox5
-            // 
-            this.panel_slide.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
             // pnl_tarjetaRecibos
             // 
             this.pnl_tarjetaRecibos.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -155,19 +153,31 @@
             this.pnl_tarjetaRecibos.Controls.Add(this.label8);
             this.pnl_tarjetaRecibos.Controls.Add(this.pictureBox4);
             this.pnl_tarjetaRecibos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.pnl_tarjetaRecibos, BunifuAnimatorNS.DecorationType.None);
             this.pnl_tarjetaRecibos.Location = new System.Drawing.Point(813, 2);
             this.pnl_tarjetaRecibos.Name = "pnl_tarjetaRecibos";
             this.pnl_tarjetaRecibos.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaRecibos.TabIndex = 23;
+            this.pnl_tarjetaRecibos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnl_tarjetaRecibos_MouseClick);
             this.pnl_tarjetaRecibos.MouseLeave += new System.EventHandler(this.pnl_tarjetaRecibos_MouseLeave);
             this.pnl_tarjetaRecibos.MouseHover += new System.EventHandler(this.pnl_tarjetaRecibos_MouseHover);
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(16, 85);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(90, 25);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Recibos";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Product Sans", 48F);
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(169, 7);
@@ -177,17 +187,6 @@
             this.label8.Text = "0";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox4
-            // 
-            this.panel_slide.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // pnl_tarjetaPensionados
             // 
             this.pnl_tarjetaPensionados.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -196,7 +195,6 @@
             this.pnl_tarjetaPensionados.Controls.Add(this.label4);
             this.pnl_tarjetaPensionados.Controls.Add(this.pictureBox3);
             this.pnl_tarjetaPensionados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.pnl_tarjetaPensionados, BunifuAnimatorNS.DecorationType.None);
             this.pnl_tarjetaPensionados.Location = new System.Drawing.Point(545, 2);
             this.pnl_tarjetaPensionados.Name = "pnl_tarjetaPensionados";
             this.pnl_tarjetaPensionados.Size = new System.Drawing.Size(260, 135);
@@ -209,7 +207,6 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(17, 85);
@@ -223,7 +220,6 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(158, 7);
@@ -233,17 +229,6 @@
             this.label4.Text = "0";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
-            // 
-            this.panel_slide.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // pnl_tarjetaEmpleados
             // 
             this.pnl_tarjetaEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -252,7 +237,6 @@
             this.pnl_tarjetaEmpleados.Controls.Add(this.label2);
             this.pnl_tarjetaEmpleados.Controls.Add(this.pictureBox2);
             this.pnl_tarjetaEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.pnl_tarjetaEmpleados, BunifuAnimatorNS.DecorationType.None);
             this.pnl_tarjetaEmpleados.Location = new System.Drawing.Point(277, 2);
             this.pnl_tarjetaEmpleados.Name = "pnl_tarjetaEmpleados";
             this.pnl_tarjetaEmpleados.Size = new System.Drawing.Size(260, 135);
@@ -265,7 +249,6 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(11, 85);
@@ -279,7 +262,6 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(162, 7);
@@ -289,17 +271,6 @@
             this.label2.Text = "0";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            this.panel_slide.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // pnl_tarjetaCoches
             // 
             this.pnl_tarjetaCoches.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -308,11 +279,11 @@
             this.pnl_tarjetaCoches.Controls.Add(this.label6);
             this.pnl_tarjetaCoches.Controls.Add(this.pictureBox1);
             this.pnl_tarjetaCoches.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.pnl_tarjetaCoches, BunifuAnimatorNS.DecorationType.None);
             this.pnl_tarjetaCoches.Location = new System.Drawing.Point(9, 2);
             this.pnl_tarjetaCoches.Name = "pnl_tarjetaCoches";
             this.pnl_tarjetaCoches.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaCoches.TabIndex = 20;
+            this.pnl_tarjetaCoches.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnl_tarjetaCoches_MouseClick);
             this.pnl_tarjetaCoches.MouseLeave += new System.EventHandler(this.pnl_tarjetaCoches_MouseLeave);
             this.pnl_tarjetaCoches.MouseHover += new System.EventHandler(this.pnl_tarjetaCoches_MouseHover_1);
             // 
@@ -320,7 +291,6 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(8, 85);
@@ -334,7 +304,6 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(155, 7);
@@ -344,64 +313,24 @@
             this.label6.Text = "0";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.panel_slide.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_expandir_contraer
-            // 
-            this.btn_expandir_contraer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_expandir_contraer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_expandir_contraer, BunifuAnimatorNS.DecorationType.None);
-            this.btn_expandir_contraer.FlatAppearance.BorderSize = 0;
-            this.btn_expandir_contraer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_expandir_contraer.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer.Image")));
-            this.btn_expandir_contraer.Location = new System.Drawing.Point(638, 136);
-            this.btn_expandir_contraer.Name = "btn_expandir_contraer";
-            this.btn_expandir_contraer.Size = new System.Drawing.Size(75, 14);
-            this.btn_expandir_contraer.TabIndex = 0;
-            this.btn_expandir_contraer.UseVisualStyleBackColor = true;
-            this.btn_expandir_contraer.Click += new System.EventHandler(this.btn_expandir_contraer_Click);
-            // 
-            // panel_slide
-            // 
-            this.panel_slide.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
-            this.panel_slide.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(0);
-            animation9.RotateCoeff = 0F;
-            animation9.RotateLimit = 0F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 0F;
-            this.panel_slide.DefaultAnimation = animation9;
-            // 
             // pnl_contenedor
             // 
             this.pnl_contenedor.Controls.Add(this.pnl_centro);
             this.pnl_contenedor.Controls.Add(this.pnl_top);
             this.pnl_contenedor.Controls.Add(this.pnl_barratop);
-            this.panel_slide.SetDecoration(this.pnl_contenedor, BunifuAnimatorNS.DecorationType.None);
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_contenedor.Location = new System.Drawing.Point(0, 0);
             this.pnl_contenedor.Name = "pnl_contenedor";
             this.pnl_contenedor.Size = new System.Drawing.Size(1350, 729);
             this.pnl_contenedor.TabIndex = 1;
+            // 
+            // pnl_centro
+            // 
+            this.pnl_centro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_centro.Location = new System.Drawing.Point(0, 200);
+            this.pnl_centro.Name = "pnl_centro";
+            this.pnl_centro.Size = new System.Drawing.Size(1350, 529);
+            this.pnl_centro.TabIndex = 2;
             // 
             // pnl_barratop
             // 
@@ -417,31 +346,54 @@
             this.pnl_barratop.Controls.Add(this.btn_minimizar);
             this.pnl_barratop.Controls.Add(this.btn_cerrar);
             this.pnl_barratop.Controls.Add(this.btn_expandir_contraer2);
-            this.panel_slide.SetDecoration(this.pnl_barratop, BunifuAnimatorNS.DecorationType.None);
             this.pnl_barratop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_barratop.Location = new System.Drawing.Point(0, 0);
             this.pnl_barratop.Name = "pnl_barratop";
             this.pnl_barratop.Size = new System.Drawing.Size(1350, 46);
             this.pnl_barratop.TabIndex = 1;
             // 
-            // pictureBox6
+            // btn_Salir
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.panel_slide.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(8, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 23;
-            this.pictureBox6.TabStop = false;
+            this.btn_Salir.Activecolor = System.Drawing.Color.DimGray;
+            this.btn_Salir.AllowDrop = true;
+            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Salir.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Salir.BorderRadius = 7;
+            this.btn_Salir.ButtonText = "Cerrar sesión";
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Salir.Iconimage = null;
+            this.btn_Salir.Iconimage_right = null;
+            this.btn_Salir.Iconimage_right_Selected = null;
+            this.btn_Salir.Iconimage_Selected = null;
+            this.btn_Salir.IconMarginLeft = 0;
+            this.btn_Salir.IconMarginRight = 0;
+            this.btn_Salir.IconRightVisible = true;
+            this.btn_Salir.IconRightZoom = 0D;
+            this.btn_Salir.IconVisible = true;
+            this.btn_Salir.IconZoom = 35D;
+            this.btn_Salir.IsTab = false;
+            this.btn_Salir.Location = new System.Drawing.Point(1099, 3);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Normalcolor = System.Drawing.SystemColors.Control;
+            this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Salir.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Salir.selected = false;
+            this.btn_Salir.Size = new System.Drawing.Size(179, 31);
+            this.btn_Salir.TabIndex = 24;
+            this.btn_Salir.Text = "Cerrar sesión";
+            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Salir.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.panel_slide.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
             this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Location = new System.Drawing.Point(45, 16);
@@ -449,6 +401,111 @@
             this.label11.Size = new System.Drawing.Size(94, 24);
             this.label11.TabIndex = 22;
             this.label11.Text = "arkingMat";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ElipsetarjetaCoches
+            // 
+            this.ElipsetarjetaCoches.ElipseRadius = 12;
+            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
+            // 
+            // RlipseEmpleados
+            // 
+            this.RlipseEmpleados.ElipseRadius = 12;
+            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
+            // 
+            // elipsePensionados
+            // 
+            this.elipsePensionados.ElipseRadius = 12;
+            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
+            // 
+            // ElipseRecibos
+            // 
+            this.ElipseRecibos.ElipseRadius = 12;
+            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
+            // 
+            // ElipseReportes
+            // 
+            this.ElipseReportes.ElipseRadius = 12;
+            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(17, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_expandir_contraer
+            // 
+            this.btn_expandir_contraer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_expandir_contraer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_expandir_contraer.FlatAppearance.BorderSize = 0;
+            this.btn_expandir_contraer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_expandir_contraer.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer.Image")));
+            this.btn_expandir_contraer.Location = new System.Drawing.Point(638, 136);
+            this.btn_expandir_contraer.Name = "btn_expandir_contraer";
+            this.btn_expandir_contraer.Size = new System.Drawing.Size(75, 14);
+            this.btn_expandir_contraer.TabIndex = 0;
+            this.btn_expandir_contraer.UseVisualStyleBackColor = true;
+            this.btn_expandir_contraer.Click += new System.EventHandler(this.btn_expandir_contraer_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(8, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
             // 
             // btn_adminReportMinimal
             // 
@@ -459,7 +516,6 @@
             this.btn_adminReportMinimal.BorderRadius = 6;
             this.btn_adminReportMinimal.ButtonText = "Administracion de reportes";
             this.btn_adminReportMinimal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_adminReportMinimal, BunifuAnimatorNS.DecorationType.None);
             this.btn_adminReportMinimal.DisabledColor = System.Drawing.Color.Gray;
             this.btn_adminReportMinimal.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_adminReportMinimal.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_adminReportMinimal.Iconimage")));
@@ -486,6 +542,7 @@
             this.btn_adminReportMinimal.Textcolor = System.Drawing.Color.White;
             this.btn_adminReportMinimal.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adminReportMinimal.Visible = false;
+            this.btn_adminReportMinimal.Click += new System.EventHandler(this.btn_adminReportMinimal_Click);
             // 
             // btn_adminRecibosminimal
             // 
@@ -496,7 +553,6 @@
             this.btn_adminRecibosminimal.BorderRadius = 6;
             this.btn_adminRecibosminimal.ButtonText = "Administracion de recibos";
             this.btn_adminRecibosminimal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_adminRecibosminimal, BunifuAnimatorNS.DecorationType.None);
             this.btn_adminRecibosminimal.DisabledColor = System.Drawing.Color.Gray;
             this.btn_adminRecibosminimal.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_adminRecibosminimal.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_adminRecibosminimal.Iconimage")));
@@ -523,6 +579,7 @@
             this.btn_adminRecibosminimal.Textcolor = System.Drawing.Color.White;
             this.btn_adminRecibosminimal.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adminRecibosminimal.Visible = false;
+            this.btn_adminRecibosminimal.Click += new System.EventHandler(this.btn_adminRecibosminimal_Click);
             // 
             // btn_adminPensionadosMinimal
             // 
@@ -533,7 +590,6 @@
             this.btn_adminPensionadosMinimal.BorderRadius = 6;
             this.btn_adminPensionadosMinimal.ButtonText = "Administracion de pensionados";
             this.btn_adminPensionadosMinimal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_adminPensionadosMinimal, BunifuAnimatorNS.DecorationType.None);
             this.btn_adminPensionadosMinimal.DisabledColor = System.Drawing.Color.Gray;
             this.btn_adminPensionadosMinimal.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_adminPensionadosMinimal.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_adminPensionadosMinimal.Iconimage")));
@@ -571,7 +627,6 @@
             this.btn_adminEmpleadosMinimal.BorderRadius = 6;
             this.btn_adminEmpleadosMinimal.ButtonText = "Administracion de empleados";
             this.btn_adminEmpleadosMinimal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_adminEmpleadosMinimal, BunifuAnimatorNS.DecorationType.None);
             this.btn_adminEmpleadosMinimal.DisabledColor = System.Drawing.Color.Gray;
             this.btn_adminEmpleadosMinimal.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_adminEmpleadosMinimal.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_adminEmpleadosMinimal.Iconimage")));
@@ -609,7 +664,6 @@
             this.btn_adminSucursalMinimal.BorderRadius = 6;
             this.btn_adminSucursalMinimal.ButtonText = "Administrar sucursal";
             this.btn_adminSucursalMinimal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_adminSucursalMinimal, BunifuAnimatorNS.DecorationType.None);
             this.btn_adminSucursalMinimal.DisabledColor = System.Drawing.Color.Gray;
             this.btn_adminSucursalMinimal.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_adminSucursalMinimal.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_adminSucursalMinimal.Iconimage")));
@@ -636,6 +690,7 @@
             this.btn_adminSucursalMinimal.Textcolor = System.Drawing.Color.White;
             this.btn_adminSucursalMinimal.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adminSucursalMinimal.Visible = false;
+            this.btn_adminSucursalMinimal.Click += new System.EventHandler(this.btn_adminSucursalMinimal_Click);
             // 
             // btn_minimizar
             // 
@@ -646,7 +701,6 @@
             this.btn_minimizar.BorderRadius = 0;
             this.btn_minimizar.ButtonText = "";
             this.btn_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_minimizar, BunifuAnimatorNS.DecorationType.None);
             this.btn_minimizar.DisabledColor = System.Drawing.Color.Gray;
             this.btn_minimizar.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_minimizar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Iconimage")));
@@ -681,7 +735,6 @@
             this.btn_cerrar.BorderRadius = 0;
             this.btn_cerrar.ButtonText = "";
             this.btn_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_cerrar, BunifuAnimatorNS.DecorationType.None);
             this.btn_cerrar.DisabledColor = System.Drawing.Color.Gray;
             this.btn_cerrar.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_cerrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Iconimage")));
@@ -712,7 +765,6 @@
             // 
             this.btn_expandir_contraer2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_expandir_contraer2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_expandir_contraer2, BunifuAnimatorNS.DecorationType.None);
             this.btn_expandir_contraer2.FlatAppearance.BorderSize = 0;
             this.btn_expandir_contraer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_expandir_contraer2.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer2.Image")));
@@ -724,112 +776,6 @@
             this.btn_expandir_contraer2.Visible = false;
             this.btn_expandir_contraer2.Click += new System.EventHandler(this.btn_expandir_contraer2_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 30;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ElipsetarjetaCoches
-            // 
-            this.ElipsetarjetaCoches.ElipseRadius = 12;
-            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
-            // 
-            // RlipseEmpleados
-            // 
-            this.RlipseEmpleados.ElipseRadius = 12;
-            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
-            // 
-            // elipsePensionados
-            // 
-            this.elipsePensionados.ElipseRadius = 12;
-            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
-            // 
-            // ElipseRecibos
-            // 
-            this.ElipseRecibos.ElipseRadius = 12;
-            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
-            // 
-            // ElipseReportes
-            // 
-            this.ElipseReportes.ElipseRadius = 12;
-            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label15, BunifuAnimatorNS.DecorationType.None);
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(16, 85);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 25);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Recibos";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.panel_slide.SetDecoration(this.label16, BunifuAnimatorNS.DecorationType.None);
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(9, 85);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(99, 25);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "Reportes";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.Activecolor = System.Drawing.Color.Crimson;
-            this.btn_Salir.AllowDrop = true;
-            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Salir.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Salir.BorderRadius = 7;
-            this.btn_Salir.ButtonText = "Administrador";
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_slide.SetDecoration(this.btn_Salir, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Salir.Iconimage = null;
-            this.btn_Salir.Iconimage_right = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Iconimage_right")));
-            this.btn_Salir.Iconimage_right_Selected = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Iconimage_right_Selected")));
-            this.btn_Salir.Iconimage_Selected = null;
-            this.btn_Salir.IconMarginLeft = 0;
-            this.btn_Salir.IconMarginRight = 0;
-            this.btn_Salir.IconRightVisible = true;
-            this.btn_Salir.IconRightZoom = 0D;
-            this.btn_Salir.IconVisible = true;
-            this.btn_Salir.IconZoom = 35D;
-            this.btn_Salir.IsTab = false;
-            this.btn_Salir.Location = new System.Drawing.Point(1095, 3);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Normalcolor = System.Drawing.SystemColors.Control;
-            this.btn_Salir.OnHovercolor = System.Drawing.Color.Crimson;
-            this.btn_Salir.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Salir.selected = false;
-            this.btn_Salir.Size = new System.Drawing.Size(179, 44);
-            this.btn_Salir.TabIndex = 24;
-            this.btn_Salir.Text = "Administrador";
-            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Salir.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.MouseLeave += new System.EventHandler(this.btn_Salir_MouseLeave);
-            this.btn_Salir.MouseHover += new System.EventHandler(this.btn_Salir_MouseHover);
-            // 
-            // pnl_centro
-            // 
-            this.panel_slide.SetDecoration(this.pnl_centro, BunifuAnimatorNS.DecorationType.None);
-            this.pnl_centro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_centro.Location = new System.Drawing.Point(0, 200);
-            this.pnl_centro.Name = "pnl_centro";
-            this.pnl_centro.Size = new System.Drawing.Size(1350, 529);
-            this.pnl_centro.TabIndex = 2;
-            // 
             // frm_menuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -837,7 +783,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.pnl_contenedor);
-            this.panel_slide.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_menuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -845,22 +790,22 @@
             this.pnl_top.ResumeLayout(false);
             this.pnl_tarjetaReportes.ResumeLayout(false);
             this.pnl_tarjetaReportes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnl_tarjetaRecibos.ResumeLayout(false);
             this.pnl_tarjetaRecibos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnl_tarjetaPensionados.ResumeLayout(false);
             this.pnl_tarjetaPensionados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_tarjetaEmpleados.ResumeLayout(false);
             this.pnl_tarjetaEmpleados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_tarjetaCoches.ResumeLayout(false);
             this.pnl_tarjetaCoches.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_barratop.ResumeLayout(false);
             this.pnl_barratop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
@@ -870,7 +815,6 @@
 
         private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Button btn_expandir_contraer;
-        private BunifuAnimatorNS.BunifuTransition panel_slide;
         private System.Windows.Forms.Panel pnl_contenedor;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel pnl_barratop;
