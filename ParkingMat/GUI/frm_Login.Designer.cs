@@ -40,9 +40,12 @@
             this.txt_contrase = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_correo = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.login = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lbl_USNOVALID = new System.Windows.Forms.Label();
+            this.pick_USNOVALID = new System.Windows.Forms.PictureBox();
             this.pnl_centro.SuspendLayout();
             this.pnl_fontLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pick_USNOVALID)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_centro
@@ -59,6 +62,8 @@
             // 
             this.pnl_fontLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnl_fontLogin.BackColor = System.Drawing.Color.White;
+            this.pnl_fontLogin.Controls.Add(this.pick_USNOVALID);
+            this.pnl_fontLogin.Controls.Add(this.lbl_USNOVALID);
             this.pnl_fontLogin.Controls.Add(this.pictureBox1);
             this.pnl_fontLogin.Controls.Add(this.label2);
             this.pnl_fontLogin.Controls.Add(this.label1);
@@ -226,6 +231,30 @@
             this.login.ElipseRadius = 25;
             this.login.TargetControl = this.pnl_fontLogin;
             // 
+            // lbl_USNOVALID
+            // 
+            this.lbl_USNOVALID.AutoSize = true;
+            this.lbl_USNOVALID.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_USNOVALID.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_USNOVALID.ForeColor = System.Drawing.Color.Red;
+            this.lbl_USNOVALID.Location = new System.Drawing.Point(79, 296);
+            this.lbl_USNOVALID.Name = "lbl_USNOVALID";
+            this.lbl_USNOVALID.Size = new System.Drawing.Size(184, 16);
+            this.lbl_USNOVALID.TabIndex = 6;
+            this.lbl_USNOVALID.Text = "Usuario o contraseña no validos!";
+            this.lbl_USNOVALID.Visible = false;
+            // 
+            // pick_USNOVALID
+            // 
+            this.pick_USNOVALID.Image = ((System.Drawing.Image)(resources.GetObject("pick_USNOVALID.Image")));
+            this.pick_USNOVALID.Location = new System.Drawing.Point(57, 296);
+            this.pick_USNOVALID.Name = "pick_USNOVALID";
+            this.pick_USNOVALID.Size = new System.Drawing.Size(16, 16);
+            this.pick_USNOVALID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pick_USNOVALID.TabIndex = 7;
+            this.pick_USNOVALID.TabStop = false;
+            this.pick_USNOVALID.Visible = false;
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +269,7 @@
             this.pnl_fontLogin.ResumeLayout(false);
             this.pnl_fontLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pick_USNOVALID)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +286,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_IniciarSesion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pick_USNOVALID;
+        private System.Windows.Forms.Label lbl_USNOVALID;
     }
 }

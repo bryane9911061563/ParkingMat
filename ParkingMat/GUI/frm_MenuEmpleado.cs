@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ParkingMat.BO;
 
 namespace ParkingMat.GUI
 {
@@ -15,8 +16,34 @@ namespace ParkingMat.GUI
         public frm_MenuEmpleado()
         {
             InitializeComponent();
-            btn_parquimetro.Height = 47;
-            btn_parquimetro.Location = new Point(9, 54);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            AbrirFormularios<frm_ParkingEmpleado>();
+
+
+        }
+        //Metodo para abrir un form dentro del contenedor
+        public void AbrirFormularios<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = pnl_contenedor.Controls.OfType<MiForm>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.Dock = DockStyle.Fill;
+                pnl_contenedor.Controls.Add(formulario);
+                pnl_contenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)
@@ -31,107 +58,46 @@ namespace ParkingMat.GUI
             Salir.ShowDialog();
         }
 
+
         //Cambio de color del indicador
         private void btn_parquimetro_Click(object sender, EventArgs e)
         {
-            pnl_indicador.BackColor = Color.FromArgb(115, 194, 125);
-            btn_parquimetro.Height = 47;
-            btn_parquimetro.Location = new Point(9, 54);
+           
+                pnl_indicador.BackColor = Color.FromArgb(115, 194, 125);
+                AbrirFormularios<frm_ParkingEmpleado>();
+           
 
-            //vehiculos
-            btn_vehiculos.Height = 37;
-            btn_vehiculos.Location = new Point(277, 64);
-            //Clientes
-            btn_clientes.Height = 37;
-            btn_clientes.Location = new Point(545, 64);
-            //Pensionados
-            btn_pensionados.Height = 37;
-            btn_pensionados.Location = new Point(813, 64);
-            //Recibos
-            btn_recibos.Height = 37;
-            btn_recibos.Location = new Point(1081, 64);
+            
         }
 
         private void btn_vehiculos_Click(object sender, EventArgs e)
         {
+
+            AbrirFormularios<frm_VehiculosEmpleado>();
             pnl_indicador.BackColor = Color.FromArgb(230, 142, 138);
-            btn_vehiculos.Height = 47;
-            btn_vehiculos.Location = new Point(277, 54);
-
-            //parking
-            btn_parquimetro.Height = 37;
-            btn_parquimetro.Location = new Point(9, 64);
-            //Clientes
-            btn_clientes.Height = 37;
-            btn_clientes.Location = new Point(545, 64);
-            //Pensionados
-            btn_pensionados.Height = 37;
-            btn_pensionados.Location = new Point(813, 64);
-            //Recibos
-            btn_recibos.Height = 37;
-            btn_recibos.Location = new Point(1081, 64);
+               
         }
 
-        private void btn_clientes_Click(object sender, EventArgs e)
-        {
-            pnl_indicador.BackColor = Color.FromArgb(130, 172, 222);
-            btn_clientes.Height = 47;
-            btn_clientes.Location = new Point(545, 54);
-
-            //vehiculos
-            btn_vehiculos.Height = 37;
-            btn_vehiculos.Location = new Point(277, 64);
-            //parking
-            btn_parquimetro.Height = 37;
-            btn_parquimetro.Location = new Point(9, 64);
-
-            //Pensionados
-            btn_pensionados.Height = 37;
-            btn_pensionados.Location = new Point(813, 64);
-            //Recibos
-            btn_recibos.Height = 37;
-            btn_recibos.Location = new Point(1081, 64);
-        }
+       
 
         private void btn_pensionados_Click(object sender, EventArgs e)
         {
             pnl_indicador.BackColor = Color.FromArgb(250, 235, 166);
-            btn_pensionados.Height = 47;
-            btn_pensionados.Location = new Point(813, 54);
-
-            //vehiculos
-            btn_vehiculos.Height = 37;
-            btn_vehiculos.Location = new Point(277, 64);
-            //parking
-            btn_parquimetro.Height = 37;
-            btn_parquimetro.Location = new Point(9, 64);
-            //Clientes
-            btn_clientes.Height = 37;
-            btn_clientes.Location = new Point(545, 64);
-
-            //Recibos
-            btn_recibos.Height = 37;
-            btn_recibos.Location = new Point(1081, 64);
+            AbrirFormularios<frm_AdminPensionados>();
+            
         }
 
         private void btn_recibos_Click(object sender, EventArgs e)
         {
+            AbrirFormularios<frm_ReportesEmpleado>();
             pnl_indicador.BackColor = Color.FromArgb(213, 186, 223);
-            btn_recibos.Height = 47;
-            btn_recibos.Location = new Point(1081, 54);
+            
+        }
 
-            //vehiculos
-            btn_vehiculos.Height = 37;
-            btn_vehiculos.Location = new Point(277, 64);
-            //parking
-            btn_parquimetro.Height = 37;
-            btn_parquimetro.Location = new Point(9, 64);
-            //Clientes
-            btn_clientes.Height = 37;
-            btn_clientes.Location = new Point(545, 64);
-            //Pensionados
-            btn_pensionados.Height = 37;
-            btn_pensionados.Location = new Point(813, 64);
+        private void tmr_Hora_Tick(object sender, EventArgs e)
+        {
+            CLs_TIempoActual tiempo = new CLs_TIempoActual();
+            lbl_hora.Text = tiempo.HoraActualTimer();
         }
     }
 }

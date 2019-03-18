@@ -61,13 +61,13 @@ namespace ParkingMat.GUI
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void btn_IniciarSesion_Click(object sender, EventArgs e)
         {
             Jefe_BO jefe = new Jefe_BO();
             EmpleadoUS_BO empleado = new EmpleadoUS_BO();
-
             if (jefe.Nombre==txt_correo.Text && jefe.Clave==txt_contrase.Text) {
                 frm_menuAdmin obj = new frm_menuAdmin();
                 obj.Show();
@@ -83,8 +83,10 @@ namespace ParkingMat.GUI
                 }
                 else
                 {
-                    MessageBox.Show("Usuario invalido");
-
+                    pick_USNOVALID.Visible = true;
+                    lbl_USNOVALID.Visible = true;
+                    frm_pruebaDialog OBJOK = new frm_pruebaDialog();
+                    OBJOK.ShowDialog();
                 }
             }
         }

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ParkingMat.GUI
 {
-    public partial class frm_AdminEmpleados : Form
+    public partial class frm_VehiculosEmpleado : Form
     {
-        public frm_AdminEmpleados()
+        public frm_VehiculosEmpleado()
         {
             InitializeComponent();
-        }
-
-        private void btn_Cerrar_Click(object sender, EventArgs e)
-        {
-            frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG();
-            ERROR.ShowDialog();
         }
     }
 }

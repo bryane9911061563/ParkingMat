@@ -28,30 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MenuEmpleado));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_contenedor = new System.Windows.Forms.Panel();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnl_indicador = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btn_recibos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_pensionados = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_vehiculos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_parquimetro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_recibos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_pensionados = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_clientes = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_vehiculos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_parquimetro = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnl_contenedor = new System.Windows.Forms.Panel();
+            this.tmr_Hora = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl_hora);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pnl_indicador);
             this.panel1.Controls.Add(this.btn_recibos);
             this.panel1.Controls.Add(this.btn_pensionados);
-            this.panel1.Controls.Add(this.btn_clientes);
             this.panel1.Controls.Add(this.btn_vehiculos);
             this.panel1.Controls.Add(this.btn_parquimetro);
             this.panel1.Controls.Add(this.btn_Salir);
@@ -65,13 +69,25 @@
             this.panel1.Size = new System.Drawing.Size(1350, 121);
             this.panel1.TabIndex = 0;
             // 
-            // pnl_contenedor
+            // lbl_hora
             // 
-            this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_contenedor.Location = new System.Drawing.Point(0, 121);
-            this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1350, 608);
-            this.pnl_contenedor.TabIndex = 1;
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Location = new System.Drawing.Point(674, 13);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(74, 23);
+            this.lbl_hora.TabIndex = 35;
+            this.lbl_hora.Text = "--:--.--";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(602, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 23);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Hora:";
             // 
             // pnl_indicador
             // 
@@ -82,28 +98,149 @@
             this.pnl_indicador.Size = new System.Drawing.Size(1350, 25);
             this.pnl_indicador.TabIndex = 0;
             // 
-            // label11
+            // btn_recibos
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(40, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 24);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "arkingMat";
+            this.btn_recibos.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
+            this.btn_recibos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_recibos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
+            this.btn_recibos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_recibos.BorderRadius = 6;
+            this.btn_recibos.ButtonText = "Recibos";
+            this.btn_recibos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_recibos.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_recibos.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_recibos.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_recibos.Iconimage")));
+            this.btn_recibos.Iconimage_right = null;
+            this.btn_recibos.Iconimage_right_Selected = null;
+            this.btn_recibos.Iconimage_Selected = null;
+            this.btn_recibos.IconMarginLeft = 0;
+            this.btn_recibos.IconMarginRight = 0;
+            this.btn_recibos.IconRightVisible = true;
+            this.btn_recibos.IconRightZoom = 0D;
+            this.btn_recibos.IconVisible = true;
+            this.btn_recibos.IconZoom = 45D;
+            this.btn_recibos.IsTab = false;
+            this.btn_recibos.Location = new System.Drawing.Point(995, 64);
+            this.btn_recibos.Name = "btn_recibos";
+            this.btn_recibos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
+            this.btn_recibos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btn_recibos.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_recibos.selected = false;
+            this.btn_recibos.Size = new System.Drawing.Size(320, 37);
+            this.btn_recibos.TabIndex = 33;
+            this.btn_recibos.Text = "Recibos";
+            this.btn_recibos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_recibos.Textcolor = System.Drawing.Color.White;
+            this.btn_recibos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_recibos.Click += new System.EventHandler(this.btn_recibos_Click);
             // 
-            // pictureBox6
+            // btn_pensionados
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 25;
-            this.pictureBox6.TabStop = false;
+            this.btn_pensionados.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
+            this.btn_pensionados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_pensionados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
+            this.btn_pensionados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_pensionados.BorderRadius = 6;
+            this.btn_pensionados.ButtonText = "Pensionados";
+            this.btn_pensionados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pensionados.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_pensionados.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_pensionados.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_pensionados.Iconimage")));
+            this.btn_pensionados.Iconimage_right = null;
+            this.btn_pensionados.Iconimage_right_Selected = null;
+            this.btn_pensionados.Iconimage_Selected = null;
+            this.btn_pensionados.IconMarginLeft = 0;
+            this.btn_pensionados.IconMarginRight = 0;
+            this.btn_pensionados.IconRightVisible = true;
+            this.btn_pensionados.IconRightZoom = 0D;
+            this.btn_pensionados.IconVisible = true;
+            this.btn_pensionados.IconZoom = 45D;
+            this.btn_pensionados.IsTab = false;
+            this.btn_pensionados.Location = new System.Drawing.Point(675, 64);
+            this.btn_pensionados.Name = "btn_pensionados";
+            this.btn_pensionados.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
+            this.btn_pensionados.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btn_pensionados.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_pensionados.selected = false;
+            this.btn_pensionados.Size = new System.Drawing.Size(320, 37);
+            this.btn_pensionados.TabIndex = 32;
+            this.btn_pensionados.Text = "Pensionados";
+            this.btn_pensionados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_pensionados.Textcolor = System.Drawing.Color.White;
+            this.btn_pensionados.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pensionados.Click += new System.EventHandler(this.btn_pensionados_Click);
+            // 
+            // btn_vehiculos
+            // 
+            this.btn_vehiculos.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
+            this.btn_vehiculos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_vehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
+            this.btn_vehiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_vehiculos.BorderRadius = 6;
+            this.btn_vehiculos.ButtonText = "Vehículos";
+            this.btn_vehiculos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_vehiculos.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_vehiculos.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_vehiculos.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_vehiculos.Iconimage")));
+            this.btn_vehiculos.Iconimage_right = null;
+            this.btn_vehiculos.Iconimage_right_Selected = null;
+            this.btn_vehiculos.Iconimage_Selected = null;
+            this.btn_vehiculos.IconMarginLeft = 0;
+            this.btn_vehiculos.IconMarginRight = 0;
+            this.btn_vehiculos.IconRightVisible = true;
+            this.btn_vehiculos.IconRightZoom = 0D;
+            this.btn_vehiculos.IconVisible = true;
+            this.btn_vehiculos.IconZoom = 45D;
+            this.btn_vehiculos.IsTab = false;
+            this.btn_vehiculos.Location = new System.Drawing.Point(355, 64);
+            this.btn_vehiculos.Name = "btn_vehiculos";
+            this.btn_vehiculos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
+            this.btn_vehiculos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btn_vehiculos.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_vehiculos.selected = false;
+            this.btn_vehiculos.Size = new System.Drawing.Size(320, 37);
+            this.btn_vehiculos.TabIndex = 30;
+            this.btn_vehiculos.Text = "Vehículos";
+            this.btn_vehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_vehiculos.Textcolor = System.Drawing.Color.White;
+            this.btn_vehiculos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vehiculos.Click += new System.EventHandler(this.btn_vehiculos_Click);
+            // 
+            // btn_parquimetro
+            // 
+            this.btn_parquimetro.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
+            this.btn_parquimetro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_parquimetro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
+            this.btn_parquimetro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_parquimetro.BorderRadius = 6;
+            this.btn_parquimetro.ButtonText = "Parquímetro";
+            this.btn_parquimetro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_parquimetro.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_parquimetro.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_parquimetro.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_parquimetro.Iconimage")));
+            this.btn_parquimetro.Iconimage_right = null;
+            this.btn_parquimetro.Iconimage_right_Selected = null;
+            this.btn_parquimetro.Iconimage_Selected = null;
+            this.btn_parquimetro.IconMarginLeft = 0;
+            this.btn_parquimetro.IconMarginRight = 0;
+            this.btn_parquimetro.IconRightVisible = true;
+            this.btn_parquimetro.IconRightZoom = 0D;
+            this.btn_parquimetro.IconVisible = true;
+            this.btn_parquimetro.IconZoom = 45D;
+            this.btn_parquimetro.IsTab = false;
+            this.btn_parquimetro.Location = new System.Drawing.Point(35, 64);
+            this.btn_parquimetro.Name = "btn_parquimetro";
+            this.btn_parquimetro.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
+            this.btn_parquimetro.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btn_parquimetro.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_parquimetro.selected = false;
+            this.btn_parquimetro.Size = new System.Drawing.Size(320, 37);
+            this.btn_parquimetro.TabIndex = 29;
+            this.btn_parquimetro.Text = "Parquímetro";
+            this.btn_parquimetro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_parquimetro.Textcolor = System.Drawing.Color.White;
+            this.btn_parquimetro.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_parquimetro.Click += new System.EventHandler(this.btn_parquimetro_Click);
             // 
             // btn_Salir
             // 
@@ -211,185 +348,41 @@
             this.btn_cerrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // btn_recibos
+            // pictureBox6
             // 
-            this.btn_recibos.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
-            this.btn_recibos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_recibos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
-            this.btn_recibos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_recibos.BorderRadius = 6;
-            this.btn_recibos.ButtonText = "Recibos";
-            this.btn_recibos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_recibos.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_recibos.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_recibos.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_recibos.Iconimage")));
-            this.btn_recibos.Iconimage_right = null;
-            this.btn_recibos.Iconimage_right_Selected = null;
-            this.btn_recibos.Iconimage_Selected = null;
-            this.btn_recibos.IconMarginLeft = 0;
-            this.btn_recibos.IconMarginRight = 0;
-            this.btn_recibos.IconRightVisible = true;
-            this.btn_recibos.IconRightZoom = 0D;
-            this.btn_recibos.IconVisible = true;
-            this.btn_recibos.IconZoom = 45D;
-            this.btn_recibos.IsTab = false;
-            this.btn_recibos.Location = new System.Drawing.Point(1081, 64);
-            this.btn_recibos.Name = "btn_recibos";
-            this.btn_recibos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
-            this.btn_recibos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btn_recibos.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_recibos.selected = false;
-            this.btn_recibos.Size = new System.Drawing.Size(260, 37);
-            this.btn_recibos.TabIndex = 33;
-            this.btn_recibos.Text = "Recibos";
-            this.btn_recibos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_recibos.Textcolor = System.Drawing.Color.White;
-            this.btn_recibos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_recibos.Click += new System.EventHandler(this.btn_recibos_Click);
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 25;
+            this.pictureBox6.TabStop = false;
             // 
-            // btn_pensionados
+            // label11
             // 
-            this.btn_pensionados.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
-            this.btn_pensionados.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_pensionados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
-            this.btn_pensionados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pensionados.BorderRadius = 6;
-            this.btn_pensionados.ButtonText = "Pensionados";
-            this.btn_pensionados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_pensionados.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_pensionados.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_pensionados.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_pensionados.Iconimage")));
-            this.btn_pensionados.Iconimage_right = null;
-            this.btn_pensionados.Iconimage_right_Selected = null;
-            this.btn_pensionados.Iconimage_Selected = null;
-            this.btn_pensionados.IconMarginLeft = 0;
-            this.btn_pensionados.IconMarginRight = 0;
-            this.btn_pensionados.IconRightVisible = true;
-            this.btn_pensionados.IconRightZoom = 0D;
-            this.btn_pensionados.IconVisible = true;
-            this.btn_pensionados.IconZoom = 45D;
-            this.btn_pensionados.IsTab = false;
-            this.btn_pensionados.Location = new System.Drawing.Point(813, 64);
-            this.btn_pensionados.Name = "btn_pensionados";
-            this.btn_pensionados.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
-            this.btn_pensionados.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btn_pensionados.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_pensionados.selected = false;
-            this.btn_pensionados.Size = new System.Drawing.Size(260, 37);
-            this.btn_pensionados.TabIndex = 32;
-            this.btn_pensionados.Text = "Pensionados";
-            this.btn_pensionados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_pensionados.Textcolor = System.Drawing.Color.White;
-            this.btn_pensionados.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pensionados.Click += new System.EventHandler(this.btn_pensionados_Click);
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(40, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 24);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "arkingMat";
             // 
-            // btn_clientes
+            // pnl_contenedor
             // 
-            this.btn_clientes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(172)))), ((int)(((byte)(222)))));
-            this.btn_clientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(172)))), ((int)(((byte)(222)))));
-            this.btn_clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_clientes.BorderRadius = 6;
-            this.btn_clientes.ButtonText = "Clientes";
-            this.btn_clientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_clientes.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_clientes.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_clientes.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_clientes.Iconimage")));
-            this.btn_clientes.Iconimage_right = null;
-            this.btn_clientes.Iconimage_right_Selected = null;
-            this.btn_clientes.Iconimage_Selected = null;
-            this.btn_clientes.IconMarginLeft = 0;
-            this.btn_clientes.IconMarginRight = 0;
-            this.btn_clientes.IconRightVisible = true;
-            this.btn_clientes.IconRightZoom = 0D;
-            this.btn_clientes.IconVisible = true;
-            this.btn_clientes.IconZoom = 45D;
-            this.btn_clientes.IsTab = false;
-            this.btn_clientes.Location = new System.Drawing.Point(545, 64);
-            this.btn_clientes.Name = "btn_clientes";
-            this.btn_clientes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(172)))), ((int)(((byte)(222)))));
-            this.btn_clientes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btn_clientes.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_clientes.selected = false;
-            this.btn_clientes.Size = new System.Drawing.Size(260, 37);
-            this.btn_clientes.TabIndex = 31;
-            this.btn_clientes.Text = "Clientes";
-            this.btn_clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_clientes.Textcolor = System.Drawing.Color.White;
-            this.btn_clientes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
+            this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_contenedor.Location = new System.Drawing.Point(0, 121);
+            this.pnl_contenedor.Name = "pnl_contenedor";
+            this.pnl_contenedor.Size = new System.Drawing.Size(1350, 608);
+            this.pnl_contenedor.TabIndex = 1;
             // 
-            // btn_vehiculos
+            // tmr_Hora
             // 
-            this.btn_vehiculos.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
-            this.btn_vehiculos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_vehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
-            this.btn_vehiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_vehiculos.BorderRadius = 6;
-            this.btn_vehiculos.ButtonText = "Vehículos";
-            this.btn_vehiculos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_vehiculos.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_vehiculos.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_vehiculos.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_vehiculos.Iconimage")));
-            this.btn_vehiculos.Iconimage_right = null;
-            this.btn_vehiculos.Iconimage_right_Selected = null;
-            this.btn_vehiculos.Iconimage_Selected = null;
-            this.btn_vehiculos.IconMarginLeft = 0;
-            this.btn_vehiculos.IconMarginRight = 0;
-            this.btn_vehiculos.IconRightVisible = true;
-            this.btn_vehiculos.IconRightZoom = 0D;
-            this.btn_vehiculos.IconVisible = true;
-            this.btn_vehiculos.IconZoom = 45D;
-            this.btn_vehiculos.IsTab = false;
-            this.btn_vehiculos.Location = new System.Drawing.Point(277, 64);
-            this.btn_vehiculos.Name = "btn_vehiculos";
-            this.btn_vehiculos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
-            this.btn_vehiculos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btn_vehiculos.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_vehiculos.selected = false;
-            this.btn_vehiculos.Size = new System.Drawing.Size(260, 37);
-            this.btn_vehiculos.TabIndex = 30;
-            this.btn_vehiculos.Text = "Vehículos";
-            this.btn_vehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_vehiculos.Textcolor = System.Drawing.Color.White;
-            this.btn_vehiculos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_vehiculos.Click += new System.EventHandler(this.btn_vehiculos_Click);
-            // 
-            // btn_parquimetro
-            // 
-            this.btn_parquimetro.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
-            this.btn_parquimetro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_parquimetro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
-            this.btn_parquimetro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_parquimetro.BorderRadius = 6;
-            this.btn_parquimetro.ButtonText = "Parquímetro";
-            this.btn_parquimetro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_parquimetro.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_parquimetro.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_parquimetro.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_parquimetro.Iconimage")));
-            this.btn_parquimetro.Iconimage_right = null;
-            this.btn_parquimetro.Iconimage_right_Selected = null;
-            this.btn_parquimetro.Iconimage_Selected = null;
-            this.btn_parquimetro.IconMarginLeft = 0;
-            this.btn_parquimetro.IconMarginRight = 0;
-            this.btn_parquimetro.IconRightVisible = true;
-            this.btn_parquimetro.IconRightZoom = 0D;
-            this.btn_parquimetro.IconVisible = true;
-            this.btn_parquimetro.IconZoom = 45D;
-            this.btn_parquimetro.IsTab = false;
-            this.btn_parquimetro.Location = new System.Drawing.Point(9, 64);
-            this.btn_parquimetro.Name = "btn_parquimetro";
-            this.btn_parquimetro.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
-            this.btn_parquimetro.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btn_parquimetro.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_parquimetro.selected = false;
-            this.btn_parquimetro.Size = new System.Drawing.Size(260, 37);
-            this.btn_parquimetro.TabIndex = 29;
-            this.btn_parquimetro.Text = "Parquímetro";
-            this.btn_parquimetro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_parquimetro.Textcolor = System.Drawing.Color.White;
-            this.btn_parquimetro.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_parquimetro.Click += new System.EventHandler(this.btn_parquimetro_Click);
+            this.tmr_Hora.Enabled = true;
+            this.tmr_Hora.Tick += new System.EventHandler(this.tmr_Hora_Tick);
             // 
             // frm_MenuEmpleado
             // 
@@ -421,8 +414,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_recibos;
         private Bunifu.Framework.UI.BunifuFlatButton btn_pensionados;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_clientes;
         private Bunifu.Framework.UI.BunifuFlatButton btn_vehiculos;
         private Bunifu.Framework.UI.BunifuFlatButton btn_parquimetro;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer tmr_Hora;
     }
 }

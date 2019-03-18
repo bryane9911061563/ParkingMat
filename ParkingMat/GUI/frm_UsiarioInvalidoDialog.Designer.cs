@@ -1,6 +1,6 @@
 ﻿namespace ParkingMat.GUI
 {
-    partial class frm_SalirDialog
+    partial class frm_UsiarioInvalidoDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,58 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SalirDialog));
-            this.btn_Cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_UsiarioInvalidoDialog));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.TransitionFade = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_BarraEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Cancelar
+            // panel1
             // 
-            this.btn_Cancelar.Activecolor = System.Drawing.Color.White;
-            this.btn_Cancelar.AllowDrop = true;
-            this.btn_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Cancelar.BackColor = System.Drawing.Color.White;
-            this.btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cancelar.BorderRadius = 7;
-            this.btn_Cancelar.ButtonText = "Cancelar";
-            this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cancelar.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Cancelar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Cancelar.Iconimage = null;
-            this.btn_Cancelar.Iconimage_right = null;
-            this.btn_Cancelar.Iconimage_right_Selected = null;
-            this.btn_Cancelar.Iconimage_Selected = null;
-            this.btn_Cancelar.IconMarginLeft = 0;
-            this.btn_Cancelar.IconMarginRight = 0;
-            this.btn_Cancelar.IconRightVisible = true;
-            this.btn_Cancelar.IconRightZoom = 0D;
-            this.btn_Cancelar.IconVisible = true;
-            this.btn_Cancelar.IconZoom = 90D;
-            this.btn_Cancelar.IsTab = false;
-            this.btn_Cancelar.Location = new System.Drawing.Point(47, 159);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Normalcolor = System.Drawing.Color.White;
-            this.btn_Cancelar.OnHovercolor = System.Drawing.Color.Silver;
-            this.btn_Cancelar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Cancelar.selected = false;
-            this.btn_Cancelar.Size = new System.Drawing.Size(179, 48);
-            this.btn_Cancelar.TabIndex = 5;
-            this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Cancelar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Cancelar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Location = new System.Drawing.Point(0, 32);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(488, 232);
+            this.panel1.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(150, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(262, 40);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Se ha producido un error al intentar\r\nejecutar la solicitud\r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Product Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(149, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 30);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Error";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_Salir
             // 
@@ -89,7 +93,7 @@
             this.btn_Salir.BackColor = System.Drawing.Color.Crimson;
             this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Salir.BorderRadius = 7;
-            this.btn_Salir.ButtonText = "Salir";
+            this.btn_Salir.ButtonText = "Aceptar";
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Salir.Iconcolor = System.Drawing.Color.Transparent;
@@ -104,7 +108,7 @@
             this.btn_Salir.IconVisible = true;
             this.btn_Salir.IconZoom = 90D;
             this.btn_Salir.IsTab = false;
-            this.btn_Salir.Location = new System.Drawing.Point(249, 159);
+            this.btn_Salir.Location = new System.Drawing.Point(155, 159);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Normalcolor = System.Drawing.Color.Crimson;
             this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -112,58 +116,17 @@
             this.btn_Salir.selected = false;
             this.btn_Salir.Size = new System.Drawing.Size(179, 48);
             this.btn_Salir.TabIndex = 4;
-            this.btn_Salir.Text = "Salir";
+            this.btn_Salir.Text = "Aceptar";
             this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Salir.Textcolor = System.Drawing.Color.White;
             this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btn_Cancelar);
-            this.panel1.Controls.Add(this.btn_Salir);
-            this.panel1.Location = new System.Drawing.Point(0, 31);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(488, 232);
-            this.panel1.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(150, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 40);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "El programa terminará la sesión y\r\ncerrará el programa";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(135, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 30);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Está seguro que desea salir?";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // pnl_BarraEstado
             // 
+            this.pnl_BarraEstado.BackColor = System.Drawing.Color.White;
             this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
             this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BarraEstado.Controls.Add(this.pictureBox2);
             this.pnl_BarraEstado.Controls.Add(this.btn_cerrar);
             this.pnl_BarraEstado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_BarraEstado.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
@@ -174,7 +137,7 @@
             this.pnl_BarraEstado.Name = "pnl_BarraEstado";
             this.pnl_BarraEstado.Quality = 10;
             this.pnl_BarraEstado.Size = new System.Drawing.Size(488, 31);
-            this.pnl_BarraEstado.TabIndex = 6;
+            this.pnl_BarraEstado.TabIndex = 8;
             // 
             // btn_cerrar
             // 
@@ -209,44 +172,47 @@
             this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cerrar.Textcolor = System.Drawing.Color.White;
             this.btn_cerrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // TransitionFade
+            // pictureBox2
             // 
-            this.TransitionFade.Delay = 0;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
-            // frm_SalirDialog
+            // frm_UsiarioInvalidoDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(488, 264);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_BarraEstado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_SalirDialog";
-            this.Opacity = 0D;
+            this.Name = "frm_UsiarioInvalidoDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_SalirDialog";
-            this.Load += new System.EventHandler(this.frm_SalirDialog_Load);
+            this.Text = "frm_UsiarioInvalidoDialog";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_BarraEstado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Cancelar;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
-        private Bunifu.Framework.UI.BunifuGradientPanel pnl_BarraEstado;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuFormFadeTransition TransitionFade;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
+        private Bunifu.Framework.UI.BunifuGradientPanel pnl_BarraEstado;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
