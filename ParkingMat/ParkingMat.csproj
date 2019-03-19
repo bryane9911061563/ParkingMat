@@ -54,11 +54,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Cajones_BO.cs" />
+    <Compile Include="BO\Cliente_BO.cs" />
     <Compile Include="BO\Cls_AppRunning.cs" />
+    <Compile Include="BO\CLs_TIempoActual.cs" />
+    <Compile Include="BO\EmpleadoUS_BO.cs" />
+    <Compile Include="BO\Sucursal_BO.cs" />
     <Compile Include="BO\Empleado_BO.cs" />
     <Compile Include="BO\Jefe_BO.cs" />
+    <Compile Include="BO\Recibo_BO.cs" />
+    <Compile Include="DAO\Cliente_DAO.cs" />
     <Compile Include="DAO\Conexion_DAO.cs" />
+    <Compile Include="DAO\Cajones_DAO.cs" />
+    <Compile Include="DAO\Sucursal_DAO.cs" />
     <Compile Include="DAO\Empleado_DAO.cs" />
+    <Compile Include="DAO\Recibo_DAO.cs" />
+    <Compile Include="GUI\A-EjemploBotonCajon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\A-EjemploBotonCajon.Designer.cs">
+      <DependentUpon>A-EjemploBotonCajon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmAdminVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +93,12 @@
     <Compile Include="GUI\frm_AdminPensionados.Designer.cs">
       <DependentUpon>frm_AdminPensionados.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_AdminPrincipalBeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AdminPrincipalBeta.Designer.cs">
+      <DependentUpon>frm_AdminPrincipalBeta.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_AdminRecibos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +111,29 @@
     <Compile Include="GUI\frm_AdminSucursales.Designer.cs">
       <DependentUpon>frm_AdminSucursales.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_AdmiReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AdmiReportes.Designer.cs">
+      <DependentUpon>frm_AdmiReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_AgregarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frm_AgregarVehiculo.Designer.cs">
       <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_CerrarSesionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_CerrarSesionDialog.Designer.cs">
+      <DependentUpon>frm_CerrarSesionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_ERROR_DIALOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_ERROR_DIALOG.Designer.cs">
+      <DependentUpon>frm_ERROR_DIALOG.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_Login.cs">
       <SubType>Form</SubType>
@@ -101,11 +141,35 @@
     <Compile Include="GUI\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frm_PrincipalAdmin.cs">
+    <Compile Include="GUI\frm_menuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frm_PrincipalAdmin.Designer.cs">
-      <DependentUpon>frm_PrincipalAdmin.cs</DependentUpon>
+    <Compile Include="GUI\frm_menuAdmin.Designer.cs">
+      <DependentUpon>frm_menuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_MenuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_MenuEmpleado.Designer.cs">
+      <DependentUpon>frm_MenuEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_ParkingEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_ParkingEmpleado.Designer.cs">
+      <DependentUpon>frm_ParkingEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_pruebaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_pruebaDialog.Designer.cs">
+      <DependentUpon>frm_pruebaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_ReportesEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_ReportesEmpleado.Designer.cs">
+      <DependentUpon>frm_ReportesEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_SalirDialog.cs">
       <SubType>Form</SubType>
@@ -113,8 +177,23 @@
     <Compile Include="GUI\frm_SalirDialog.Designer.cs">
       <DependentUpon>frm_SalirDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_UsiarioInvalidoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_UsiarioInvalidoDialog.Designer.cs">
+      <DependentUpon>frm_UsiarioInvalidoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_VehiculosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_VehiculosEmpleado.Designer.cs">
+      <DependentUpon>frm_VehiculosEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\A-EjemploBotonCajon.resx">
+      <DependentUpon>A-EjemploBotonCajon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmAdminVehiculo.resx">
       <DependentUpon>frmAdminVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,23 +203,53 @@
     <EmbeddedResource Include="GUI\frm_AdminPensionados.resx">
       <DependentUpon>frm_AdminPensionados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdminPrincipalBeta.resx">
+      <DependentUpon>frm_AdminPrincipalBeta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AdminRecibos.resx">
       <DependentUpon>frm_AdminRecibos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AdminSucursales.resx">
       <DependentUpon>frm_AdminSucursales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdmiReportes.resx">
+      <DependentUpon>frm_AdmiReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AgregarVehiculo.resx">
       <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_CerrarSesionDialog.resx">
+      <DependentUpon>frm_CerrarSesionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_ERROR_DIALOG.resx">
+      <DependentUpon>frm_ERROR_DIALOG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frm_PrincipalAdmin.resx">
-      <DependentUpon>frm_PrincipalAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frm_menuAdmin.resx">
+      <DependentUpon>frm_menuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_MenuEmpleado.resx">
+      <DependentUpon>frm_MenuEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_ParkingEmpleado.resx">
+      <DependentUpon>frm_ParkingEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_pruebaDialog.resx">
+      <DependentUpon>frm_pruebaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_ReportesEmpleado.resx">
+      <DependentUpon>frm_ReportesEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_SalirDialog.resx">
       <DependentUpon>frm_SalirDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_UsiarioInvalidoDialog.resx">
+      <DependentUpon>frm_UsiarioInvalidoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_VehiculosEmpleado.resx">
+      <DependentUpon>frm_VehiculosEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

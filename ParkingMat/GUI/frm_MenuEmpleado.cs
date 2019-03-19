@@ -13,14 +13,18 @@ namespace ParkingMat.GUI
 {
     public partial class frm_MenuEmpleado : Form
     {
-        public frm_MenuEmpleado()
+        private int Sucursal;
+
+        public int Sucursal1 { get => Sucursal; set => Sucursal = value; }
+
+        public frm_MenuEmpleado(int sucu)
         {
             InitializeComponent();
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             AbrirFormularios<frm_ParkingEmpleado>();
-
+            Sucursal1 = sucu;
 
         }
         //Metodo para abrir un form dentro del contenedor
@@ -65,9 +69,6 @@ namespace ParkingMat.GUI
            
                 pnl_indicador.BackColor = Color.FromArgb(115, 194, 125);
                 AbrirFormularios<frm_ParkingEmpleado>();
-           
-
-            
         }
 
         private void btn_vehiculos_Click(object sender, EventArgs e)

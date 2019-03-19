@@ -34,17 +34,19 @@
             this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pick_alert = new System.Windows.Forms.PictureBox();
             this.icon_delay = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pick_alert)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(56, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 26);
+            this.label1.Size = new System.Drawing.Size(379, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "No se ha logrado ejecutar la solicitud!!";
             // 
@@ -71,7 +73,7 @@
             this.btn_Salir.IconVisible = true;
             this.btn_Salir.IconZoom = 90D;
             this.btn_Salir.IsTab = false;
-            this.btn_Salir.Location = new System.Drawing.Point(138, 173);
+            this.btn_Salir.Location = new System.Drawing.Point(150, 216);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_Salir.OnHovercolor = System.Drawing.Color.Red;
@@ -82,7 +84,7 @@
             this.btn_Salir.Text = "Aceptar";
             this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Salir.Textcolor = System.Drawing.Color.White;
-            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // pick_alert
@@ -102,12 +104,36 @@
             this.icon_delay.Interval = 950;
             this.icon_delay.Tick += new System.EventHandler(this.icon_delay_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(56, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Por favor:";
+            // 
+            // lbl_error
+            // 
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_error.ForeColor = System.Drawing.Color.White;
+            this.lbl_error.Location = new System.Drawing.Point(167, 170);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(30, 25);
+            this.lbl_error.TabIndex = 11;
+            this.lbl_error.Text = "...";
+            // 
             // frm_ERROR_DIALOG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(472, 225);
+            this.ClientSize = new System.Drawing.Size(497, 273);
+            this.Controls.Add(this.lbl_error);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.pick_alert);
@@ -127,5 +153,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
         private System.Windows.Forms.PictureBox pick_alert;
         private System.Windows.Forms.Timer icon_delay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_error;
     }
 }

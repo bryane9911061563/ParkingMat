@@ -88,9 +88,10 @@ namespace ParkingMat.GUI
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-        public frm_ERROR_DIALOG()
+        public frm_ERROR_DIALOG(String mensaje)
         {
             InitializeComponent();
+            lbl_error.Text = mensaje;
         }
 
         private void icon_delay_Tick(object sender, EventArgs e)

@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ParkingMat.BO;
 
 namespace ParkingMat.DAO
 {
-    class Empleado_DAO
+    class Cajones_DAO
     {
         //Coso para usar sus propiedades 
         Conexion_DAO obj_conec = new Conexion_DAO();
@@ -37,28 +38,46 @@ namespace ParkingMat.DAO
             return 1;
         }
 
-
-        public int Iniciar_Sesion (String Correo, String Contraseña)
+        public int Cajones_por_Sucursal(int id)
         {
-            instruccion_SQL = "Select id_Sucursal from empleados where Correo_Electronico = '" + Correo + "' and Clave_Sesion = '" + Contraseña + "'";
+            instruccion_SQL = "Select Cantidad_Cajones from sucursales where id_Sucursal = '"+id.ToString()+"'";
             MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
             obj_conec.AbrirBD();
             MySqlDataReader leer;
-            int match = -1;
+            int match=0;
             leer = cmd.ExecuteReader();
             while (leer.Read())
             {
-                match = int.Parse(leer["id_Sucursal"].ToString());
+                match = int.Parse(leer["Cantidad_Cajones"].ToString());
             }
             obj_conec.CerrarBD();
-            if (match>0)
+            if (match >0)
             {
                 return match;
             }
             else
             {
-                return -1;
+                return 0;
             }
+        }
+
+        public ArrayList info_Cajones(int id)
+        {
+            instruccion_SQL = "Select * from cajones where id_sucursal = '" + id.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+            obj_conec.AbrirBD();
+            MySqlDataReader leer;
+            ArrayList cajas = new ArrayList();
+            leer = cmd.ExecuteReader();
+            while (leer.Read())
+            {
+                cajas.Add(leer["estado_cajon"].ToString());
+                cajas.Add(leer["tipo_vehiculo"].ToString());
+                cajas.Add(leer["Hora_inicio"].ToString());
+                cajas.Add(leer["Lugar"].ToString());
+            }
+            obj_conec.CerrarBD();
+            return cajas;
         }
     }
 }

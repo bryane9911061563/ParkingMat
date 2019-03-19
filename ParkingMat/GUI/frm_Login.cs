@@ -1,4 +1,5 @@
 ﻿using ParkingMat.BO;
+using ParkingMat.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,7 +68,7 @@ namespace ParkingMat.GUI
         private void btn_IniciarSesion_Click(object sender, EventArgs e)
         {
             Jefe_BO jefe = new Jefe_BO();
-            EmpleadoUS_BO empleado = new EmpleadoUS_BO();
+            Empleado_BO empleado = new Empleado_BO();
             if (jefe.Nombre==txt_correo.Text && jefe.Clave==txt_contrase.Text) {
                 frm_menuAdmin obj = new frm_menuAdmin();
                 obj.Show();
@@ -75,9 +76,11 @@ namespace ParkingMat.GUI
             }
             else
             {
-                if(empleado.Nombre==txt_correo.Text && empleado.Clave==txt_contrase.Text)
+                Empleado_DAO verificar = new Empleado_DAO();
+                int sucursal = verificar.Iniciar_Sesion(txt_correo.Text, txt_contrase.Text);
+                if (sucursal>=0)
                 {
-                    frm_MenuEmpleado objMenu = new frm_MenuEmpleado();
+                    frm_MenuEmpleado objMenu = new frm_MenuEmpleado(sucursal);
                     objMenu.Show();
                     this.Hide();
                 }
@@ -85,8 +88,6 @@ namespace ParkingMat.GUI
                 {
                     pick_USNOVALID.Visible = true;
                     lbl_USNOVALID.Visible = true;
-                    frm_pruebaDialog OBJOK = new frm_pruebaDialog();
-                    OBJOK.ShowDialog();
                 }
             }
         }
