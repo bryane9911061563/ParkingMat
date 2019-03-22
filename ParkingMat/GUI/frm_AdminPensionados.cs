@@ -16,5 +16,11 @@ namespace ParkingMat.GUI
         {
             InitializeComponent();
         }
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            frm_pruebaDialog error = new frm_pruebaDialog();
+            error.ShowDialog();
+        }
     }
 }

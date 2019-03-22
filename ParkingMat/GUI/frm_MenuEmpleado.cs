@@ -13,7 +13,7 @@ namespace ParkingMat.GUI
 {
     public partial class frm_MenuEmpleado : Form
     {
-        private int Sucursal;
+        private int Sucursal=0;
 
         public int Sucursal1 { get => Sucursal; set => Sucursal = value; }
 
@@ -63,12 +63,18 @@ namespace ParkingMat.GUI
         }
 
 
+
+        frm_ParkingEmpleado park = new frm_ParkingEmpleado();
         //Cambio de color del indicador
         private void btn_parquimetro_Click(object sender, EventArgs e)
         {
-           
-                pnl_indicador.BackColor = Color.FromArgb(115, 194, 125);
-                AbrirFormularios<frm_ParkingEmpleado>();
+            //park.Sucursal1 = Sucursal;
+            // park.Visible = true;
+            // park.BackColor = Color.FromArgb(115, 194, 125);
+            pnl_indicador.BackColor = Color.FromArgb(115, 194, 125);
+            AbrirFormularios<frm_ParkingEmpleado>();
+
+
         }
 
         private void btn_vehiculos_Click(object sender, EventArgs e)

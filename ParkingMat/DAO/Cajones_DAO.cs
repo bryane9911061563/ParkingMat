@@ -71,10 +71,11 @@ namespace ParkingMat.DAO
             leer = cmd.ExecuteReader();
             while (leer.Read())
             {
-                cajas.Add(leer["estado_cajon"].ToString());
-                cajas.Add(leer["tipo_vehiculo"].ToString());
-                cajas.Add(leer["Hora_inicio"].ToString());
-                cajas.Add(leer["Lugar"].ToString());
+                String auxiliar =leer["estado_cajon"].ToString() + "|";
+                auxiliar = auxiliar + "|" + leer["tipo_vehiculo"].ToString() + "|";
+                auxiliar = auxiliar + "|" + leer["Hora_inicio"].ToString() + "|";
+                auxiliar = auxiliar + "|" + leer["Lugar"].ToString() + "|";
+                cajas.Add(auxiliar);
             }
             obj_conec.CerrarBD();
             return cajas;

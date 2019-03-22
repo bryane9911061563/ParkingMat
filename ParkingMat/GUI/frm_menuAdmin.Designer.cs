@@ -420,7 +420,7 @@
             // 
             this.btn_Salir.Activecolor = System.Drawing.Color.DimGray;
             this.btn_Salir.AllowDrop = true;
-            this.btn_Salir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Salir.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Salir.BorderRadius = 7;

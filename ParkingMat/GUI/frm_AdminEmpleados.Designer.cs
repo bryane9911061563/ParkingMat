@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AdminEmpleados));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Empleados = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mtx_Sueldo = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.txt_correo = new System.Windows.Forms.TextBox();
@@ -43,9 +44,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cbx_Sucursal = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_actualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_eliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Img_Examinar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,9 +66,8 @@
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.mtx_Sueldo = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +77,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgv_Empleados);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(733, 0);
@@ -85,15 +85,17 @@
             this.panel1.Size = new System.Drawing.Size(617, 606);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgv_Empleados
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(617, 567);
-            this.dataGridView1.TabIndex = 26;
+            this.dgv_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Empleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Empleados.Location = new System.Drawing.Point(0, 39);
+            this.dgv_Empleados.Name = "dgv_Empleados";
+            this.dgv_Empleados.Size = new System.Drawing.Size(617, 567);
+            this.dgv_Empleados.TabIndex = 26;
+            this.dgv_Empleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Empleados_CellContentClick);
+            this.dgv_Empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Empleados_CellMouseClick);
             // 
             // panel2
             // 
@@ -171,9 +173,9 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.cbx_Sucursal);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton3);
+            this.groupBox1.Controls.Add(this.btn_actualizar);
             this.groupBox1.Controls.Add(this.bunifuFlatButton2);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton1);
+            this.groupBox1.Controls.Add(this.btn_eliminar);
             this.groupBox1.Controls.Add(this.btn_Cerrar);
             this.groupBox1.Controls.Add(this.btn_Img_Examinar);
             this.groupBox1.Controls.Add(this.label9);
@@ -196,6 +198,17 @@
             this.groupBox1.Size = new System.Drawing.Size(692, 543);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // mtx_Sueldo
+            // 
+            this.mtx_Sueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtx_Sueldo.Location = new System.Drawing.Point(203, 249);
+            this.mtx_Sueldo.Mask = "999999";
+            this.mtx_Sueldo.Name = "mtx_Sueldo";
+            this.mtx_Sueldo.Size = new System.Drawing.Size(191, 29);
+            this.mtx_Sueldo.TabIndex = 30;
+            this.mtx_Sueldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtx_Sueldo.ValidatingType = typeof(int);
             // 
             // label13
             // 
@@ -265,41 +278,42 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Sucursal: ";
             // 
-            // bunifuFlatButton3
+            // btn_actualizar
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.AllowDrop = true;
-            this.bunifuFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 7;
-            this.bunifuFlatButton3.ButtonText = "Actualizar";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = null;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(345, 480);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(134, 48);
-            this.bunifuFlatButton3.TabIndex = 22;
-            this.bunifuFlatButton3.Text = "Actualizar";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_actualizar.Activecolor = System.Drawing.Color.White;
+            this.btn_actualizar.AllowDrop = true;
+            this.btn_actualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_actualizar.BackColor = System.Drawing.Color.White;
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_actualizar.BorderRadius = 7;
+            this.btn_actualizar.ButtonText = "Actualizar";
+            this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_actualizar.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_actualizar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_actualizar.Iconimage = null;
+            this.btn_actualizar.Iconimage_right = null;
+            this.btn_actualizar.Iconimage_right_Selected = null;
+            this.btn_actualizar.Iconimage_Selected = null;
+            this.btn_actualizar.IconMarginLeft = 0;
+            this.btn_actualizar.IconMarginRight = 0;
+            this.btn_actualizar.IconRightVisible = true;
+            this.btn_actualizar.IconRightZoom = 0D;
+            this.btn_actualizar.IconVisible = true;
+            this.btn_actualizar.IconZoom = 90D;
+            this.btn_actualizar.IsTab = false;
+            this.btn_actualizar.Location = new System.Drawing.Point(345, 480);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Normalcolor = System.Drawing.Color.White;
+            this.btn_actualizar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_actualizar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_actualizar.selected = false;
+            this.btn_actualizar.Size = new System.Drawing.Size(134, 48);
+            this.btn_actualizar.TabIndex = 22;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_actualizar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_actualizar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -337,41 +351,42 @@
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton1
+            // btn_eliminar
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.AllowDrop = true;
-            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 7;
-            this.bunifuFlatButton1.ButtonText = "Eliminar";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(59, 480);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(134, 48);
-            this.bunifuFlatButton1.TabIndex = 20;
-            this.bunifuFlatButton1.Text = "Eliminar";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Activecolor = System.Drawing.Color.White;
+            this.btn_eliminar.AllowDrop = true;
+            this.btn_eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_eliminar.BackColor = System.Drawing.Color.White;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.BorderRadius = 7;
+            this.btn_eliminar.ButtonText = "Eliminar";
+            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_eliminar.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_eliminar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.Iconimage = null;
+            this.btn_eliminar.Iconimage_right = null;
+            this.btn_eliminar.Iconimage_right_Selected = null;
+            this.btn_eliminar.Iconimage_Selected = null;
+            this.btn_eliminar.IconMarginLeft = 0;
+            this.btn_eliminar.IconMarginRight = 0;
+            this.btn_eliminar.IconRightVisible = true;
+            this.btn_eliminar.IconRightZoom = 0D;
+            this.btn_eliminar.IconVisible = true;
+            this.btn_eliminar.IconZoom = 90D;
+            this.btn_eliminar.IsTab = false;
+            this.btn_eliminar.Location = new System.Drawing.Point(59, 480);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Normalcolor = System.Drawing.Color.White;
+            this.btn_eliminar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_eliminar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_eliminar.selected = false;
+            this.btn_eliminar.Size = new System.Drawing.Size(134, 48);
+            this.btn_eliminar.TabIndex = 20;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_eliminar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_eliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_Cerrar
             // 
@@ -595,17 +610,6 @@
             this.txt_nombre.TabIndex = 4;
             this.txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_KeyPress);
             // 
-            // mtx_Sueldo
-            // 
-            this.mtx_Sueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtx_Sueldo.Location = new System.Drawing.Point(203, 249);
-            this.mtx_Sueldo.Mask = "999999";
-            this.mtx_Sueldo.Name = "mtx_Sueldo";
-            this.mtx_Sueldo.Size = new System.Drawing.Size(191, 29);
-            this.mtx_Sueldo.TabIndex = 30;
-            this.mtx_Sueldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtx_Sueldo.ValidatingType = typeof(int);
-            // 
             // frm_AdminEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,7 +624,7 @@
             this.Text = "frm_AdminEmpleados";
             this.Load += new System.EventHandler(this.frm_AdminEmpleados_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -656,14 +660,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_eliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cerrar;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_actualizar;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.TextBox textBox4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Empleados;
         private System.Windows.Forms.ComboBox cbx_Sucursal;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_contraseña;

@@ -6,17 +6,30 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using ParkingMat.BO;
+using System.Data;
 
 namespace ParkingMat.DAO
 {
     class Empleado_DAO
     {
+        string instruccion_SQL;
+
         //Coso para usar sus propiedades 
         Conexion_DAO obj_conec = new Conexion_DAO();
         MySqlCommand cmd = new MySqlCommand();
 
+        //Mostrar empleados
+        public DataTable tabla_empleado()
+        {
+            instruccion_SQL = "SELECT id_Empleado,Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,Puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario, Nombre_Sucursal from empleados INNER JOIN sucursales ON empleados.id_Sucursal=sucursales.id_Sucursal";
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
+            DataTable virtual_div = new DataTable();
+            adp.Fill(virtual_div);
+
+            return (virtual_div);
+        }
+
         //Coso para ejecutar instrucciones
-        string instruccion_SQL;
 
         public int Guardar_Datos(Empleado_BO obj_div)
         {
@@ -34,6 +47,49 @@ namespace ParkingMat.DAO
                 return 0;
             }
 
+            return 1;
+        }
+        public int Eliminar_Datos(Empleado_BO ObjEmp)
+        {
+            Empleado_BO datos = (Empleado_BO)ObjEmp;
+
+            cmd.Connection = obj_conec.ConectarBD();
+            obj_conec.AbrirBD();
+            //modif access to BD
+            instruccion_SQL = "Delete  from empleados  where id_Empleado='" + datos.Id_Empleado + "'";
+            //exe cmd
+            cmd.CommandText = instruccion_SQL;
+            //gdr vlr
+            int valor = cmd.ExecuteNonQuery();
+            obj_conec.CerrarBD();
+
+
+            if (valor <= 0)
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+        public int Actualizar_Datos(Empleado_BO ObjEmp)
+        {
+            Empleado_BO datos = (Empleado_BO)ObjEmp;
+
+            cmd.Connection = obj_conec.ConectarBD();
+            obj_conec.AbrirBD();
+            //modif access to BD
+            instruccion_SQL = "Update  empleados set Nombre_Empleado= '" + datos.Nombre + "',Apellido_1_Empleado='"+datos.Apellido_11+"',Apellido_2_Empleado='"+datos.Apellido_21+ "',Fecha_Nacimiento='"+datos.Fecha_nacimiento+ "',Puesto='"+datos.Puesto+ "',Salario_Base='"+datos.Salario_Base+ "',Correo_Electronico='"+datos.Correo_Electronico1+ "',Clave_Sesion='"+datos.Clave_Sesion1+ "',Horario='"+datos.Horario_Trabajo1+ "',id_Sucursal='"+datos.Id_sucursal+ "'  where id_Empleado='" + datos.Id_Empleado + "'";
+            //exe cmd
+            cmd.CommandText = instruccion_SQL;
+            //gdr vlr
+            int valor = cmd.ExecuteNonQuery();
+            obj_conec.CerrarBD();
+
+
+            if (valor <= 0)
+            {
+                return 0;
+            }
             return 1;
         }
 
