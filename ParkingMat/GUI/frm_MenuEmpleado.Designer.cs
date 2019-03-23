@@ -45,12 +45,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.tmr_Hora = new System.Windows.Forms.Timer(this.components);
+            this.lbl_nombre_us = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl_nombre_us);
             this.panel1.Controls.Add(this.lbl_hora);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pnl_indicador);
@@ -384,6 +386,16 @@
             this.tmr_Hora.Enabled = true;
             this.tmr_Hora.Tick += new System.EventHandler(this.tmr_Hora_Tick);
             // 
+            // lbl_nombre_us
+            // 
+            this.lbl_nombre_us.AutoSize = true;
+            this.lbl_nombre_us.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_us.Location = new System.Drawing.Point(140, 16);
+            this.lbl_nombre_us.Name = "lbl_nombre_us";
+            this.lbl_nombre_us.Size = new System.Drawing.Size(151, 23);
+            this.lbl_nombre_us.TabIndex = 36;
+            this.lbl_nombre_us.Text = "nombre_usuario";
+            // 
             // frm_MenuEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,5 +431,6 @@
         private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer tmr_Hora;
+        private System.Windows.Forms.Label lbl_nombre_us;
     }
 }

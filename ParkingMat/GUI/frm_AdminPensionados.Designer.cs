@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AdminPensionados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txt_correo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxt_telefono = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha_ven = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha_reg = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -45,25 +46,33 @@
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_Agregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dtp_fecha_nac = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_apellido_m = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_apellido_p = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_pensionados = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.id_pensionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido_m = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_nac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_pensionados)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,13 +80,13 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.bunifuFlatButton5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txt_correo);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.mtxt_telefono);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
+            this.groupBox1.Controls.Add(this.dtp_fecha_ven);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dtp_fecha_reg);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.maskedTextBox1);
@@ -86,28 +95,64 @@
             this.groupBox1.Controls.Add(this.bunifuFlatButton3);
             this.groupBox1.Controls.Add(this.bunifuFlatButton2);
             this.groupBox1.Controls.Add(this.bunifuFlatButton1);
-            this.groupBox1.Controls.Add(this.btn_Cerrar);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.btn_Agregar);
+            this.groupBox1.Controls.Add(this.dtp_fecha_nac);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_apellido_m);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_apellido_p);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Location = new System.Drawing.Point(20, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(692, 446);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // textBox4
+            // bunifuFlatButton5
             // 
-            this.textBox4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(445, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(224, 30);
-            this.textBox4.TabIndex = 34;
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton5.AllowDrop = true;
+            this.bunifuFlatButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuFlatButton5.BackColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton5.BorderRadius = 7;
+            this.bunifuFlatButton5.ButtonText = "Agregar vehículo";
+            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton5.Iconimage = null;
+            this.bunifuFlatButton5.Iconimage_right = null;
+            this.bunifuFlatButton5.Iconimage_right_Selected = null;
+            this.bunifuFlatButton5.Iconimage_Selected = null;
+            this.bunifuFlatButton5.IconMarginLeft = 0;
+            this.bunifuFlatButton5.IconMarginRight = 0;
+            this.bunifuFlatButton5.IconRightVisible = true;
+            this.bunifuFlatButton5.IconRightZoom = 0D;
+            this.bunifuFlatButton5.IconVisible = true;
+            this.bunifuFlatButton5.IconZoom = 90D;
+            this.bunifuFlatButton5.IsTab = false;
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(445, 157);
+            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
+            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.selected = false;
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(224, 40);
+            this.bunifuFlatButton5.TabIndex = 35;
+            this.bunifuFlatButton5.Text = "Agregar vehículo";
+            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_correo
+            // 
+            this.txt_correo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_correo.Location = new System.Drawing.Point(445, 117);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(224, 30);
+            this.txt_correo.TabIndex = 34;
             // 
             // label9
             // 
@@ -119,15 +164,15 @@
             this.label9.TabIndex = 33;
             this.label9.Text = "Correo electrónico:";
             // 
-            // maskedTextBox2
+            // mtxt_telefono
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(445, 49);
-            this.maskedTextBox2.Mask = "000-000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(165, 30);
-            this.maskedTextBox2.TabIndex = 32;
-            this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtxt_telefono.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxt_telefono.Location = new System.Drawing.Point(445, 49);
+            this.mtxt_telefono.Mask = "000-000-0000";
+            this.mtxt_telefono.Name = "mtxt_telefono";
+            this.mtxt_telefono.Size = new System.Drawing.Size(165, 30);
+            this.mtxt_telefono.TabIndex = 32;
+            this.mtxt_telefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -139,14 +184,14 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Número de teléfono:";
             // 
-            // dateTimePicker3
+            // dtp_fecha_ven
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Roboto", 14.25F);
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(254, 291);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(140, 30);
-            this.dateTimePicker3.TabIndex = 30;
+            this.dtp_fecha_ven.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.dtp_fecha_ven.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_ven.Location = new System.Drawing.Point(254, 291);
+            this.dtp_fecha_ven.Name = "dtp_fecha_ven";
+            this.dtp_fecha_ven.Size = new System.Drawing.Size(140, 30);
+            this.dtp_fecha_ven.TabIndex = 30;
             // 
             // label11
             // 
@@ -158,14 +203,14 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "Fecha de vencimiento:";
             // 
-            // dateTimePicker2
+            // dtp_fecha_reg
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Roboto", 14.25F);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(257, 246);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(140, 30);
-            this.dateTimePicker2.TabIndex = 28;
+            this.dtp_fecha_reg.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.dtp_fecha_reg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_reg.Location = new System.Drawing.Point(257, 246);
+            this.dtp_fecha_reg.Name = "dtp_fecha_reg";
+            this.dtp_fecha_reg.Size = new System.Drawing.Size(140, 30);
+            this.dtp_fecha_reg.TabIndex = 28;
             // 
             // label7
             // 
@@ -342,51 +387,51 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btn_Cerrar
+            // btn_Agregar
             // 
-            this.btn_Cerrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btn_Cerrar.AllowDrop = true;
-            this.btn_Cerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Cerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cerrar.BorderRadius = 7;
-            this.btn_Cerrar.ButtonText = "Agregar";
-            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cerrar.DisabledColor = System.Drawing.Color.White;
-            this.btn_Cerrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Cerrar.Iconimage = null;
-            this.btn_Cerrar.Iconimage_right = null;
-            this.btn_Cerrar.Iconimage_right_Selected = null;
-            this.btn_Cerrar.Iconimage_Selected = null;
-            this.btn_Cerrar.IconMarginLeft = 0;
-            this.btn_Cerrar.IconMarginRight = 0;
-            this.btn_Cerrar.IconRightVisible = true;
-            this.btn_Cerrar.IconRightZoom = 0D;
-            this.btn_Cerrar.IconVisible = true;
-            this.btn_Cerrar.IconZoom = 90D;
-            this.btn_Cerrar.IsTab = false;
-            this.btn_Cerrar.Location = new System.Drawing.Point(492, 383);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.btn_Cerrar.OnHovercolor = System.Drawing.Color.DodgerBlue;
-            this.btn_Cerrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Cerrar.selected = false;
-            this.btn_Cerrar.Size = new System.Drawing.Size(134, 48);
-            this.btn_Cerrar.TabIndex = 19;
-            this.btn_Cerrar.Text = "Agregar";
-            this.btn_Cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Cerrar.Textcolor = System.Drawing.Color.White;
-            this.btn_Cerrar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            this.btn_Agregar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_Agregar.AllowDrop = true;
+            this.btn_Agregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Agregar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Agregar.BorderRadius = 7;
+            this.btn_Agregar.ButtonText = "Agregar";
+            this.btn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Agregar.DisabledColor = System.Drawing.Color.White;
+            this.btn_Agregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Agregar.Iconimage = null;
+            this.btn_Agregar.Iconimage_right = null;
+            this.btn_Agregar.Iconimage_right_Selected = null;
+            this.btn_Agregar.Iconimage_Selected = null;
+            this.btn_Agregar.IconMarginLeft = 0;
+            this.btn_Agregar.IconMarginRight = 0;
+            this.btn_Agregar.IconRightVisible = true;
+            this.btn_Agregar.IconRightZoom = 0D;
+            this.btn_Agregar.IconVisible = true;
+            this.btn_Agregar.IconZoom = 90D;
+            this.btn_Agregar.IsTab = false;
+            this.btn_Agregar.Location = new System.Drawing.Point(492, 383);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Normalcolor = System.Drawing.Color.RoyalBlue;
+            this.btn_Agregar.OnHovercolor = System.Drawing.Color.DodgerBlue;
+            this.btn_Agregar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Agregar.selected = false;
+            this.btn_Agregar.Size = new System.Drawing.Size(134, 48);
+            this.btn_Agregar.TabIndex = 19;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Agregar.Textcolor = System.Drawing.Color.White;
+            this.btn_Agregar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
-            // dateTimePicker1
+            // dtp_fecha_nac
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 14.25F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(254, 157);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(140, 30);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtp_fecha_nac.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.dtp_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_nac.Location = new System.Drawing.Point(254, 157);
+            this.dtp_fecha_nac.Name = "dtp_fecha_nac";
+            this.dtp_fecha_nac.Size = new System.Drawing.Size(140, 30);
+            this.dtp_fecha_nac.TabIndex = 10;
             // 
             // label5
             // 
@@ -408,13 +453,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Apellido paterno:";
             // 
-            // textBox3
+            // txt_apellido_m
             // 
-            this.textBox3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(203, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 30);
-            this.textBox3.TabIndex = 8;
+            this.txt_apellido_m.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_m.Location = new System.Drawing.Point(203, 111);
+            this.txt_apellido_m.Name = "txt_apellido_m";
+            this.txt_apellido_m.Size = new System.Drawing.Size(191, 30);
+            this.txt_apellido_m.TabIndex = 8;
             // 
             // label3
             // 
@@ -426,13 +471,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Apellido materno:";
             // 
-            // textBox2
+            // txt_apellido_p
             // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 30);
-            this.textBox2.TabIndex = 6;
+            this.txt_apellido_p.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_p.Location = new System.Drawing.Point(203, 66);
+            this.txt_apellido_p.Name = "txt_apellido_p";
+            this.txt_apellido_p.Size = new System.Drawing.Size(191, 30);
+            this.txt_apellido_p.TabIndex = 6;
             // 
             // label2
             // 
@@ -444,13 +489,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre(s):";
             // 
-            // textBox1
+            // txt_nombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 30);
-            this.textBox1.TabIndex = 4;
+            this.txt_nombre.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Location = new System.Drawing.Point(147, 19);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(247, 30);
+            this.txt_nombre.TabIndex = 4;
             // 
             // label1
             // 
@@ -466,7 +511,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgv_pensionados);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(749, 0);
@@ -474,15 +519,26 @@
             this.panel1.Size = new System.Drawing.Size(617, 563);
             this.panel1.TabIndex = 5;
             // 
-            // dataGridView1
+            // dgv_pensionados
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(617, 524);
-            this.dataGridView1.TabIndex = 2;
+            this.dgv_pensionados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_pensionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_pensionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_pensionado,
+            this.nombre,
+            this.apellido_p,
+            this.apellido_m,
+            this.fecha_nac,
+            this.fecha_registro,
+            this.fecha_vencimiento,
+            this.telfono,
+            this.correo});
+            this.dgv_pensionados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_pensionados.Location = new System.Drawing.Point(0, 39);
+            this.dgv_pensionados.Name = "dgv_pensionados";
+            this.dgv_pensionados.Size = new System.Drawing.Size(617, 524);
+            this.dgv_pensionados.TabIndex = 2;
+            this.dgv_pensionados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_pensionados_CellMouseClick);
             // 
             // panel2
             // 
@@ -538,41 +594,66 @@
             this.textBox5.Size = new System.Drawing.Size(452, 30);
             this.textBox5.TabIndex = 26;
             // 
-            // bunifuFlatButton5
+            // id_pensionado
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton5.AllowDrop = true;
-            this.bunifuFlatButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 7;
-            this.bunifuFlatButton5.ButtonText = "Agregar vehículo";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = null;
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 90D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(445, 157);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(224, 40);
-            this.bunifuFlatButton5.TabIndex = 35;
-            this.bunifuFlatButton5.Text = "Agregar vehículo";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_pensionado.HeaderText = "Codigo";
+            this.id_pensionado.Name = "id_pensionado";
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // apellido_p
+            // 
+            this.apellido_p.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellido_p.DataPropertyName = "apellido_p";
+            this.apellido_p.HeaderText = "Apellido paterno";
+            this.apellido_p.Name = "apellido_p";
+            // 
+            // apellido_m
+            // 
+            this.apellido_m.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellido_m.DataPropertyName = "apellido_m";
+            this.apellido_m.HeaderText = "Apellido materno";
+            this.apellido_m.Name = "apellido_m";
+            // 
+            // fecha_nac
+            // 
+            this.fecha_nac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha_nac.DataPropertyName = "fecha_nac";
+            this.fecha_nac.HeaderText = "Fecha nacimiento";
+            this.fecha_nac.Name = "fecha_nac";
+            // 
+            // fecha_registro
+            // 
+            this.fecha_registro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha_registro.DataPropertyName = "fecha_registro";
+            this.fecha_registro.HeaderText = "Fecha registro";
+            this.fecha_registro.Name = "fecha_registro";
+            // 
+            // fecha_vencimiento
+            // 
+            this.fecha_vencimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha_vencimiento.DataPropertyName = "fecha_vencimiento";
+            this.fecha_vencimiento.HeaderText = "Fecha vencimiento";
+            this.fecha_vencimiento.Name = "fecha_vencimiento";
+            // 
+            // telfono
+            // 
+            this.telfono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telfono.DataPropertyName = "telfono";
+            this.telfono.HeaderText = "Telefono";
+            this.telfono.Name = "telfono";
+            // 
+            // correo
+            // 
+            this.correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.correo.DataPropertyName = "correo";
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
             // 
             // frm_AdminPensionados
             // 
@@ -589,7 +670,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_pensionados)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -602,33 +683,42 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Cerrar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Agregar;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_nac;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_apellido_m;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_apellido_p;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mtxt_telefono;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_ven;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_reg;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_pensionados;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.TextBox textBox5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_pensionado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido_p;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido_m;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_registro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_vencimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telfono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
     }
 }

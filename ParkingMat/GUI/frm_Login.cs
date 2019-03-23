@@ -69,6 +69,8 @@ namespace ParkingMat.GUI
         {
             Jefe_BO jefe = new Jefe_BO();
             Empleado_BO empleado = new Empleado_BO();
+
+
             if (jefe.Nombre==txt_correo.Text && jefe.Clave==txt_contrase.Text) {
                 frm_menuAdmin obj = new frm_menuAdmin();
                 obj.Show();
@@ -77,9 +79,11 @@ namespace ParkingMat.GUI
             else
             {
                 Empleado_DAO verificar = new Empleado_DAO();
+
                 int sucursal = verificar.Iniciar_Sesion(txt_correo.Text, txt_contrase.Text);
                 if (sucursal>=0)
                 {
+
                     frm_MenuEmpleado objMenu = new frm_MenuEmpleado(sucursal);
                     objMenu.Show();
                     this.Hide();
