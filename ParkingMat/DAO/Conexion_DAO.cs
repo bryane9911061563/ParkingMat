@@ -12,6 +12,7 @@ namespace ParkingMat.DAO
     class Conexion_DAO
     {
         MySqlConnection Conex;
+        MySqlCommand cmd = new MySqlCommand();
 
 
         public MySqlConnection ConectarBD()
@@ -30,6 +31,20 @@ namespace ParkingMat.DAO
         {
             Conex.Close();
         }
-        
+
+        public int EjecutarSQL(string InstruccionABC)
+        {
+            cmd.Connection = ConectarBD();
+            AbrirBD();
+            cmd.CommandText = InstruccionABC;
+            int acuse = cmd.ExecuteNonQuery();
+            CerrarBD();
+            if (acuse <= 0)
+            {
+                return 0;
+            }
+            return 1;
+        }
+
     }
 }

@@ -23,10 +23,10 @@ namespace ParkingMat.DAO
         {
             instruccion_SQL = "SELECT id_Empleado,Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,Puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario, Nombre_Sucursal from empleados INNER JOIN sucursales ON empleados.id_Sucursal=sucursales.id_Sucursal";
             MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
-            DataTable virtual_div = new DataTable();
-            adp.Fill(virtual_div);
+            DataTable virtual_pen = new DataTable();
+            adp.Fill(virtual_pen);
 
-            return (virtual_div);
+            return (virtual_pen);
         }
 
         //Coso para ejecutar instrucciones
@@ -116,5 +116,15 @@ namespace ParkingMat.DAO
                 return -1;
             }
         }
+        public DataTable Capturar_ID_sucursal(String corre, String contraseña)
+        {
+            instruccion_SQL = "Select id_Sucursal from empleados where Correo_Electronico='" + corre + "' and Clave Sesion='" + contraseña + "'";
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
+            DataTable virtual_Suc = new DataTable();
+            adp.Fill(virtual_Suc);
+
+            return (virtual_Suc);
+        }
     }
+    
 }

@@ -83,6 +83,8 @@ namespace ParkingMat.GUI
                 int sucursal = verificar.Iniciar_Sesion(txt_correo.Text, txt_contrase.Text);
                 if (sucursal>=0)
                 {
+                    Cls_Static_UsuarioRunningThisMoment Sucursal = new Cls_Static_UsuarioRunningThisMoment();
+                    Cls_Static_UsuarioRunningThisMoment.id_Sucursal = sucursal;
 
                     frm_MenuEmpleado objMenu = new frm_MenuEmpleado(sucursal);
                     objMenu.Show();

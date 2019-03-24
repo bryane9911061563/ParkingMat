@@ -13,9 +13,7 @@ namespace ParkingMat.GUI
 {
     public partial class frm_MenuEmpleado : Form
     {
-        private int Sucursal=0;
 
-        public int Sucursal1 { get => Sucursal; set => Sucursal = value; }
 
         public frm_MenuEmpleado(int sucu)
         {
@@ -24,7 +22,7 @@ namespace ParkingMat.GUI
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             AbrirFormularios<frm_ParkingEmpleado>();
-            Sucursal1 = sucu;
+            MessageBox.Show(Cls_Static_UsuarioRunningThisMoment.id_Sucursal.ToString());
 
         }
         //Metodo para abrir un form dentro del contenedor
