@@ -1,6 +1,6 @@
 ﻿namespace ParkingMat.GUI
 {
-    partial class frm_AdmTiposRecibo
+    partial class frm_PuestosEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,86 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AdmTiposRecibo));
-            this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PuestosEmpleados));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_actualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Nuevo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Eliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Agregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_nombre_tip_recibo = new System.Windows.Forms.TextBox();
-            this.dgv_tipos_recibos = new System.Windows.Forms.DataGridView();
-            this.id_tiporecibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_tiporecibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnl_BarraEstado.SuspendLayout();
+            this.txt_nombre_puesto = new System.Windows.Forms.TextBox();
+            this.dgv_puestos_empleados = new System.Windows.Forms.DataGridView();
+            this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.id_puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tipos_recibos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_puestos_empleados)).BeginInit();
+            this.pnl_BarraEstado.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnl_BarraEstado
-            // 
-            this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
-            this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl_BarraEstado.Controls.Add(this.label1);
-            this.pnl_BarraEstado.Controls.Add(this.btn_cerrar);
-            this.pnl_BarraEstado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_BarraEstado.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.pnl_BarraEstado.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.pnl_BarraEstado.GradientTopLeft = System.Drawing.Color.White;
-            this.pnl_BarraEstado.GradientTopRight = System.Drawing.Color.White;
-            this.pnl_BarraEstado.Location = new System.Drawing.Point(0, 0);
-            this.pnl_BarraEstado.Name = "pnl_BarraEstado";
-            this.pnl_BarraEstado.Quality = 10;
-            this.pnl_BarraEstado.Size = new System.Drawing.Size(587, 31);
-            this.pnl_BarraEstado.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Admin. Tipos de recibos";
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.Activecolor = System.Drawing.Color.Transparent;
-            this.btn_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_cerrar.BorderRadius = 0;
-            this.btn_cerrar.ButtonText = "";
-            this.btn_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cerrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_cerrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_cerrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Iconimage")));
-            this.btn_cerrar.Iconimage_right = null;
-            this.btn_cerrar.Iconimage_right_Selected = null;
-            this.btn_cerrar.Iconimage_Selected = null;
-            this.btn_cerrar.IconMarginLeft = 0;
-            this.btn_cerrar.IconMarginRight = 0;
-            this.btn_cerrar.IconRightVisible = true;
-            this.btn_cerrar.IconRightZoom = 0D;
-            this.btn_cerrar.IconVisible = true;
-            this.btn_cerrar.IconZoom = 50D;
-            this.btn_cerrar.IsTab = false;
-            this.btn_cerrar.Location = new System.Drawing.Point(559, 1);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_cerrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_cerrar.selected = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(29, 29);
-            this.btn_cerrar.TabIndex = 1;
-            this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cerrar.Textcolor = System.Drawing.Color.White;
-            this.btn_cerrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panel1
             // 
@@ -117,12 +55,12 @@
             this.panel1.Controls.Add(this.btn_Eliminar);
             this.panel1.Controls.Add(this.btn_Agregar);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_nombre_tip_recibo);
-            this.panel1.Controls.Add(this.dgv_tipos_recibos);
+            this.panel1.Controls.Add(this.txt_nombre_puesto);
+            this.panel1.Controls.Add(this.dgv_puestos_empleados);
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(588, 328);
-            this.panel1.TabIndex = 8;
+            this.panel1.TabIndex = 10;
             // 
             // btn_actualizar
             // 
@@ -283,43 +221,105 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
             // 
-            // txt_nombre_tip_recibo
+            // txt_nombre_puesto
             // 
-            this.txt_nombre_tip_recibo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_tip_recibo.Location = new System.Drawing.Point(228, 28);
-            this.txt_nombre_tip_recibo.Name = "txt_nombre_tip_recibo";
-            this.txt_nombre_tip_recibo.Size = new System.Drawing.Size(220, 27);
-            this.txt_nombre_tip_recibo.TabIndex = 1;
+            this.txt_nombre_puesto.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_puesto.Location = new System.Drawing.Point(228, 28);
+            this.txt_nombre_puesto.Name = "txt_nombre_puesto";
+            this.txt_nombre_puesto.Size = new System.Drawing.Size(220, 27);
+            this.txt_nombre_puesto.TabIndex = 1;
             // 
-            // dgv_tipos_recibos
+            // dgv_puestos_empleados
             // 
-            this.dgv_tipos_recibos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_tipos_recibos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tipos_recibos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_tiporecibo,
-            this.nombre_tiporecibo});
-            this.dgv_tipos_recibos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_tipos_recibos.Location = new System.Drawing.Point(0, 131);
-            this.dgv_tipos_recibos.Name = "dgv_tipos_recibos";
-            this.dgv_tipos_recibos.Size = new System.Drawing.Size(588, 197);
-            this.dgv_tipos_recibos.TabIndex = 0;
-            this.dgv_tipos_recibos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_tipos_recibos_CellMouseClick);
+            this.dgv_puestos_empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_puestos_empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_puestos_empleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_puesto,
+            this.nombre_puesto});
+            this.dgv_puestos_empleados.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_puestos_empleados.Location = new System.Drawing.Point(0, 131);
+            this.dgv_puestos_empleados.Name = "dgv_puestos_empleados";
+            this.dgv_puestos_empleados.Size = new System.Drawing.Size(588, 197);
+            this.dgv_puestos_empleados.TabIndex = 0;
+            this.dgv_puestos_empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_puestos_empleados_CellMouseClick);
             // 
-            // id_tiporecibo
+            // pnl_BarraEstado
             // 
-            this.id_tiporecibo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_tiporecibo.DataPropertyName = "id_tiporecibo";
-            this.id_tiporecibo.HeaderText = "Codigo";
-            this.id_tiporecibo.Name = "id_tiporecibo";
+            this.pnl_BarraEstado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BarraEstado.BackgroundImage")));
+            this.pnl_BarraEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BarraEstado.Controls.Add(this.label1);
+            this.pnl_BarraEstado.Controls.Add(this.btn_cerrar);
+            this.pnl_BarraEstado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_BarraEstado.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            this.pnl_BarraEstado.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.pnl_BarraEstado.GradientTopLeft = System.Drawing.Color.White;
+            this.pnl_BarraEstado.GradientTopRight = System.Drawing.Color.White;
+            this.pnl_BarraEstado.Location = new System.Drawing.Point(0, 0);
+            this.pnl_BarraEstado.Name = "pnl_BarraEstado";
+            this.pnl_BarraEstado.Quality = 10;
+            this.pnl_BarraEstado.Size = new System.Drawing.Size(587, 31);
+            this.pnl_BarraEstado.TabIndex = 9;
             // 
-            // nombre_tiporecibo
+            // label1
             // 
-            this.nombre_tiporecibo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombre_tiporecibo.DataPropertyName = "nombre_tiporecibo";
-            this.nombre_tiporecibo.HeaderText = "Nombre";
-            this.nombre_tiporecibo.Name = "nombre_tiporecibo";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Admin. Puestos de empleados";
             // 
-            // frm_AdmTiposRecibo
+            // btn_cerrar
+            // 
+            this.btn_cerrar.Activecolor = System.Drawing.Color.Transparent;
+            this.btn_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cerrar.BorderRadius = 0;
+            this.btn_cerrar.ButtonText = "";
+            this.btn_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cerrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_cerrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_cerrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Iconimage")));
+            this.btn_cerrar.Iconimage_right = null;
+            this.btn_cerrar.Iconimage_right_Selected = null;
+            this.btn_cerrar.Iconimage_Selected = null;
+            this.btn_cerrar.IconMarginLeft = 0;
+            this.btn_cerrar.IconMarginRight = 0;
+            this.btn_cerrar.IconRightVisible = true;
+            this.btn_cerrar.IconRightZoom = 0D;
+            this.btn_cerrar.IconVisible = true;
+            this.btn_cerrar.IconZoom = 50D;
+            this.btn_cerrar.IsTab = false;
+            this.btn_cerrar.Location = new System.Drawing.Point(559, 1);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_cerrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_cerrar.selected = false;
+            this.btn_cerrar.Size = new System.Drawing.Size(29, 29);
+            this.btn_cerrar.TabIndex = 1;
+            this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cerrar.Textcolor = System.Drawing.Color.White;
+            this.btn_cerrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // id_puesto
+            // 
+            this.id_puesto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_puesto.DataPropertyName = "id_puesto";
+            this.id_puesto.HeaderText = "Codigo";
+            this.id_puesto.Name = "id_puesto";
+            // 
+            // nombre_puesto
+            // 
+            this.nombre_puesto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre_puesto.DataPropertyName = "nombre_puesto";
+            this.nombre_puesto.HeaderText = "Nombre";
+            this.nombre_puesto.Name = "nombre_puesto";
+            // 
+            // frm_PuestosEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -327,32 +327,32 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_BarraEstado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_AdmTiposRecibo";
+            this.Name = "frm_PuestosEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_AdmTiposRecibo";
-            this.pnl_BarraEstado.ResumeLayout(false);
-            this.pnl_BarraEstado.PerformLayout();
+            this.Text = "frm_PuestosEmpleados";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tipos_recibos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_puestos_empleados)).EndInit();
+            this.pnl_BarraEstado.ResumeLayout(false);
+            this.pnl_BarraEstado.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuGradientPanel pnl_BarraEstado;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_tipos_recibos;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_nombre_tip_recibo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_actualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Nuevo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Eliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Agregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_tiporecibo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_tiporecibo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_nombre_puesto;
+        private System.Windows.Forms.DataGridView dgv_puestos_empleados;
+        private Bunifu.Framework.UI.BunifuGradientPanel pnl_BarraEstado;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_puesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_puesto;
     }
 }
