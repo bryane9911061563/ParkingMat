@@ -57,8 +57,10 @@
     <Compile Include="BO\Cajones_BO.cs" />
     <Compile Include="BO\Cliente_BO.cs" />
     <Compile Include="BO\Cls_AppRunning.cs" />
+    <Compile Include="BO\Cls_Static_UsuarioRunningThisMoment.cs" />
     <Compile Include="BO\CLs_TIempoActual.cs" />
     <Compile Include="BO\EmpleadoUS_BO.cs" />
+    <Compile Include="BO\Pensionados_BO.cs" />
     <Compile Include="BO\Sucursal_BO.cs" />
     <Compile Include="BO\Empleado_BO.cs" />
     <Compile Include="BO\Jefe_BO.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="DAO\Cliente_DAO.cs" />
     <Compile Include="DAO\Conexion_DAO.cs" />
     <Compile Include="DAO\Cajones_DAO.cs" />
+    <Compile Include="DAO\Pensionados_DAO.cs" />
     <Compile Include="DAO\Sucursal_DAO.cs" />
     <Compile Include="DAO\Empleado_DAO.cs" />
     <Compile Include="DAO\Recibo_DAO.cs" />

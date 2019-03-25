@@ -53,10 +53,25 @@ namespace ParkingMat.DAO
             return lisDivision;
         }
 
+        public ArrayList lista_Puestos()
+        {
+            instruccion_SQL = "Select Puesto from tipo_puesto";
+            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+            obj_conec.AbrirBD();
+            MySqlDataReader leer;
+            ArrayList lisDivision = new ArrayList();
+            leer = cmd.ExecuteReader();
+            while (leer.Read())
+            {
+                lisDivision.Add(leer["Puesto"].ToString());
+            }
+            obj_conec.CerrarBD();
+            return lisDivision;
+        }
 
         public int Asignar_Sucursal(String sucursal)
         {
-            instruccion_SQL = "Select id_Sucursal from sucursales where Nombre_Sucursal = '" + sucursal + "'";
+            instruccion_SQL = "Select id_Sucursal from sucursales where Nombre_Sucursal = '"+sucursal+"'";
             MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
             obj_conec.AbrirBD();
             MySqlDataReader leer;
@@ -65,6 +80,21 @@ namespace ParkingMat.DAO
             while (leer.Read())
             {
                 id = int.Parse(leer["id_Sucursal"].ToString());
+            }
+            obj_conec.CerrarBD();
+            return id;
+        }
+        public int Asignar_Puesto(String puesto)
+        {
+            instruccion_SQL = "Select id_puesto from tipo_puesto where Puesto = '" + puesto + "'";
+            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+            obj_conec.AbrirBD();
+            MySqlDataReader leer;
+            int id = 0;
+            leer = cmd.ExecuteReader();
+            while (leer.Read())
+            {
+                id = int.Parse(leer["id_puesto"].ToString());
             }
             obj_conec.CerrarBD();
             return id;

@@ -22,7 +22,6 @@ namespace ParkingMat.GUI
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             AbrirFormularios<frm_ParkingEmpleado>();
-            MessageBox.Show(Cls_Static_UsuarioRunningThisMoment.id_Sucursal.ToString());
 
         }
         //Metodo para abrir un form dentro del contenedor

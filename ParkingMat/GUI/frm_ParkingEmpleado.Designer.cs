@@ -37,7 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_cajones = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            this.gbx_cajones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +54,13 @@
             // 
             // gbx_cajones
             // 
+            this.gbx_cajones.Controls.Add(this.pnl_cajones);
             this.gbx_cajones.Location = new System.Drawing.Point(12, 6);
             this.gbx_cajones.Name = "gbx_cajones";
             this.gbx_cajones.Size = new System.Drawing.Size(1310, 494);
             this.gbx_cajones.TabIndex = 0;
             this.gbx_cajones.TabStop = false;
+            this.gbx_cajones.Enter += new System.EventHandler(this.gbx_cajones_Enter);
             // 
             // comboBox1
             // 
@@ -148,6 +152,14 @@
             this.panel1.Size = new System.Drawing.Size(1334, 39);
             this.panel1.TabIndex = 0;
             // 
+            // pnl_cajones
+            // 
+            this.pnl_cajones.AutoScroll = true;
+            this.pnl_cajones.Location = new System.Drawing.Point(0, 19);
+            this.pnl_cajones.Name = "pnl_cajones";
+            this.pnl_cajones.Size = new System.Drawing.Size(1304, 469);
+            this.pnl_cajones.TabIndex = 0;
+            // 
             // frm_ParkingEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +172,7 @@
             this.Text = "frm_ParkingEmpleado";
             this.Load += new System.EventHandler(this.frm_ParkingEmpleado_Load);
             this.panel2.ResumeLayout(false);
+            this.gbx_cajones.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -175,5 +188,6 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_cajones;
     }
 }

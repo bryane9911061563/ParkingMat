@@ -8,8 +8,8 @@ namespace ParkingMat.BO
 {
     class Empleado_BO
     {
-        private int id_Empleado = 0, salario_Base = 0,id_sucursal;
-        private String nombre = "", Apellido_1 = "", Apellido_2 = "",Correo_Electronico="",Clave_Sesion="",Horario_Trabajo="",puesto="";
+        private int id_Empleado = 0, salario_Base = 0,id_sucursal, puesto;
+        private String nombre = "", Apellido_1 = "", Apellido_2 = "",Correo_Electronico="",Clave_Sesion="",Horario_Trabajo="";
         private DateTime fecha_nacimiento;
 
         public int Id_Empleado { get => id_Empleado; set => id_Empleado = value; }
@@ -21,7 +21,7 @@ namespace ParkingMat.BO
         public string Clave_Sesion1 { get => Clave_Sesion; set => Clave_Sesion = value; }
         public string Horario_Trabajo1 { get => Horario_Trabajo; set => Horario_Trabajo = value; }
         public DateTime Fecha_nacimiento { get => fecha_nacimiento; set => fecha_nacimiento = value; }
-        public string Puesto { get => puesto; set => puesto = value; }
+        public int Puesto { get => puesto; set => puesto = value; }
         public int Id_sucursal { get => id_sucursal; set => id_sucursal = value; }
     }
 }

@@ -480,10 +480,6 @@
             // 
             this.cbx_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cbx_Cargo.FormattingEnabled = true;
-            this.cbx_Cargo.Items.AddRange(new object[] {
-            "Vigilante de caseta",
-            "Conserje",
-            "Guardia"});
             this.cbx_Cargo.Location = new System.Drawing.Point(104, 442);
             this.cbx_Cargo.Name = "cbx_Cargo";
             this.cbx_Cargo.Size = new System.Drawing.Size(187, 32);

@@ -63,7 +63,7 @@ namespace ParkingMat.DAO
 
         public ArrayList info_Cajones(int id)
         {
-            instruccion_SQL = "Select * from cajones where id_sucursal = '" + id.ToString() + "'";
+            instruccion_SQL = "SELECT cajones.*, estados_cajones.*,tipos_vehiculos.* FROM cajones,estados_cajones,tipos_vehiculos WHERE cajones.id_estado_cajon = estados_cajones.id_estado_cajon and tipos_vehiculos.id_tipo_vehiculo = cajones.id_tipo_vehiculo and cajones.id_sucursal = " + id+" GROUP BY cajones.id_cajon";
             MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
             obj_conec.AbrirBD();
             MySqlDataReader leer;
@@ -71,10 +71,10 @@ namespace ParkingMat.DAO
             leer = cmd.ExecuteReader();
             while (leer.Read())
             {
-                String auxiliar =leer["estado_cajon"].ToString() + "|";
-                auxiliar = auxiliar + "|" + leer["tipo_vehiculo"].ToString() + "|";
-                auxiliar = auxiliar + "|" + leer["Hora_inicio"].ToString() + "|";
-                auxiliar = auxiliar + "|" + leer["Lugar"].ToString() + "|";
+                String auxiliar =leer["estado"].ToString();
+                auxiliar = auxiliar + "|" + leer["tipo_vehiculo"].ToString();
+                auxiliar = auxiliar + "|" + leer["Hora_inicio"].ToString();
+                auxiliar = auxiliar + "|" + leer["Lugar"].ToString();
                 cajas.Add(auxiliar);
             }
             obj_conec.CerrarBD();
