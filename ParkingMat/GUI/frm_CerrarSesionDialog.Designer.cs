@@ -58,20 +58,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(150, 79);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(149, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 40);
+            this.label2.Size = new System.Drawing.Size(230, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "El programa cerrará la sesión \r\nactual";
+            this.label2.Text = "Se realizara el reporte del turno";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(135, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 30);
+            this.label1.Size = new System.Drawing.Size(455, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Está seguro que desea cerrar sesión?";
             // 
@@ -119,7 +119,7 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cancelar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Cancelar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Cerrar_Sesion
@@ -156,7 +156,7 @@
             this.btn_Cerrar_Sesion.Text = "Cerrar sesión";
             this.btn_Cerrar_Sesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cerrar_Sesion.Textcolor = System.Drawing.Color.White;
-            this.btn_Cerrar_Sesion.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cerrar_Sesion.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cerrar_Sesion.Click += new System.EventHandler(this.btn_Cerrar_Sesion_Click);
             // 
             // pnl_BarraEstado

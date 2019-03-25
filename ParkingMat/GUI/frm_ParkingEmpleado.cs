@@ -58,26 +58,37 @@ namespace ParkingMat.GUI
                 (este texto verde) pero antes de delagar el boton
                     aprentemente este ciclo for es el create de el boton*/
                     String estado="";
+                    int lugar = contador+1;
                    
+                    if (cajones_lista.Count < 1)
+                    {
+                        Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
+                    }
                     for (int z = 0; z<cajones_lista.Count ;z++)
                         {
                         String[] info = cajones_lista[z].ToString().Split('|');
-                            if (info[0] == "ocupado"  && int.Parse(info[3].ToString())-1 == contador)
+                            if (info[0] == "ocupado"  && int.Parse(info[4].ToString())-1 == contador)
                             {
                                 Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#e68e8a");
                                 Vehiculo_Botton[contador].Text = info[2].ToString();
                                 estado = "El lugar se encuentra ocupado \n intenta otro por favor";
                             break;
                             }
+                            else if(info[0] == "recerbado" && int.Parse(info[4].ToString()) - 1 == contador)
+                            {
+                                Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#e68e8a");
+                                Vehiculo_Botton[contador].Text = info[2].ToString()+"-"+ info[3].ToString();
+                                estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                            }
                             else
                             {
-                                estado = "libre, puedes usarlo";
                                 Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
                             }
                            
                         }
 
-                    Vehiculo_Botton[contador].Click += delegate { MessageBox.Show(estado); };
+                    Vehiculo_Botton[contador].Click += delegate {/* MessageBox.Show(lugar.ToString()); };/*/frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(1,lugar); vehiculo.Show(); };
+                    pnl_cajones.Controls.Remove(Vehiculo_Botton[contador]);
                     pnl_cajones.Controls.Add(Vehiculo_Botton[contador]);
                     contador = contador + 1;
                     if (contador >= cantidad)

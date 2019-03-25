@@ -106,6 +106,8 @@ namespace ParkingMat.GUI
 
         private void btn_Cerrar_Sesion_Click(object sender, EventArgs e)
         {
+
+
             Application.Restart();
         }
     }

@@ -136,11 +136,11 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Product Sans", 48F);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(156, 7);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 82);
+            this.label10.Size = new System.Drawing.Size(68, 73);
             this.label10.TabIndex = 1;
             this.label10.Text = "0";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,11 +188,11 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Product Sans", 48F);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(169, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 82);
+            this.label8.Size = new System.Drawing.Size(68, 73);
             this.label8.TabIndex = 1;
             this.label8.Text = "0";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,11 +227,11 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(17, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 25);
+            this.label3.Size = new System.Drawing.Size(137, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Pensionados";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,11 +240,11 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(158, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 82);
+            this.label4.Size = new System.Drawing.Size(68, 73);
             this.label4.TabIndex = 1;
             this.label4.Text = "0";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,11 +279,11 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(11, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
+            this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Empleados";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -292,11 +292,11 @@
             // 
             this.lbl_NumEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_NumEmpleados.AutoSize = true;
-            this.lbl_NumEmpleados.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NumEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NumEmpleados.ForeColor = System.Drawing.Color.White;
             this.lbl_NumEmpleados.Location = new System.Drawing.Point(162, 7);
             this.lbl_NumEmpleados.Name = "lbl_NumEmpleados";
-            this.lbl_NumEmpleados.Size = new System.Drawing.Size(76, 82);
+            this.lbl_NumEmpleados.Size = new System.Drawing.Size(68, 73);
             this.lbl_NumEmpleados.TabIndex = 1;
             this.lbl_NumEmpleados.Text = "0";
             this.lbl_NumEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,6 +323,7 @@
             this.pnl_tarjetaCoches.Name = "pnl_tarjetaCoches";
             this.pnl_tarjetaCoches.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaCoches.TabIndex = 20;
+            this.pnl_tarjetaCoches.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_tarjetaCoches_Paint);
             this.pnl_tarjetaCoches.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnl_tarjetaCoches_MouseClick);
             this.pnl_tarjetaCoches.MouseLeave += new System.EventHandler(this.pnl_tarjetaCoches_MouseLeave);
             this.pnl_tarjetaCoches.MouseHover += new System.EventHandler(this.pnl_tarjetaCoches_MouseHover_1);
@@ -331,11 +332,11 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(8, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 25);
+            this.label7.Size = new System.Drawing.Size(106, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Vehiculos";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -344,11 +345,11 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(155, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 82);
+            this.label6.Size = new System.Drawing.Size(68, 73);
             this.label6.TabIndex = 1;
             this.label6.Text = "0";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,7 +451,7 @@
             this.btn_Salir.Text = "Cerrar sesión";
             this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Salir.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // pictureBox6
@@ -468,11 +469,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Location = new System.Drawing.Point(45, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 24);
+            this.label11.Size = new System.Drawing.Size(91, 24);
             this.label11.TabIndex = 22;
             this.label11.Text = "arkingMat";
             // 

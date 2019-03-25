@@ -26,7 +26,7 @@ namespace ParkingMat.GUI
             InitializeComponent();
             //Mostrar el numero de empleados
             
-            MessageBox.Show(obAdminDAO.num_Empleados().ToString());
+            //MessageBox.Show(obAdminDAO.num_Empleados().ToString());
 
             lbl_NumEmpleados.Text = obAdminDAO.num_Empleados();
 
@@ -260,6 +260,11 @@ namespace ParkingMat.GUI
         private void pnl_tarjetaReportes_MouseClick(object sender, MouseEventArgs e)
         {
             AbrirFormularios<frm_AdmiReportes>();
+
+        }
+
+        private void pnl_tarjetaCoches_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

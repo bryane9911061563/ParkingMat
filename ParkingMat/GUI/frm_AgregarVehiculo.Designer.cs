@@ -33,19 +33,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.mtx_salida = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtx_entrada = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_matricula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtx_numero = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_tipo_vehiculo = new System.Windows.Forms.ComboBox();
             this.pnl_BarraEstado = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -60,22 +60,22 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(577, 372);
+            this.panel1.Size = new System.Drawing.Size(573, 372);
             this.panel1.TabIndex = 10;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_cancelar);
             this.groupBox1.Controls.Add(this.bunifuFlatButton4);
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
+            this.groupBox1.Controls.Add(this.mtx_salida);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.mtx_entrada);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.mtx_numero);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_tipo_vehiculo);
             this.groupBox1.Location = new System.Drawing.Point(28, 16);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(520, 332);
@@ -116,7 +116,7 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cancelar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_cancelar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // bunifuFlatButton4
@@ -153,47 +153,50 @@
             this.bunifuFlatButton4.Text = "Guardar";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
-            // maskedTextBox3
+            // mtx_salida
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(414, 216);
-            this.maskedTextBox3.Mask = "00:00";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(64, 29);
-            this.maskedTextBox3.TabIndex = 26;
-            this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            this.mtx_salida.Enabled = false;
+            this.mtx_salida.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtx_salida.Location = new System.Drawing.Point(200, 220);
+            this.mtx_salida.Mask = "00:00";
+            this.mtx_salida.Name = "mtx_salida";
+            this.mtx_salida.Size = new System.Drawing.Size(64, 29);
+            this.mtx_salida.TabIndex = 26;
+            this.mtx_salida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtx_salida.ValidatingType = typeof(System.DateTime);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(270, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 23);
+            this.label7.Size = new System.Drawing.Size(136, 24);
             this.label7.TabIndex = 25;
             this.label7.Text = "Hora de salida:";
             // 
-            // maskedTextBox2
+            // mtx_entrada
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(200, 216);
-            this.maskedTextBox2.Mask = "00:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(64, 29);
-            this.maskedTextBox2.TabIndex = 24;
-            this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.mtx_entrada.Enabled = false;
+            this.mtx_entrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtx_entrada.Location = new System.Drawing.Point(412, 220);
+            this.mtx_entrada.Mask = "00:00";
+            this.mtx_entrada.Name = "mtx_entrada";
+            this.mtx_entrada.Size = new System.Drawing.Size(64, 29);
+            this.mtx_entrada.TabIndex = 24;
+            this.mtx_entrada.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtx_entrada.ValidatingType = typeof(System.DateTime);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(42, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 23);
+            this.label6.Size = new System.Drawing.Size(151, 24);
             this.label6.TabIndex = 23;
             this.label6.Text = "Hora de entrada:";
             // 
@@ -202,8 +205,8 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Controls.Add(this.txt_matricula);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(76, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(369, 139);
@@ -214,17 +217,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(136, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 23);
+            this.label4.Size = new System.Drawing.Size(60, 24);
             this.label4.TabIndex = 23;
             this.label4.Text = "Color:";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(203, 91);
+            this.button1.Location = new System.Drawing.Point(198, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 21;
@@ -233,77 +236,63 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(47, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 23);
+            this.label2.Size = new System.Drawing.Size(125, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "No. Matricula:";
             // 
-            // textBox1
+            // txt_matricula
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(51, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 30);
-            this.textBox1.TabIndex = 15;
+            this.txt_matricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_matricula.Location = new System.Drawing.Point(51, 49);
+            this.txt_matricula.Name = "txt_matricula";
+            this.txt_matricula.Size = new System.Drawing.Size(266, 29);
+            this.txt_matricula.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(307, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 20;
             this.label3.Text = "Número:";
             // 
-            // maskedTextBox1
+            // mtx_numero
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(400, 173);
-            this.maskedTextBox1.Mask = "99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(37, 30);
-            this.maskedTextBox1.TabIndex = 19;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.mtx_numero.Enabled = false;
+            this.mtx_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtx_numero.Location = new System.Drawing.Point(400, 173);
+            this.mtx_numero.Mask = "99";
+            this.mtx_numero.Name = "mtx_numero";
+            this.mtx_numero.Size = new System.Drawing.Size(37, 29);
+            this.mtx_numero.TabIndex = 19;
+            this.mtx_numero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtx_numero.ValidatingType = typeof(int);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(84, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 23);
+            this.label5.Size = new System.Drawing.Size(84, 24);
             this.label5.TabIndex = 18;
             this.label5.Text = "Sección:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // comboBox1
+            // cmb_tipo_vehiculo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 14.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O"});
-            this.comboBox1.Location = new System.Drawing.Point(177, 173);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 31);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.Text = "Seleccione";
+            this.cmb_tipo_vehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.cmb_tipo_vehiculo.FormattingEnabled = true;
+            this.cmb_tipo_vehiculo.Location = new System.Drawing.Point(177, 173);
+            this.cmb_tipo_vehiculo.Name = "cmb_tipo_vehiculo";
+            this.cmb_tipo_vehiculo.Size = new System.Drawing.Size(120, 32);
+            this.cmb_tipo_vehiculo.TabIndex = 17;
+            this.cmb_tipo_vehiculo.Text = "Seleccione";
             // 
             // pnl_BarraEstado
             // 
@@ -326,12 +315,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 24);
+            this.label1.Size = new System.Drawing.Size(237, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Administracion de vehiculo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_cerrar
             // 
@@ -379,6 +369,7 @@
             this.Name = "frm_AgregarVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_AgregarVehiculo";
+            this.Load += new System.EventHandler(this.frm_AgregarVehiculo_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -396,19 +387,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_cancelar;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox mtx_salida;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mtx_entrada;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_matricula;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtx_numero;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_tipo_vehiculo;
         private Bunifu.Framework.UI.BunifuGradientPanel pnl_BarraEstado;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_cerrar;
