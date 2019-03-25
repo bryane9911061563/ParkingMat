@@ -29,7 +29,6 @@ namespace ParkingMat.DAO
             return (virtual_pen);
         }
 
-        //Coso para ejecutar instrucciones
 
         public int Guardar_Datos(Empleado_BO obj_div)
         {

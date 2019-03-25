@@ -45,7 +45,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaEmpleados = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_NumEmpleados = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaCoches = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -264,7 +264,7 @@
             this.pnl_tarjetaEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnl_tarjetaEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
             this.pnl_tarjetaEmpleados.Controls.Add(this.label1);
-            this.pnl_tarjetaEmpleados.Controls.Add(this.label2);
+            this.pnl_tarjetaEmpleados.Controls.Add(this.lbl_NumEmpleados);
             this.pnl_tarjetaEmpleados.Controls.Add(this.pictureBox2);
             this.pnl_tarjetaEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_tarjetaEmpleados.Location = new System.Drawing.Point(277, 2);
@@ -288,18 +288,18 @@
             this.label1.Text = "Empleados";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbl_NumEmpleados
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(162, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 82);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_NumEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_NumEmpleados.AutoSize = true;
+            this.lbl_NumEmpleados.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NumEmpleados.ForeColor = System.Drawing.Color.White;
+            this.lbl_NumEmpleados.Location = new System.Drawing.Point(162, 7);
+            this.lbl_NumEmpleados.Name = "lbl_NumEmpleados";
+            this.lbl_NumEmpleados.Size = new System.Drawing.Size(76, 82);
+            this.lbl_NumEmpleados.TabIndex = 1;
+            this.lbl_NumEmpleados.Text = "0";
+            this.lbl_NumEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -832,7 +832,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel pnl_tarjetaEmpleados;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_NumEmpleados;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnl_tarjetaCoches;
         private System.Windows.Forms.Label label7;

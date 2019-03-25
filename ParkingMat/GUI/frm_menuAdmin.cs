@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ParkingMat.DAO;
+using ParkingMat.BO;
 
 namespace ParkingMat.GUI
 {
@@ -14,10 +16,20 @@ namespace ParkingMat.GUI
     {
         int panelHeight;
         bool Hidden;
+        Cls_ADMIN_DAO obAdminDAO = new Cls_ADMIN_DAO();
+        
+        
+
 
         public frm_menuAdmin()
         {
             InitializeComponent();
+            //Mostrar el numero de empleados
+            
+            MessageBox.Show(obAdminDAO.num_Empleados().ToString());
+
+            lbl_NumEmpleados.Text = obAdminDAO.num_Empleados();
+
             panelHeight = pnl_top.Height;
             Hidden = false;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
