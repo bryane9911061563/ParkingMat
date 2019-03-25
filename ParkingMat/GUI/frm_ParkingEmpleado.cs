@@ -29,6 +29,7 @@ namespace ParkingMat.GUI
         {
             int cantidad = cajon.Cajones_por_Sucursal(Sucursal1);//el parametro a recibir es el id del sucursal
             cajones_lista = cajon.info_Cajones(Sucursal1);
+            //MessageBox.Show(cantidad.ToString());
             Mostrar_Cajones(cantidad);
         }
 
@@ -42,51 +43,56 @@ namespace ParkingMat.GUI
             Button[] Vehiculo_Botton = new Button[cantidad];
 
             int contador = 0;
-            for (int y = 0; y < 10; y++)
+            for (int y = 0; y < cantidad; y++)
             {
-                for (int x = 0; x < 4; x++)
+                for (int x = 0; x < 5; x++)
                 {
                     Vehiculo_Botton[contador] = new Button();
                     Vehiculo_Botton[contador].Visible = true;
                     Vehiculo_Botton[contador].Height = 110;
-                    Vehiculo_Botton[contador].Width = 270;
+                    Vehiculo_Botton[contador].Width = 260;
                     Vehiculo_Botton[contador].Top = y * 115;
-                    Vehiculo_Botton[contador].Left = x * 275;
+                    Vehiculo_Botton[contador].Left = x * 265;
                     /*recuerda que si el boonton va a tener }
                 daots, estos tienen que crearse en el espacio de creacion del boton
                 (este texto verde) pero antes de delagar el boton
                     aprentemente este ciclo for es el create de el boton*/
-                    try{
-                        
-                    String estado;
-                        String[] info = cajones_lista[contador].ToString().Split('|');
-                        if (info[0] == "ocupado")
+                    String estado="";
+                   
+                    for (int z = 0; z<cajones_lista.Count ;z++)
                         {
-                            Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#b00");
-                            estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                        String[] info = cajones_lista[z].ToString().Split('|');
+                            if (info[0] == "ocupado"  && int.Parse(info[3].ToString())-1 == contador)
+                            {
+                                Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#e68e8a");
+                                Vehiculo_Botton[contador].Text = info[2].ToString();
+                                estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                            break;
+                            }
+                            else
+                            {
+                                estado = "libre, puedes usarlo";
+                                Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
+                            }
+                           
                         }
-                        else
-                        {
-                            estado = "libre, puedes usarlo";
-                            Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#0f0");
-                        }
-                        Vehiculo_Botton[contador].Text = info[0].ToString();
-                        Vehiculo_Botton[contador].Click += delegate { MessageBox.Show("" /*estado.ToString()*/); };
-                        gbx_cajones.Controls.Add(Vehiculo_Botton[contador]);
-                        contador = contador + 1;
-                    }catch(Exception ex)
-                    {
 
-                    }
-                    if (contador >= cajones_lista.Count)
+                    Vehiculo_Botton[contador].Click += delegate { MessageBox.Show(estado); };
+                    pnl_cajones.Controls.Add(Vehiculo_Botton[contador]);
+                    contador = contador + 1;
+                    if (contador >= cantidad)
                     {
-                        x = 11;
-                        y = 11;
+                        x = cantidad+1;
+                        y = cantidad + 1;
                     }
-
+     
                 }
             }
         }
 
+        private void gbx_cajones_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

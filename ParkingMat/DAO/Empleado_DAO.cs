@@ -21,7 +21,7 @@ namespace ParkingMat.DAO
         //Mostrar empleados
         public DataTable tabla_empleado()
         {
-            instruccion_SQL = "SELECT id_Empleado,Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,Puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario, Nombre_Sucursal from empleados INNER JOIN sucursales ON empleados.id_Sucursal=sucursales.id_Sucursal";
+            instruccion_SQL = "SELECT empleados.id_Empleado,empleados.Nombre_Empleado,empleados.Apellido_1_Empleado,empleados.Apellido_2_Empleado,empleados.Fecha_Nacimiento,tipo_puesto.Puesto,empleados.Salario_Base,empleados.Correo_Electronico,empleados.Clave_Sesion,empleados.Horario, sucursales.Nombre_Sucursal from empleados,sucursales,tipo_puesto where empleados.id_Sucursal=sucursales.id_Sucursal and empleados.id_puesto = tipo_puesto.id_puesto GROUP BY empleados.id_Empleado";
             MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
             DataTable virtual_pen = new DataTable();
             adp.Fill(virtual_pen);
@@ -36,7 +36,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
-            instruccion_SQL = "Insert into empleados (Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,Puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario,id_Sucursal) values ('" + datos.Nombre + "','" + datos.Apellido_11 + "','" +datos.Apellido_21 + "','" +datos.Fecha_nacimiento + "','" + datos.Puesto + "','"+datos.Salario_Base+"','" +datos.Correo_Electronico1 + "','" +datos.Clave_Sesion1 + "','" +datos.Horario_Trabajo1 + "','" +datos.Id_sucursal+"')";
+            instruccion_SQL = "Insert into empleados (Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,id_puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario,id_Sucursal) values ('" + datos.Nombre + "','" + datos.Apellido_11 + "','" +datos.Apellido_21 + "','" +datos.Fecha_nacimiento + "','" + datos.Puesto + "','"+datos.Salario_Base+"','" +datos.Correo_Electronico1 + "','" +datos.Clave_Sesion1 + "','" +datos.Horario_Trabajo1 + "','" +datos.Id_sucursal+"')";
             cmd.CommandText = instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             obj_conec.CerrarBD();
@@ -77,7 +77,7 @@ namespace ParkingMat.DAO
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
             //modif access to BD
-            instruccion_SQL = "Update  empleados set Nombre_Empleado= '" + datos.Nombre + "',Apellido_1_Empleado='"+datos.Apellido_11+"',Apellido_2_Empleado='"+datos.Apellido_21+ "',Fecha_Nacimiento='"+datos.Fecha_nacimiento+ "',Puesto='"+datos.Puesto+ "',Salario_Base='"+datos.Salario_Base+ "',Correo_Electronico='"+datos.Correo_Electronico1+ "',Clave_Sesion='"+datos.Clave_Sesion1+ "',Horario='"+datos.Horario_Trabajo1+ "',id_Sucursal='"+datos.Id_sucursal+ "'  where id_Empleado='" + datos.Id_Empleado + "'";
+            instruccion_SQL = "Update  empleados set Nombre_Empleado= '" + datos.Nombre + "',Apellido_1_Empleado='"+datos.Apellido_11+"',Apellido_2_Empleado='"+datos.Apellido_21+ "',Fecha_Nacimiento='"+datos.Fecha_nacimiento+ "',id_puesto='"+datos.Puesto+ "',Salario_Base='"+datos.Salario_Base+ "',Correo_Electronico='"+datos.Correo_Electronico1+ "',Clave_Sesion='"+datos.Clave_Sesion1+ "',Horario='"+datos.Horario_Trabajo1+ "',id_Sucursal='"+datos.Id_sucursal+ "'  where id_Empleado='" + datos.Id_Empleado + "'";
             //exe cmd
             cmd.CommandText = instruccion_SQL;
             //gdr vlr

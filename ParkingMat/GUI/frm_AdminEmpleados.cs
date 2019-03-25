@@ -43,11 +43,12 @@ namespace ParkingMat.GUI
                 {
                     nuevo.Horario_Trabajo1 = rbx_Vespertino.Text;
                 }
-                nuevo.Puesto = cbx_Cargo.Text;
+               
                 nuevo.Correo_Electronico1 = txt_correo.Text;
                 nuevo.Clave_Sesion1 = txt_contraseña.Text;
                 try
                 {
+                    nuevo.Puesto = verificar.Asignar_Puesto(cbx_Cargo.Text);
                     nuevo.Id_sucursal = verificar.Asignar_Sucursal(cbx_Sucursal.Text);
                 }
                 catch (Exception ex)
@@ -94,6 +95,11 @@ namespace ParkingMat.GUI
             for (int i = 0; i < sucursal.Count; i++)
             {
                 cbx_Sucursal.Items.Add(sucursal[i].ToString());
+            }
+            sucursal = suc.lista_Puestos();
+            for (int i = 0; i < sucursal.Count; i++)
+            {
+               cbx_Cargo.Items.Add(sucursal[i].ToString());
             }
         }
 
@@ -155,7 +161,7 @@ namespace ParkingMat.GUI
                 dtp_nacimiento.Text = dgv_Empleados.Rows[Fila].Cells["Fecha_Nacimiento"].Value.ToString();
                 //TURNO CON UN IF PERO NO HAY TIEMPO XD
                 cbx_Cargo.Text = dgv_Empleados.Rows[Fila].Cells["Puesto"].Value.ToString();
-                cbx_Sucursal.Text = Convert.ToString(dgv_Empleados.Rows[Fila].Cells["id_Sucursal"].Value.ToString().TrimEnd());
+                cbx_Sucursal.Text = dgv_Empleados.Rows[Fila].Cells["Nombre_Sucursal"].Value.ToString();
                 datos.Id_Empleado = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Empleado"].Value.ToString().TrimEnd());
                 id_empleado = datos.Id_Empleado;
                 MessageBox.Show(id_empleado.ToString() + "<//" + datos.Id_Empleado.ToString());
@@ -244,11 +250,11 @@ namespace ParkingMat.GUI
                 {
                     nuevo.Horario_Trabajo1 = rbx_Vespertino.Text;
                 }
-                nuevo.Puesto = cbx_Cargo.Text;
                 nuevo.Correo_Electronico1 = txt_correo.Text;
                 nuevo.Clave_Sesion1 = txt_contraseña.Text;
                 try
                 {
+                    nuevo.Puesto = verificar.Asignar_Puesto(cbx_Cargo.Text);
                     nuevo.Id_sucursal = verificar.Asignar_Sucursal(cbx_Sucursal.Text);
                 }
                 catch (Exception ex)
