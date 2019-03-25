@@ -31,7 +31,7 @@ namespace ParkingMat.DAO
         public int Guardar_pensionado(Pensionados_BO objPen)
         {
             Pensionados_BO datos = (Pensionados_BO)objPen;
-            instruccion_SQL = string.Format("Insert into alumno (nombre,apellido_p,apellido_m,fecha_nac,fecha_registro,fecha_venimiento,telfono,correo)values('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}')", objPen.Nombre_pensionado, objPen.Apellido_p_pensionado, objPen.Apellido_m_pensionado, objPen.Fecha_nac_pensionado.ToString("dd/MM/yyyy HH:mm:ss"), objPen.Fecha_registro_pensionado.ToString("dd/MM/yyyy HH:mm:ss"), objPen.Fecha_vencimiento_pensionado.ToString("dd/MM/yyyy HH:mm:ss"), objPen.Num_telefono_pensionado,objPen.Correo_pensionado);
+            instruccion_SQL = string.Format("Insert into pensionados (nombre,apellido_p,apellido_m,fecha_nac,fecha_registro,fecha_vencimiento,telfono,correo)values('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}')", objPen.Nombre_pensionado, objPen.Apellido_p_pensionado, objPen.Apellido_m_pensionado, objPen.Fecha_nac_pensionado.ToString("dd/MM/yyyy"), objPen.Fecha_registro_pensionado.ToString("dd/mm/yyyy"), objPen.Fecha_vencimiento_pensionado.ToString("dd/mm/yyyy"), objPen.Num_telefono_pensionado,objPen.Correo_pensionado);
             return obj_conec.EjecutarSQL(instruccion_SQL);
         }
     }

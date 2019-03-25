@@ -45,6 +45,8 @@ namespace ParkingMat.GUI
             {
                 frm_pruebaDialog frmExito = new frm_pruebaDialog();
                 frmExito.ShowDialog();
+                dgv_pensionados.DataSource = objPenDAO.Mostrar_pensionados();
+
             }
         }
 
