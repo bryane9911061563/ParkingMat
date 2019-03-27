@@ -16,5 +16,39 @@ namespace ParkingMat.GUI
         {
             InitializeComponent();
         }
+
+        public void AbrirFormularios<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = pnl_Contenedor.Controls.OfType<MiForm>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.Dock = DockStyle.Fill;
+                pnl_Contenedor.Controls.Add(formulario);
+                pnl_Contenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.Text== "Puestos de empleados")
+            {
+                AbrirFormularios<frm_PuestosEmpleados>();
+            }
+            if (comboBox1.Text == "Motivos de recibo") 
+            {
+                AbrirFormularios<frm_AdmTiposRecibo>();
+            }
+        }
     }
 }

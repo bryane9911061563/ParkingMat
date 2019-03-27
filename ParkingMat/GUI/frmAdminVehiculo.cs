@@ -95,12 +95,17 @@ namespace ParkingMat.GUI
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,7 +34,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = Conec.ConectarBD();
             Conec.AbrirBD();
-            Instruccion_SQL = "Insert into tipo_recibo (nombre) values ('"+objTipRecibo.Nombre_tipRecibo+"')";
+            Instruccion_SQL = "Insert into tipo_recibo (tipo_recibo) values ('" + objTipRecibo.Nombre_tipRecibo+"')";
             cmd.CommandText = Instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             Conec.CerrarBD();
@@ -70,7 +70,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = Conec.ConectarBD();
             Conec.AbrirBD();
-            Instruccion_SQL = "Update  tipo_recibo set nombre_tiporecibo= '" + datos.Nombre_tipRecibo + "' where id_tipo_recibo= ('" + objTipRecibo.Id_tipRecibo + "')";
+            Instruccion_SQL = "Update  tipo_recibo set tipo_recibo= '" + datos.Nombre_tipRecibo + "' where id_tipo_recibo= ('" + objTipRecibo.Id_tipRecibo + "')";
             cmd.CommandText = Instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             Conec.CerrarBD();

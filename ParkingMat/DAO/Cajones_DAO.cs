@@ -25,7 +25,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
-            instruccion_SQL = "Insert into cajones (id_sucursal,Hora_inicio,Hora_final,Lugar,id_tipo_vehiculo,id_estado_cajon,matricula) values ('" + datos.Id_sucursal + "','" + datos.Hora_inicio1 + "','00:00','" +datos.Lugar1 + "','" + datos.Tipo_vehiculo + "',1,'"+datos.Matricula1+"')";
+            instruccion_SQL = "Insert into cajones (id_sucursal,Hora_inicio,Hora_final,Lugar,id_tipo_vehiculo,id_estado_cajon) values ('" + datos.Id_sucursal + "','" + datos.Hora_inicio1 + "','00:00','" +datos.Lugar1 + "','" + datos.Tipo_vehiculo + "',1)";
             cmd.CommandText = instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             obj_conec.CerrarBD();

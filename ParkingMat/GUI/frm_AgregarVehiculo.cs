@@ -103,12 +103,12 @@ namespace ParkingMat.GUI
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -184,7 +184,7 @@ namespace ParkingMat.GUI
                 {
                     frm_pruebaDialog exito = new frm_pruebaDialog();
                     exito.ShowDialog();
-                    this.Close();
+                    this.Hide();
 
                 }
             }

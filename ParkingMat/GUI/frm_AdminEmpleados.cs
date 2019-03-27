@@ -150,7 +150,9 @@ namespace ParkingMat.GUI
 
         private void dgv_Empleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-              int Fila = e.RowIndex;
+            try
+            {
+                int Fila = e.RowIndex;
 
                 txt_nombre.Text = dgv_Empleados.Rows[Fila].Cells["Nombre_Empleado"].Value.ToString();
                 txt_apellido1.Text = dgv_Empleados.Rows[Fila].Cells["Apellido_1_Empleado"].Value.ToString();
@@ -164,7 +166,11 @@ namespace ParkingMat.GUI
                 cbx_Sucursal.Text = dgv_Empleados.Rows[Fila].Cells["Nombre_Sucursal"].Value.ToString();
                 datos.Id_Empleado = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Empleado"].Value.ToString().TrimEnd());
                 id_empleado = datos.Id_Empleado;
-                MessageBox.Show(id_empleado.ToString() + "<//" + datos.Id_Empleado.ToString());
+            }
+            catch
+            {
+
+            }
             
         }
 

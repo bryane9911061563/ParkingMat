@@ -34,6 +34,7 @@
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_eliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
@@ -49,7 +50,6 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btn_eliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_BarraEstado.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -147,6 +147,42 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Activecolor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.AllowDrop = true;
+            this.btn_eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.BorderRadius = 7;
+            this.btn_eliminar.ButtonText = "Eliminar";
+            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_eliminar.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_eliminar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.Iconimage = null;
+            this.btn_eliminar.Iconimage_right = null;
+            this.btn_eliminar.Iconimage_right_Selected = null;
+            this.btn_eliminar.Iconimage_Selected = null;
+            this.btn_eliminar.IconMarginLeft = 0;
+            this.btn_eliminar.IconMarginRight = 0;
+            this.btn_eliminar.IconRightVisible = true;
+            this.btn_eliminar.IconRightZoom = 0D;
+            this.btn_eliminar.IconVisible = true;
+            this.btn_eliminar.IconZoom = 90D;
+            this.btn_eliminar.IsTab = false;
+            this.btn_eliminar.Location = new System.Drawing.Point(206, 268);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_eliminar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_eliminar.selected = false;
+            this.btn_eliminar.Size = new System.Drawing.Size(167, 48);
+            this.btn_eliminar.TabIndex = 31;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_eliminar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_eliminar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // btn_cancelar
             // 
             this.btn_cancelar.Activecolor = System.Drawing.Color.Transparent;
@@ -219,6 +255,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // maskedTextBox3
             // 
@@ -369,42 +406,6 @@
             this.comboBox1.Size = new System.Drawing.Size(120, 31);
             this.comboBox1.TabIndex = 17;
             this.comboBox1.Text = "Seleccione";
-            // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Activecolor = System.Drawing.Color.Transparent;
-            this.btn_eliminar.AllowDrop = true;
-            this.btn_eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_eliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar.BorderRadius = 7;
-            this.btn_eliminar.ButtonText = "Eliminar";
-            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_eliminar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_eliminar.Iconimage = null;
-            this.btn_eliminar.Iconimage_right = null;
-            this.btn_eliminar.Iconimage_right_Selected = null;
-            this.btn_eliminar.Iconimage_Selected = null;
-            this.btn_eliminar.IconMarginLeft = 0;
-            this.btn_eliminar.IconMarginRight = 0;
-            this.btn_eliminar.IconRightVisible = true;
-            this.btn_eliminar.IconRightZoom = 0D;
-            this.btn_eliminar.IconVisible = true;
-            this.btn_eliminar.IconZoom = 90D;
-            this.btn_eliminar.IsTab = false;
-            this.btn_eliminar.Location = new System.Drawing.Point(206, 268);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_eliminar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_eliminar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_eliminar.selected = false;
-            this.btn_eliminar.Size = new System.Drawing.Size(167, 48);
-            this.btn_eliminar.TabIndex = 31;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_eliminar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_eliminar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // frmAdminVehiculo
             // 

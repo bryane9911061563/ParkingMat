@@ -117,36 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnl_BarraEstado.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA9SURBVChTjcOBCQBBCAOw7r+nJ4qKTtAf4RsI7o5K7C6V
-        mBkq0d1UoqqoRGZSiYigEu5OJd57VMLM+N/4AVvUdvIjj4TJAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btn_cerrar.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAXJJREFUSEvt
-        lctKw0AUhrPxiUqz84IpQiWLurCKKLrytmt3BV2UVsGXshV024XBokKtWqmt1W5yaYSY30kyxaQTmk6E
-        rnrgIzBnzvlITpIRZhE7kEjMaVLyXJPERy0l9rkhdaoknjl9aEs21JRYJhvxX1QpWaQt2dCWRSWsiJ/k
-        LW3JBtnQZAti0aQt2XCSI5vxfVGCsZcNrA3RN2UM8sdhucklZrEA9PqwG0+MSN+QYdfrwHsXg9xRIEfg
-        uJPVBVhXVU/0/Apjf9tdN7YysO8f3PWfWg16ZuWvxoPvcY2KzEIuSuDAKXFwRNWK2xgfX1EChxgSgrGb
-        BdodT9T9JANn5uCHX+Kfgf3W9q4vLRiHO8xeCp+EGTJ5q6zKZZRocgkjWKMzSM9HiSaXmOVTT6Ao0NfT
-        /ibQ5SVYN9dAp0feuHwgR+B7XGbphBEM0eVF8iEehOX4Bx+DMZJp/IWncp74TsY7csI1eKF140/GWYwP
-        QfgFEqWe+vWAB5UAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="id_tiporecibo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="id_tipo_recibo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="nombre_tiporecibo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="id_tiporecibo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nombre_tiporecibo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="tipo_recibo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

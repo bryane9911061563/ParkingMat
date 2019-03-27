@@ -19,7 +19,7 @@ namespace ParkingMat.DAO
 
         public DataTable MostrarPuestos()
         {
-            Instruccion_SQL = "SELECT *from puestos_empleado";
+            Instruccion_SQL = "SELECT *from tipo_puesto";
             MySqlDataAdapter adp = new MySqlDataAdapter(Instruccion_SQL, Conec.ConectarBD());
             DataTable virtual_Puesto = new DataTable();
             adp.Fill(virtual_Puesto);
@@ -33,7 +33,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = Conec.ConectarBD();
             Conec.AbrirBD();
-            Instruccion_SQL = "Insert into puesto_empleado (nombre_puesto) values ('" + objPuesto.Nombre_puestoempleado + "')";
+            Instruccion_SQL = "Insert into tipo_puesto(Puesto) values ('" + objPuesto.Nombre_puestoempleado + "')";
             cmd.CommandText = Instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             Conec.CerrarBD();
@@ -52,7 +52,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = Conec.ConectarBD();
             Conec.AbrirBD();
-            Instruccion_SQL = "Delete from puesto_empleado where id_puesto= ('" + objPuesto.Id_puestoempleado + "')";
+            Instruccion_SQL = "Delete from tipo_puesto where id_puesto= ('"+ objPuesto.Id_puestoempleado + "')";
             cmd.CommandText = Instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             Conec.CerrarBD();
@@ -70,7 +70,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = Conec.ConectarBD();
             Conec.AbrirBD();
-            Instruccion_SQL = "Update  puesto_empleado set nombre_puesto= '" + objPuesto.Nombre_puestoempleado + "' where id_puesto= ('" + objPuesto.Id_puestoempleado + "')";
+            Instruccion_SQL = "Update  tipo_puesto set Puesto= '" + objPuesto.Nombre_puestoempleado + "' where id_puesto= ('" + objPuesto.Id_puestoempleado + "')";
             cmd.CommandText = Instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             Conec.CerrarBD();

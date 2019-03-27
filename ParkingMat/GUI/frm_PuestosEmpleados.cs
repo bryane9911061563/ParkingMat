@@ -56,7 +56,7 @@ namespace ParkingMat.GUI
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            if (txt_nombre_puesto.Text != "")
+            if (txt_nombre_puesto.Text == "")
             {
                 frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("Campos vacios");
                 error.ShowDialog();
@@ -87,7 +87,7 @@ namespace ParkingMat.GUI
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (txt_nombre_puesto.Text != "")
+            if (txt_nombre_puesto.Text == "")
             {
                 frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("Campos vacios");
                 error.ShowDialog();
@@ -111,11 +111,96 @@ namespace ParkingMat.GUI
             }
         }
 
-        private void dgv_puestos_empleados_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+
+        private void btn_Agregar_Click_1(object sender, EventArgs e)
+        {
+            if (txt_nombre_puesto.Text != "")
+            {
+                objPuestoBO.Nombre_puestoempleado = txt_nombre_puesto.Text;
+                if (objPuestoDAO.Agregar_Puesto(objPuestoBO) == 0)
+                {
+                    frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("Error al guardar");
+                    error.ShowDialog();
+                }
+                else
+                {
+                    frm_pruebaDialog exito = new frm_pruebaDialog();
+                    exito.ShowDialog();
+
+                    LimpiarCampos();
+                    dgv_puestos_empleados.DataSource = objPuestoDAO.MostrarPuestos();
+
+                }
+            }
+        }
+
+        private void btn_actualizar_Click_1(object sender, EventArgs e)
+        {
+            if (txt_nombre_puesto.Text == "")
+
+            {
+                frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("Seleccione un tipo puesto de empleado");
+                error.ShowDialog();
+            }
+            else
+            {
+                objPuestoBO.Nombre_puestoempleado = txt_nombre_puesto.Text;
+                if (objPuestoDAO.Actualizar_Puesto(objPuestoBO) == 0)
+                {
+                    frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("No se ha logrado actualizar el registro");
+                    error.ShowDialog();
+                }
+                else
+                {
+                    frm_pruebaDialog exito = new frm_pruebaDialog();
+                    exito.ShowDialog();
+                    LimpiarCampos();
+                    dgv_puestos_empleados.DataSource = objPuestoDAO.MostrarPuestos();
+                }
+            }
+        }
+
+        private void btn_Nuevo_Click_1(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void btn_Eliminar_Click_1(object sender, EventArgs e)
+        {
+            if (txt_nombre_puesto.Text == "")
+            {
+                frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("Seleccione un puesto");
+                error.ShowDialog();
+
+
+            }
+            else
+            {
+                objPuestoBO.Nombre_puestoempleado = txt_nombre_puesto.Text;
+                if (objPuestoDAO.Eliminar_Puesto(objPuestoBO) == 0)
+                {
+                    frm_ERROR_DIALOG error1 = new frm_ERROR_DIALOG("No se ha logrado eliminar");
+
+                    error1.ShowDialog();
+                }
+                else
+                {
+                    frm_pruebaDialog exito = new frm_pruebaDialog();
+                    exito.ShowDialog();
+                    LimpiarCampos();
+                    dgv_puestos_empleados.DataSource = objPuestoDAO.MostrarPuestos();
+
+                }
+            }
+        }
+
+        private void dgv_puestos_empleados_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             int Fila = e.RowIndex;
             objPuestoBO.Id_puestoempleado = Convert.ToInt32(dgv_puestos_empleados.Rows[Fila].Cells["id_puesto"].Value.ToString().TrimEnd());
-            txt_nombre_puesto.Text = dgv_puestos_empleados.Rows[Fila].Cells["nombre_puesto"].Value.ToString();
+            txt_nombre_puesto.Text = dgv_puestos_empleados.Rows[Fila].Cells["Puesto"].Value.ToString();
+
         }
     }
 }

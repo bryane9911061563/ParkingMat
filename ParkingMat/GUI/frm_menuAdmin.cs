@@ -259,7 +259,7 @@ namespace ParkingMat.GUI
 
         private void pnl_tarjetaReportes_MouseClick(object sender, MouseEventArgs e)
         {
-            AbrirFormularios<frm_AdmiReportes>();
+            AbrirFormularios<frm_ReportesEmpleado>();
 
         }
 
