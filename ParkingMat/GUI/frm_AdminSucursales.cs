@@ -9,14 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ParkingMat.DAO;
+using ParkingMat.BO;
 namespace ParkingMat.GUI
 {
     public partial class frm_AdminSucursales : Form
     {
+        Sucursal_BO objSucuBO = new Sucursal_BO();
+        Sucursal_DAO objSucuDAO = new Sucursal_DAO();
+
         public frm_AdminSucursales()
         {
             InitializeComponent();
+            dgv_sucursales.DataSource = objSucuDAO.MostrarSucursales();
         }
 
         private void btn_vervehiculo_Click(object sender, EventArgs e)

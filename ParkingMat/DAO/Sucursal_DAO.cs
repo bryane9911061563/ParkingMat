@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 using ParkingMat.BO;
 
 namespace ParkingMat.DAO
@@ -17,6 +18,17 @@ namespace ParkingMat.DAO
 
         //Coso para ejecutar instrucciones
         string instruccion_SQL;
+
+        public DataTable MostrarSucursales()
+        {
+            instruccion_SQL = "Select * from sucursales";
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
+            DataTable virtual_Sucursal = new DataTable();
+            
+            adp.Fill(virtual_Sucursal);
+
+            return (virtual_Sucursal);
+        }
 
         public int Guardar_Datos(Sucursal_BO obj_div)
         {

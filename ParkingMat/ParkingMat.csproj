@@ -127,6 +127,12 @@
     <Compile Include="GUI\frm_AdmiReportes.Designer.cs">
       <DependentUpon>frm_AdmiReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_AdmTiposRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_AdmTiposRecibo.Designer.cs">
+      <DependentUpon>frm_AdmTiposRecibo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_AgregarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="GUI\frm_pruebaDialog.Designer.cs">
       <DependentUpon>frm_pruebaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_PuestosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_PuestosEmpleados.Designer.cs">
+      <DependentUpon>frm_PuestosEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_ReportesEmpleado.cs">
       <SubType>Form</SubType>
@@ -225,6 +237,9 @@
     <EmbeddedResource Include="GUI\frm_AdmiReportes.resx">
       <DependentUpon>frm_AdmiReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdmTiposRecibo.resx">
+      <DependentUpon>frm_AdmTiposRecibo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AgregarVehiculo.resx">
       <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_pruebaDialog.resx">
       <DependentUpon>frm_pruebaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_PuestosEmpleados.resx">
+      <DependentUpon>frm_PuestosEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_ReportesEmpleado.resx">
       <DependentUpon>frm_ReportesEmpleado.cs</DependentUpon>

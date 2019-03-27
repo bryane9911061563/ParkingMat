@@ -1,6 +1,6 @@
 ﻿namespace ParkingMat.GUI
 {
-    partial class frm_AdmTiposRecibo
+    partial class frm_tipoVehiculo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgv_tipos_vehiculo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_actualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Nuevo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Eliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Agregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_nombre_tip_recibo = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_tipos_recibos = new System.Windows.Forms.DataGridView();
-            this.id_tipo_recibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_recibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
+            this.txt_nombre_tip_vehiculo = new System.Windows.Forms.TextBox();
+            this.id_tipo_vehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_vehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tipos_recibos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tipos_vehiculo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv_tipos_vehiculo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 135);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(571, 185);
+            this.panel2.TabIndex = 13;
+            // 
+            // dgv_tipos_vehiculo
+            // 
+            this.dgv_tipos_vehiculo.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_tipos_vehiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_tipos_vehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tipos_vehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_tipo_vehiculo,
+            this.tipo_vehiculo});
+            this.dgv_tipos_vehiculo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tipos_vehiculo.Location = new System.Drawing.Point(0, 0);
+            this.dgv_tipos_vehiculo.Name = "dgv_tipos_vehiculo";
+            this.dgv_tipos_vehiculo.Size = new System.Drawing.Size(571, 185);
+            this.dgv_tipos_vehiculo.TabIndex = 1;
+            this.dgv_tipos_vehiculo.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_tipos_vehiculo_CellMouseClick);
             // 
             // panel1
             // 
@@ -52,12 +76,12 @@
             this.panel1.Controls.Add(this.btn_Eliminar);
             this.panel1.Controls.Add(this.btn_Agregar);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_nombre_tip_recibo);
+            this.panel1.Controls.Add(this.txt_nombre_tip_vehiculo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 135);
-            this.panel1.TabIndex = 8;
+            this.panel1.Size = new System.Drawing.Size(571, 135);
+            this.panel1.TabIndex = 12;
             // 
             // btn_actualizar
             // 
@@ -82,7 +106,7 @@
             this.btn_actualizar.IconVisible = true;
             this.btn_actualizar.IconZoom = 90D;
             this.btn_actualizar.IsTab = false;
-            this.btn_actualizar.Location = new System.Drawing.Point(297, 78);
+            this.btn_actualizar.Location = new System.Drawing.Point(289, 78);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Normalcolor = System.Drawing.Color.White;
             this.btn_actualizar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -119,7 +143,7 @@
             this.btn_Nuevo.IconVisible = true;
             this.btn_Nuevo.IconZoom = 90D;
             this.btn_Nuevo.IsTab = false;
-            this.btn_Nuevo.Location = new System.Drawing.Point(169, 78);
+            this.btn_Nuevo.Location = new System.Drawing.Point(161, 78);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Normalcolor = System.Drawing.Color.White;
             this.btn_Nuevo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -156,7 +180,7 @@
             this.btn_Eliminar.IconVisible = true;
             this.btn_Eliminar.IconZoom = 90D;
             this.btn_Eliminar.IsTab = false;
-            this.btn_Eliminar.Location = new System.Drawing.Point(41, 78);
+            this.btn_Eliminar.Location = new System.Drawing.Point(33, 78);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Normalcolor = System.Drawing.Color.White;
             this.btn_Eliminar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -193,7 +217,7 @@
             this.btn_Agregar.IconVisible = true;
             this.btn_Agregar.IconZoom = 90D;
             this.btn_Agregar.IsTab = false;
-            this.btn_Agregar.Location = new System.Drawing.Point(425, 78);
+            this.btn_Agregar.Location = new System.Drawing.Point(417, 78);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.btn_Agregar.OnHovercolor = System.Drawing.Color.DodgerBlue;
@@ -213,88 +237,66 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 29);
+            this.label2.Location = new System.Drawing.Point(133, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
             // 
-            // txt_nombre_tip_recibo
+            // txt_nombre_tip_vehiculo
             // 
-            this.txt_nombre_tip_recibo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_nombre_tip_recibo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_tip_recibo.Location = new System.Drawing.Point(228, 28);
-            this.txt_nombre_tip_recibo.Name = "txt_nombre_tip_recibo";
-            this.txt_nombre_tip_recibo.Size = new System.Drawing.Size(220, 27);
-            this.txt_nombre_tip_recibo.TabIndex = 1;
+            this.txt_nombre_tip_vehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_nombre_tip_vehiculo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_tip_vehiculo.Location = new System.Drawing.Point(220, 28);
+            this.txt_nombre_tip_vehiculo.Name = "txt_nombre_tip_vehiculo";
+            this.txt_nombre_tip_vehiculo.Size = new System.Drawing.Size(220, 27);
+            this.txt_nombre_tip_vehiculo.TabIndex = 1;
             // 
-            // panel2
+            // id_tipo_vehiculo
             // 
-            this.panel2.Controls.Add(this.dgv_tipos_recibos);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 135);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 224);
-            this.panel2.TabIndex = 9;
+            this.id_tipo_vehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_tipo_vehiculo.DataPropertyName = "id_tipo_vehiculo";
+            this.id_tipo_vehiculo.HeaderText = "Codigo";
+            this.id_tipo_vehiculo.Name = "id_tipo_vehiculo";
             // 
-            // dgv_tipos_recibos
+            // tipo_vehiculo
             // 
-            this.dgv_tipos_recibos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_tipos_recibos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_tipos_recibos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tipos_recibos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_tipo_recibo,
-            this.tipo_recibo});
-            this.dgv_tipos_recibos.Location = new System.Drawing.Point(0, 29);
-            this.dgv_tipos_recibos.Name = "dgv_tipos_recibos";
-            this.dgv_tipos_recibos.Size = new System.Drawing.Size(587, 195);
-            this.dgv_tipos_recibos.TabIndex = 1;
-            this.dgv_tipos_recibos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_tipos_recibos_CellMouseClick_1);
+            this.tipo_vehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tipo_vehiculo.DataPropertyName = "tipo_vehiculo";
+            this.tipo_vehiculo.HeaderText = "Nombre";
+            this.tipo_vehiculo.Name = "tipo_vehiculo";
             // 
-            // id_tipo_recibo
-            // 
-            this.id_tipo_recibo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_tipo_recibo.DataPropertyName = "id_tipo_recibo";
-            this.id_tipo_recibo.HeaderText = "Codigo";
-            this.id_tipo_recibo.Name = "id_tipo_recibo";
-            // 
-            // tipo_recibo
-            // 
-            this.tipo_recibo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipo_recibo.DataPropertyName = "tipo_recibo";
-            this.tipo_recibo.HeaderText = "Nombre";
-            this.tipo_recibo.Name = "tipo_recibo";
-            // 
-            // frm_AdmTiposRecibo
+            // frm_tipoVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 359);
+            this.ClientSize = new System.Drawing.Size(571, 320);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_AdmTiposRecibo";
+            this.Name = "frm_tipoVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_AdmTiposRecibo";
+            this.Text = "frm_tipoVehiculo";
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tipos_vehiculo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tipos_recibos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgv_tipos_vehiculo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_nombre_tip_recibo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_actualizar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Nuevo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Eliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Agregar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgv_tipos_recibos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_tipo_recibo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_recibo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_nombre_tip_vehiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_tipo_vehiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_vehiculo;
     }
 }

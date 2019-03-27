@@ -43,3 +43,37 @@ C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ReportesEmpleado.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_UsiarioInvalidoDialog.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_VehiculosEmpleado.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\ParkingMat.exe.config
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\ParkingMat.exe
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\ParkingMat.pdb
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\MySql.Data.dll
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.csprojAssemblyReference.cache
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.A_EjemploBotonCajon.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frmAdminVehiculo.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminEmpleados.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminPensionados.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminPrincipalBeta.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminRecibos.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdminSucursales.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdmiReportes.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AgregarVehiculo.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_CerrarSesionDialog.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ERROR_DIALOG.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_Login.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_menuAdmin.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_MenuEmpleado.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ParkingEmpleado.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_pruebaDialog.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ReportesEmpleado.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_SalirDialog.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_UsiarioInvalidoDialog.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_VehiculosEmpleado.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.Properties.Resources.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.csproj.GenerateResource.cache
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.csproj.CopyComplete
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.exe
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.pdb
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdmTiposRecibo.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PuestosEmpleados.resources
