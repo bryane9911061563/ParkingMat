@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.Framework.UI;
 
 namespace ParkingMat.GUI
 {
@@ -29,7 +30,7 @@ namespace ParkingMat.GUI
         Sucursal_DAO id = new Sucursal_DAO();
         Cajones_DAO cajon = new Cajones_DAO();
         ArrayList cajones_lista = new ArrayList();
-        Button[] Vehiculo_Botton;
+        BunifuFlatButton[] Vehiculo_Botton;
 
         public int Cajon_seleccionado { get => cajon_seleccionado; set => cajon_seleccionado = value; }
         public string Matricula { get => matricula; set => matricula = value; }
@@ -41,7 +42,7 @@ namespace ParkingMat.GUI
             int cantidad = cajon.Cajones_por_Sucursal(Sucursal1);//el parametro a recibir es el id del sucursal
             cajones_lista = cajon.info_Cajones(Sucursal1);
             //MessageBox.Show(cantidad.ToString());
-            Vehiculo_Botton = new Button[cantidad];
+            Vehiculo_Botton = new BunifuFlatButton[cantidad];
             Mostrar_Cajones(cantidad);
             cantidad1 = cantidad;
         }
@@ -111,48 +112,57 @@ namespace ParkingMat.GUI
             {
                 for (int x = 0; x < 5; x++)
                 {
-                    Vehiculo_Botton[contador] = new Button();
+                    Vehiculo_Botton[contador] = new BunifuFlatButton();
                     Vehiculo_Botton[contador].Visible = true;
                     Vehiculo_Botton[contador].Height = 110;
                     Vehiculo_Botton[contador].Width = 260;
                     Vehiculo_Botton[contador].Top = y * 115;
                     Vehiculo_Botton[contador].Left = x * 265;
+                    Vehiculo_Botton[contador].BorderRadius = 7;
+                    Vehiculo_Botton[contador].Iconimage = Image.FromFile("..\\..\\bin\\debug\\sedan-car-front.png");
+                    Vehiculo_Botton[contador].Text = "Hora Inicial: --:-- \nHora Final --:-- \nMatricula: ------";
+
                     /*recuerda que si el boonton va a tener }
                 daots, estos tienen que crearse en el espacio de creacion del boton
                 (este texto verde) pero antes de delagar el boton
                     aprentemente este ciclo for es el create de el boton*/
-                    String estado="";
+                    String estado ="";
                     int lugar = contador+1;
                     int cajon_id =0;
                    
                     if (cajones_lista.Count < 1)
                     {
-                        Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
+                        Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#32cd32");
+                        Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
                     }
                     for (int z = 0; z<cajones_lista.Count ;z++)
                         {
                         String[] info = cajones_lista[z].ToString().Split('|');
                             if (info[0] == "ocupado"  && int.Parse(info[4].ToString())-1 == contador)
                             {
-                                Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#e68e8a");
-                                Vehiculo_Botton[contador].Text = info[2].ToString();
-                                estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                            Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#dc143c");
+                            Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#db7093");
+                            Vehiculo_Botton[contador].Text = info[2].ToString() + "\n\nMatricula: ";
+                            estado = "El lugar se encuentra ocupado \n intenta otro por favor";
                                 cajon_id = int.Parse(info[5].ToString());
 
                             break;
                             }
                             else if(info[0] == "recerbado" && int.Parse(info[4].ToString()) - 1 == contador)
                             {
-                                Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#fffae2");
-                                Vehiculo_Botton[contador].Text = info[2].ToString()+"-"+ info[3].ToString();
+                            Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#ffa500");
+                            Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#ff8c00");
+                            Vehiculo_Botton[contador].Text = info[2].ToString() + " -" + info[3].ToString() + "\nNombre: ";
                                 estado = "El lugar se encuentra ocupado \n intenta otro por favor";
                                 cajon_id = int.Parse(info[5].ToString());
                                 break;
                             }
                             else
                             {
-                                Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
-                                cajon_id = int.Parse(info[5].ToString());
+
+                            Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#32cd32");
+                            Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
+                            cajon_id = int.Parse(info[5].ToString());
                             }
                            
                         }
