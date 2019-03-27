@@ -16,45 +16,50 @@ namespace ParkingMat.GUI
     {
 
         Cls_ADMIN_DAO obAdminDAO = new Cls_ADMIN_DAO();
-
-
+        frm_ParkingEmpleado park;
+        frm_AdminPensionados pensionados;
+        private int sucursal;
         public frm_MenuEmpleado(int sucu)
         {
             InitializeComponent();
             //Mostrar el numero de empleados
 
-           // MessageBox.Show(obAdminDAO.num_Empleados().ToString());
+            // MessageBox.Show(obAdminDAO.num_Empleados().ToString());
 
-          /*  lbl_NumEmpleados.Text = obAdminDAO.num_Empleados();
+            /*  lbl_NumEmpleados.Text = obAdminDAO.num_Empleados();
 
-            panelHeight = pnl_top.Height;
-            Hidden = false;*/
+              panelHeight = pnl_top.Height;
+              Hidden = false;*/
+            sucursal = sucu;
+            park = new frm_ParkingEmpleado(sucu,1);
+            park.MdiParent = this;
+            park.Show();
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            AbrirFormularios<frm_ParkingEmpleado>();
+           // AbrirFormularios<frm_ParkingEmpleado>();
 
         }
         //Metodo para abrir un form dentro del contenedor
         public void AbrirFormularios<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
-            formulario = pnl_contenedor.Controls.OfType<MiForm>().FirstOrDefault();
+           /* formulario = pnl_contenedor.Controls.OfType<MiForm>().FirstOrDefault();
 
             if (formulario == null)
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
                 formulario.Dock = DockStyle.Fill;
-                pnl_contenedor.Controls.Add(formulario);
-                pnl_contenedor.Tag = formulario;
+              pnl_contenedor.Controls.Add(formulario);
+               pnl_contenedor.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
             }
             else
             {
                 formulario.BringToFront();
-            }
+            }*/
 
         }
 
@@ -72,23 +77,39 @@ namespace ParkingMat.GUI
 
 
 
-        frm_ParkingEmpleado park = new frm_ParkingEmpleado();
+        
         //Cambio de color del indicador
         private void btn_parquimetro_Click(object sender, EventArgs e)
         {
-            //park.Sucursal1 = Sucursal;
-            // park.Visible = true;
-            // park.BackColor = Color.FromArgb(115, 194, 125);
-            pnl_indicador.BackColor = Color.FromArgb(115, 194, 125);
-            AbrirFormularios<frm_ParkingEmpleado>();
+            btn_pensionados.Enabled = true;
+            btn_recibos.Enabled = true;
+            btn_parquimetro.Enabled = false;
+            if (pensionados != null)
+            {
+                pensionados.Close();
+            }
+            park = new frm_ParkingEmpleado(sucursal,1);
+            park.MdiParent = this;
 
+            park.Show();
 
         }
 
         private void btn_vehiculos_Click(object sender, EventArgs e)
         {
-
-            AbrirFormularios<frm_VehiculosEmpleado>();
+            if (park != null)
+            {
+                park.Close();
+            }
+            if (pensionados != null)
+            {
+                pensionados.Close();
+            }
+            btn_parquimetro.Enabled = true;
+            btn_pensionados.Enabled = true;
+            btn_recibos.Enabled = true;
+            park.Close();
+            //AbrirFormularios<frm_VehiculosEmpleado>();
             pnl_indicador.BackColor = Color.FromArgb(230, 142, 138);
                
         }
@@ -97,14 +118,38 @@ namespace ParkingMat.GUI
 
         private void btn_pensionados_Click(object sender, EventArgs e)
         {
+            if (park != null)
+            {
+                park.Close();
+            }
+            btn_parquimetro.Enabled = true;
+            btn_recibos.Enabled = true;
+            btn_pensionados.Enabled = false;
+            pensionados = new frm_AdminPensionados();
+            pensionados.MdiParent = this;
+            pensionados.es_empleado();
+            pensionados.Sucursal_id = sucursal;
+            pensionados.Show();
+
             pnl_indicador.BackColor = Color.FromArgb(250, 235, 166);
-            AbrirFormularios<frm_AdminPensionados>();
+           // AbrirFormularios<frm_AdminPensionados>();
             
         }
 
         private void btn_recibos_Click(object sender, EventArgs e)
         {
-            AbrirFormularios<frm_ReportesEmpleado>();
+            if (park != null)
+            {
+                park.Close();
+            }
+            if (pensionados != null)
+            {
+                pensionados.Close();
+            }
+            btn_parquimetro.Enabled = true;
+            btn_pensionados.Enabled = true;
+            btn_recibos.Enabled = false;
+            //AbrirFormularios<frm_ReportesEmpleado>();
             pnl_indicador.BackColor = Color.FromArgb(213, 186, 223);
             
         }

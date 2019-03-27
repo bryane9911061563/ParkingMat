@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MenuEmpleado));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_id_Suc = new System.Windows.Forms.Label();
             this.lbl_nombre_us = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +45,7 @@
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.tmr_Hora = new System.Windows.Forms.Timer(this.components);
-            this.lbl_id_Suc = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
@@ -73,33 +72,43 @@
             this.panel1.Size = new System.Drawing.Size(1350, 121);
             this.panel1.TabIndex = 0;
             // 
+            // lbl_id_Suc
+            // 
+            this.lbl_id_Suc.AutoSize = true;
+            this.lbl_id_Suc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id_Suc.Location = new System.Drawing.Point(370, 16);
+            this.lbl_id_Suc.Name = "lbl_id_Suc";
+            this.lbl_id_Suc.Size = new System.Drawing.Size(159, 24);
+            this.lbl_id_Suc.TabIndex = 37;
+            this.lbl_id_Suc.Text = "Numero_sucursal";
+            // 
             // lbl_nombre_us
             // 
             this.lbl_nombre_us.AutoSize = true;
-            this.lbl_nombre_us.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_us.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombre_us.Location = new System.Drawing.Point(140, 16);
             this.lbl_nombre_us.Name = "lbl_nombre_us";
-            this.lbl_nombre_us.Size = new System.Drawing.Size(151, 23);
+            this.lbl_nombre_us.Size = new System.Drawing.Size(148, 24);
             this.lbl_nombre_us.TabIndex = 36;
             this.lbl_nombre_us.Text = "nombre_usuario";
             // 
             // lbl_hora
             // 
             this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.Location = new System.Drawing.Point(674, 13);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(74, 23);
+            this.lbl_hora.Size = new System.Drawing.Size(56, 24);
             this.lbl_hora.TabIndex = 35;
             this.lbl_hora.Text = "--:--.--";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(602, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 23);
+            this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 34;
             this.label1.Text = "Hora:";
             // 
@@ -290,7 +299,7 @@
             this.btn_Salir.Text = "Cerrar sesión";
             this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Salir.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Salir.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // btn_minimizar
@@ -377,45 +386,27 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Location = new System.Drawing.Point(40, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 24);
+            this.label11.Size = new System.Drawing.Size(91, 24);
             this.label11.TabIndex = 24;
             this.label11.Text = "arkingMat";
-            // 
-            // pnl_contenedor
-            // 
-            this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_contenedor.Location = new System.Drawing.Point(0, 121);
-            this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1350, 608);
-            this.pnl_contenedor.TabIndex = 1;
             // 
             // tmr_Hora
             // 
             this.tmr_Hora.Enabled = true;
             this.tmr_Hora.Tick += new System.EventHandler(this.tmr_Hora_Tick);
             // 
-            // lbl_id_Suc
-            // 
-            this.lbl_id_Suc.AutoSize = true;
-            this.lbl_id_Suc.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id_Suc.Location = new System.Drawing.Point(370, 16);
-            this.lbl_id_Suc.Name = "lbl_id_Suc";
-            this.lbl_id_Suc.Size = new System.Drawing.Size(162, 23);
-            this.lbl_id_Suc.TabIndex = 37;
-            this.lbl_id_Suc.Text = "Numero_sucursal";
-            // 
             // frm_MenuEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.pnl_contenedor);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "frm_MenuEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_MenuEmpleado";
@@ -429,7 +420,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnl_contenedor;
         private System.Windows.Forms.Panel pnl_indicador;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label11;

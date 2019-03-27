@@ -16,15 +16,32 @@ namespace ParkingMat.GUI
     public partial class frm_AdminPensionados : Form
     {
         Pensionados_BO objPenBO = new Pensionados_BO();
+        Vehiculo_BO auto = new Vehiculo_BO();
         Pensionados_DAO objPenDAO = new Pensionados_DAO();
+        Sucursal_DAO suc = new Sucursal_DAO();
+        Vehiculos_DAO vehic = new Vehiculos_DAO();
+        ArrayList sucursal = new ArrayList();
+        private String matricula = "";
+        private int id_cajon, id_vehiculo;
+        private int sucursal_id=0;
+
+        public int Sucursal_id { get => sucursal_id; set => sucursal_id = value; }
+
         public frm_AdminPensionados()
         {
             InitializeComponent();
             dgv_pensionados.DataSource = objPenDAO.Mostrar_pensionados();
+            comboBox2.Visible = true;
+            label10.Visible = true;
         }
 
         //Mostrar pensionados
         
+        public void es_empleado()
+        {
+            comboBox2.Visible = false;
+            label10.Visible = false;
+        }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
@@ -35,7 +52,7 @@ namespace ParkingMat.GUI
             objPenBO.Fecha_nac_pensionado = DateTime.Parse(dtp_fecha_nac.Text);
             objPenBO.Fecha_registro_pensionado = DateTime.Parse(dtp_fecha_reg.Text);
             objPenBO.Fecha_vencimiento_pensionado = DateTime.Parse(dtp_fecha_ven.Text);
-
+            
             if (objPenDAO.Guardar_pensionado(objPenBO) == 0)
             {
                 frm_ERROR_DIALOG frmError = new frm_ERROR_DIALOG(mensaje_error);
@@ -43,6 +60,20 @@ namespace ParkingMat.GUI
             }
             else
             {
+                /*try
+                {*/
+                    int x = objPenDAO.ultimo_agregado();
+                    auto.Id_cajon = id_cajon;
+                    auto.Id_cliente = x;
+                    auto.Id_tipo = id_vehiculo;
+                    auto.Placas = matricula;
+                    vehic.Guardar_Datos(auto);
+                /*}catch
+                {
+                    frm_ERROR_DIALOG frmError = new frm_ERROR_DIALOG(mensaje_error);
+                    frmError.ShowDialog();
+                }*/
+                
                 frm_pruebaDialog frmExito = new frm_pruebaDialog();
                 frmExito.ShowDialog();
                 dgv_pensionados.DataSource = objPenDAO.Mostrar_pensionados();
@@ -64,6 +95,37 @@ namespace ParkingMat.GUI
 
 
 
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            if (Sucursal_id > 0)
+            {
+                frm_ParkingEmpleado jefe = new frm_ParkingEmpleado(Sucursal_id, 3);
+                jefe.ShowDialog();
+                matricula=jefe.Matricula;
+                id_cajon = jefe.Cajon_seleccionado;
+                id_vehiculo = jefe.Tipo_vehiculo;
+            }
+            else
+            {
+                frm_ERROR_DIALOG erro = new frm_ERROR_DIALOG("selecciona una sucursal");
+                erro.ShowDialog();
+            }
+        }
+
+        private void frm_AdminPensionados_Load(object sender, EventArgs e)
+        {
+            sucursal = suc.lista_Sucursales();
+            for (int i = 0; i < sucursal.Count; i++)
+            {
+                comboBox2.Items.Add(sucursal[i].ToString());
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Sucursal_id = comboBox2.SelectedIndex+1;
         }
     }
 }

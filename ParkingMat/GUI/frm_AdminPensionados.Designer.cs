@@ -58,9 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_pensionados = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.id_pensionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +67,9 @@
             this.fecha_vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pensionados)).BeginInit();
@@ -144,140 +144,128 @@
             this.bunifuFlatButton5.Text = "Agregar vehículo";
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // txt_correo
             // 
-            this.txt_correo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_correo.Location = new System.Drawing.Point(445, 117);
             this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(224, 30);
+            this.txt_correo.Size = new System.Drawing.Size(224, 29);
             this.txt_correo.TabIndex = 34;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(441, 91);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(174, 23);
+            this.label9.Size = new System.Drawing.Size(171, 24);
             this.label9.TabIndex = 33;
             this.label9.Text = "Correo electrónico:";
             // 
             // mtxt_telefono
             // 
-            this.mtxt_telefono.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxt_telefono.Location = new System.Drawing.Point(445, 49);
             this.mtxt_telefono.Mask = "000-000-0000";
             this.mtxt_telefono.Name = "mtxt_telefono";
-            this.mtxt_telefono.Size = new System.Drawing.Size(165, 30);
+            this.mtxt_telefono.Size = new System.Drawing.Size(165, 29);
             this.mtxt_telefono.TabIndex = 32;
             this.mtxt_telefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(441, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(185, 23);
+            this.label8.Size = new System.Drawing.Size(183, 24);
             this.label8.TabIndex = 31;
             this.label8.Text = "Número de teléfono:";
             // 
             // dtp_fecha_ven
             // 
-            this.dtp_fecha_ven.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.dtp_fecha_ven.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.dtp_fecha_ven.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_ven.Location = new System.Drawing.Point(254, 291);
             this.dtp_fecha_ven.Name = "dtp_fecha_ven";
-            this.dtp_fecha_ven.Size = new System.Drawing.Size(140, 30);
+            this.dtp_fecha_ven.Size = new System.Drawing.Size(140, 29);
             this.dtp_fecha_ven.TabIndex = 30;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(35, 295);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(203, 23);
+            this.label11.Size = new System.Drawing.Size(203, 24);
             this.label11.TabIndex = 29;
             this.label11.Text = "Fecha de vencimiento:";
             // 
             // dtp_fecha_reg
             // 
-            this.dtp_fecha_reg.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.dtp_fecha_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.dtp_fecha_reg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_reg.Location = new System.Drawing.Point(257, 246);
+            this.dtp_fecha_reg.Location = new System.Drawing.Point(254, 246);
             this.dtp_fecha_reg.Name = "dtp_fecha_reg";
-            this.dtp_fecha_reg.Size = new System.Drawing.Size(140, 30);
+            this.dtp_fecha_reg.Size = new System.Drawing.Size(140, 29);
             this.dtp_fecha_reg.TabIndex = 28;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(38, 250);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 23);
+            this.label7.Size = new System.Drawing.Size(163, 24);
             this.label7.TabIndex = 27;
             this.label7.Text = "Fecha de registro:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(264, 207);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(528, 212);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 23);
+            this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 26;
             this.label6.Text = "Número:";
+            this.label6.Visible = false;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(357, 203);
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(632, 207);
             this.maskedTextBox1.Mask = "99";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(37, 30);
+            this.maskedTextBox1.Size = new System.Drawing.Size(37, 29);
             this.maskedTextBox1.TabIndex = 25;
             this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox1.ValidatingType = typeof(int);
+            this.maskedTextBox1.Visible = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(38, 207);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 23);
+            this.label10.Size = new System.Drawing.Size(192, 24);
             this.label10.TabIndex = 24;
-            this.label10.Text = "Sección:";
+            this.label10.Text = "Seccione la Sucursal:";
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O"});
-            this.comboBox2.Location = new System.Drawing.Point(131, 203);
+            this.comboBox2.Location = new System.Drawing.Point(254, 204);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(120, 31);
+            this.comboBox2.Size = new System.Drawing.Size(120, 32);
             this.comboBox2.TabIndex = 23;
             this.comboBox2.Text = "Seleccione";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // bunifuFlatButton3
             // 
@@ -313,7 +301,7 @@
             this.bunifuFlatButton3.Text = "Actualizar";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuFlatButton2
             // 
@@ -349,7 +337,7 @@
             this.bunifuFlatButton2.Text = "Nuevo";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuFlatButton1
             // 
@@ -385,7 +373,7 @@
             this.bunifuFlatButton1.Text = "Eliminar";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Agregar
             // 
@@ -421,90 +409,90 @@
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Agregar.Textcolor = System.Drawing.Color.White;
-            this.btn_Agregar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // dtp_fecha_nac
             // 
-            this.dtp_fecha_nac.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.dtp_fecha_nac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.dtp_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_nac.Location = new System.Drawing.Point(254, 157);
             this.dtp_fecha_nac.Name = "dtp_fecha_nac";
-            this.dtp_fecha_nac.Size = new System.Drawing.Size(140, 30);
+            this.dtp_fecha_nac.Size = new System.Drawing.Size(140, 29);
             this.dtp_fecha_nac.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(35, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 23);
+            this.label5.Size = new System.Drawing.Size(193, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "Fecha de nacimiento:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(35, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 23);
+            this.label4.Size = new System.Drawing.Size(153, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Apellido paterno:";
             // 
             // txt_apellido_m
             // 
-            this.txt_apellido_m.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_m.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellido_m.Location = new System.Drawing.Point(203, 111);
             this.txt_apellido_m.Name = "txt_apellido_m";
-            this.txt_apellido_m.Size = new System.Drawing.Size(191, 30);
+            this.txt_apellido_m.Size = new System.Drawing.Size(191, 29);
             this.txt_apellido_m.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(35, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 23);
+            this.label3.Size = new System.Drawing.Size(158, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Apellido materno:";
             // 
             // txt_apellido_p
             // 
-            this.txt_apellido_p.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_p.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellido_p.Location = new System.Drawing.Point(203, 66);
             this.txt_apellido_p.Name = "txt_apellido_p";
-            this.txt_apellido_p.Size = new System.Drawing.Size(191, 30);
+            this.txt_apellido_p.Size = new System.Drawing.Size(191, 29);
             this.txt_apellido_p.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 23);
+            this.label2.Size = new System.Drawing.Size(105, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre(s):";
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.Location = new System.Drawing.Point(147, 19);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(247, 30);
+            this.txt_nombre.Size = new System.Drawing.Size(247, 29);
             this.txt_nombre.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(500, 45);
+            this.label1.Size = new System.Drawing.Size(499, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "Administración de pensionados";
             // 
@@ -539,60 +527,6 @@
             this.dgv_pensionados.Size = new System.Drawing.Size(617, 524);
             this.dgv_pensionados.TabIndex = 2;
             this.dgv_pensionados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_pensionados_CellMouseClick);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Controls.Add(this.bunifuFlatButton4);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(617, 39);
-            this.panel2.TabIndex = 27;
-            // 
-            // bunifuFlatButton4
-            // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton4.AllowDrop = true;
-            this.bunifuFlatButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 7;
-            this.bunifuFlatButton4.ButtonText = "";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 40D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(520, 5);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(34, 30);
-            this.bunifuFlatButton4.TabIndex = 25;
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(62, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(452, 30);
-            this.textBox5.TabIndex = 26;
             // 
             // id_pensionado
             // 
@@ -655,6 +589,60 @@
             this.correo.HeaderText = "Correo";
             this.correo.Name = "correo";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Controls.Add(this.bunifuFlatButton4);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(617, 39);
+            this.panel2.TabIndex = 27;
+            // 
+            // bunifuFlatButton4
+            // 
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton4.AllowDrop = true;
+            this.bunifuFlatButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuFlatButton4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton4.BorderRadius = 7;
+            this.bunifuFlatButton4.ButtonText = "";
+            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.White;
+            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
+            this.bunifuFlatButton4.Iconimage_right = null;
+            this.bunifuFlatButton4.Iconimage_right_Selected = null;
+            this.bunifuFlatButton4.Iconimage_Selected = null;
+            this.bunifuFlatButton4.IconMarginLeft = 0;
+            this.bunifuFlatButton4.IconMarginRight = 0;
+            this.bunifuFlatButton4.IconRightVisible = true;
+            this.bunifuFlatButton4.IconRightZoom = 0D;
+            this.bunifuFlatButton4.IconVisible = true;
+            this.bunifuFlatButton4.IconZoom = 40D;
+            this.bunifuFlatButton4.IsTab = false;
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(520, 5);
+            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
+            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.DodgerBlue;
+            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton4.selected = false;
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(34, 30);
+            this.bunifuFlatButton4.TabIndex = 25;
+            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(62, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(452, 29);
+            this.textBox5.TabIndex = 26;
+            // 
             // frm_AdminPensionados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -667,6 +655,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_AdminPensionados";
             this.Text = "frm_AdminPensionados";
+            this.Load += new System.EventHandler(this.frm_AdminPensionados_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

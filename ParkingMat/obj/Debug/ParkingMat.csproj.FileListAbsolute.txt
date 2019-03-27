@@ -43,3 +43,5 @@ C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ReportesEmpleado.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_UsiarioInvalidoDialog.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_VehiculosEmpleado.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdmTiposRecibo.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PuestosEmpleados.resources
