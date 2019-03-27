@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Vehiculo_BO.cs" />
     <Compile Include="BO\Cajones_BO.cs" />
     <Compile Include="BO\Cliente_BO.cs" />
     <Compile Include="BO\Cls_AppRunning.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="BO\Empleado_BO.cs" />
     <Compile Include="BO\Jefe_BO.cs" />
     <Compile Include="BO\Recibo_BO.cs" />
+    <Compile Include="DAO\Vehiculo_DAO.cs" />
     <Compile Include="DAO\Cliente_DAO.cs" />
     <Compile Include="DAO\Cls_ADMIN_DAO.cs" />
     <Compile Include="DAO\Cls_PuestoEmpleado_DAO.cs" />

@@ -10,7 +10,7 @@ using ParkingMat.BO;
 
 namespace ParkingMat.DAO
 {
-    class Cajones_DAO
+    class Vehiculos_DAO
     {
         //Coso para usar sus propiedades 
         Conexion_DAO obj_conec = new Conexion_DAO();
@@ -19,13 +19,13 @@ namespace ParkingMat.DAO
         //Coso para ejecutar instrucciones
         string instruccion_SQL;
 
-        public int Guardar_Datos(Cajones_BO obj_div)
+        public int Guardar_Datos(Vehiculo_BO obj_div)
         {
-            Cajones_BO datos = (Cajones_BO)obj_div;
+            Vehiculo_BO datos = (Vehiculo_BO)obj_div;
 
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
-            instruccion_SQL = "Insert into cajones (id_sucursal,Hora_inicio,Hora_final,Lugar,id_tipo_vehiculo,id_estado_cajon) values ('" + datos.Id_sucursal + "','" + datos.Hora_inicio1 + "','"+datos.Hora_final1+"','" +datos.Lugar1 + "','" + datos.Tipo_vehiculo + "',"+datos.Estado_cajon+")";
+            instruccion_SQL = "Insert into vehiculos (Placas,Modelo,Color,id_Cliente,id_Cajon,id_Tipo) values ('" + datos.Placas + "','notyet','none',"+datos.Id_cliente+"," +datos.Id_cajon + "," + datos.Id_tipo +")";
             cmd.CommandText = instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             obj_conec.CerrarBD();
@@ -37,14 +37,14 @@ namespace ParkingMat.DAO
 
             return 1;
         }
-        public int Actualizar_Datos(Cajones_BO ObjEmp)
+        public int Actualizar_Datos(Vehiculo_BO ObjEmp)
         {
-            Cajones_BO datos = (Cajones_BO)ObjEmp;
+            Vehiculo_BO datos = (Vehiculo_BO)ObjEmp;
 
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
             //modif access to BD
-            instruccion_SQL = "Update  cajones set Hora_final= '" + datos.Hora_final1 + "',id_estado_cajon='2'  where id_sucursal ='" + datos.Id_sucursal + "' and Lugar = "+datos.Lugar1+ " and matricula = "+datos.Matricula1+"";
+            instruccion_SQL = "Update  vehiculos set id_Cliente= '" + datos.Id_cliente +" where id_sucursal ='" + datos.Id_cajon + "";
             //exe cmd
             cmd.CommandText = instruccion_SQL;
             //gdr vlr
@@ -143,30 +143,6 @@ namespace ParkingMat.DAO
             {
                 return 0;
             }
-        }
-
-
-
-        public ArrayList info_Cajones(int id)
-        {
-            instruccion_SQL = "SELECT cajones.*, estados_cajones.*,tipos_vehiculos.* FROM cajones,estados_cajones,tipos_vehiculos WHERE cajones.id_estado_cajon = estados_cajones.id_estado_cajon and tipos_vehiculos.id_tipo_vehiculo = cajones.id_tipo_vehiculo and cajones.id_sucursal = " + id+" GROUP BY cajones.id_cajon";
-            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
-            obj_conec.AbrirBD();
-            MySqlDataReader leer;
-            ArrayList cajas = new ArrayList();
-            leer = cmd.ExecuteReader();
-            while (leer.Read())
-            {
-                String auxiliar =leer["estado"].ToString();
-                auxiliar = auxiliar + "|" + leer["tipo_vehiculo"].ToString();
-                auxiliar = auxiliar + "|" + leer["Hora_inicio"].ToString();
-                auxiliar = auxiliar + "|" + leer["Hora_final"].ToString();
-                auxiliar = auxiliar + "|" + leer["Lugar"].ToString();
-                auxiliar = auxiliar + "|" + leer["id_cajon"].ToString();
-                cajas.Add(auxiliar);
-            }
-            obj_conec.CerrarBD();
-            return cajas;
         }
     }
 }

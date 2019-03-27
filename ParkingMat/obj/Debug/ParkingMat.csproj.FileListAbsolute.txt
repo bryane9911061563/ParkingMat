@@ -43,6 +43,7 @@ C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ReportesEmpleado.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_UsiarioInvalidoDialog.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_VehiculosEmpleado.resources
+<<<<<<< HEAD
 C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\ParkingMat.exe.config
 C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\ParkingMat.exe
 C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\bin\Debug\ParkingMat.pdb
@@ -77,3 +78,7 @@ C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProye
 C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.pdb
 C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdmTiposRecibo.resources
 C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PuestosEmpleados.resources
+=======
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdmTiposRecibo.resources
+C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PuestosEmpleados.resources
+>>>>>>> master

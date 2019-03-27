@@ -32,8 +32,8 @@ namespace ParkingMat.GUI
 
         private void btn_agregarvehiculo_Click(object sender, EventArgs e)
         {
-            frm_AgregarVehiculo objAgregarVehiculo = new frm_AgregarVehiculo(1,1);
-            objAgregarVehiculo.ShowDialog();
+           // frm_AgregarVehiculo objAgregarVehiculo = new frm_AgregarVehiculo(1,1);
+            //objAgregarVehiculo.ShowDialog();
         }
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
