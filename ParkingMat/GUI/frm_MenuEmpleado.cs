@@ -18,6 +18,8 @@ namespace ParkingMat.GUI
         Cls_ADMIN_DAO obAdminDAO = new Cls_ADMIN_DAO();
         frm_ParkingEmpleado park;
         frm_AdminPensionados pensionados;
+
+        frm_AdminRecibos recivos;
         private int sucursal;
         public frm_MenuEmpleado(int sucu)
         {
@@ -77,7 +79,7 @@ namespace ParkingMat.GUI
 
 
 
-        
+
         //Cambio de color del indicador
         private void btn_parquimetro_Click(object sender, EventArgs e)
         {
@@ -88,16 +90,22 @@ namespace ParkingMat.GUI
             {
                 pensionados.Close();
             }
-            park = new frm_ParkingEmpleado(sucursal,1);
+            if (recivos != null)
+            {
+                recivos.Close();
+            }
+            park = new frm_ParkingEmpleado(sucursal, 1);
             park.MdiParent = this;
-
+            park.StartPosition = FormStartPosition.Manual;
+            park.Location = new Point(0, 0);
+            park.Width = this.Width;
             park.Show();
 
         }
 
         private void btn_vehiculos_Click(object sender, EventArgs e)
         {
-            if (park != null)
+           /* if (park != null)
             {
                 park.Close();
             }
@@ -105,12 +113,16 @@ namespace ParkingMat.GUI
             {
                 pensionados.Close();
             }
+            if (recivos != null)
+            {
+                recivos.Close();
+            }
             btn_parquimetro.Enabled = true;
             btn_pensionados.Enabled = true;
             btn_recibos.Enabled = true;
             park.Close();
             //AbrirFormularios<frm_VehiculosEmpleado>();
-            pnl_indicador.BackColor = Color.FromArgb(230, 142, 138);
+            pnl_indicador.BackColor = Color.FromArgb(230, 142, 138);*/
                
         }
 
@@ -122,11 +134,17 @@ namespace ParkingMat.GUI
             {
                 park.Close();
             }
+            if (recivos != null)
+            {
+                recivos.Close();
+            }
             btn_parquimetro.Enabled = true;
             btn_recibos.Enabled = true;
             btn_pensionados.Enabled = false;
             pensionados = new frm_AdminPensionados();
             pensionados.MdiParent = this;
+            pensionados.StartPosition = FormStartPosition.Manual;
+            pensionados.Location = new Point(0, 0);
             pensionados.es_empleado();
             pensionados.Sucursal_id = sucursal;
             pensionados.Show();
@@ -150,6 +168,12 @@ namespace ParkingMat.GUI
             btn_pensionados.Enabled = true;
             btn_recibos.Enabled = false;
             //AbrirFormularios<frm_ReportesEmpleado>();
+            recivos = new frm_AdminRecibos();
+            recivos.empleado(sucursal);
+            recivos.MdiParent = this;
+            recivos.StartPosition = FormStartPosition.Manual;
+            recivos.Location = new Point(0, 0);
+            recivos.Show();
             pnl_indicador.BackColor = Color.FromArgb(213, 186, 223);
             
         }

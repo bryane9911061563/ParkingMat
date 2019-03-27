@@ -82,6 +82,7 @@ namespace ParkingMat.GUI
                             Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#fffae2");
                             Vehiculo_Botton[contador].Text = info[2].ToString() + "-" + info[3].ToString();
                             estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                            break;
                         }
                         else
                         {
@@ -146,6 +147,7 @@ namespace ParkingMat.GUI
                                 Vehiculo_Botton[contador].Text = info[2].ToString()+"-"+ info[3].ToString();
                                 estado = "El lugar se encuentra ocupado \n intenta otro por favor";
                                 cajon_id = int.Parse(info[5].ToString());
+                                break;
                             }
                             else
                             {

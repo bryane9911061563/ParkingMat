@@ -114,15 +114,16 @@
             this.btn_Agregar.Text = "Guardar cambios";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Agregar.Textcolor = System.Drawing.Color.White;
-            this.btn_Agregar.TextFont = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 157);
+            this.textBox1.Location = new System.Drawing.Point(17, 157);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(605, 307);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Text = " ";
             // 
             // pictureBox1
             // 
@@ -138,10 +139,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(72, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 82);
+            this.label1.Size = new System.Drawing.Size(357, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "ParkingMat";
             // 
@@ -153,7 +154,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(657, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(677, 569);
+            this.panel2.Size = new System.Drawing.Size(721, 569);
             this.panel2.TabIndex = 1;
             // 
             // pnl_Contenedor
@@ -162,7 +163,7 @@
             this.pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Contenedor.Location = new System.Drawing.Point(0, 225);
             this.pnl_Contenedor.Name = "pnl_Contenedor";
-            this.pnl_Contenedor.Size = new System.Drawing.Size(677, 344);
+            this.pnl_Contenedor.Size = new System.Drawing.Size(721, 344);
             this.pnl_Contenedor.TabIndex = 7;
             // 
             // panel3
@@ -174,7 +175,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(677, 225);
+            this.panel3.Size = new System.Drawing.Size(721, 225);
             this.panel3.TabIndex = 6;
             // 
             // comboBox1
@@ -185,9 +186,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Puestos de empleados",
             "Motivos de recibo",
-            "Tipos de vehiculos",
-            "Tipos de estados de cajones"});
-            this.comboBox1.Location = new System.Drawing.Point(286, 174);
+            "Estados de cajones",
+            "Tipos de Vehiculos"});
+            this.comboBox1.Location = new System.Drawing.Point(310, 174);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(201, 32);
             this.comboBox1.TabIndex = 9;
@@ -196,10 +197,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(189, 178);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(213, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 23);
+            this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "Catalogo:";
             // 
@@ -217,11 +218,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(172, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(431, 82);
+            this.label2.Size = new System.Drawing.Size(429, 73);
             this.label2.TabIndex = 7;
             this.label2.Text = "Configuración";
             // 
@@ -229,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 569);
+            this.ClientSize = new System.Drawing.Size(1378, 569);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -104,7 +104,7 @@
             this.groupBox1.Controls.Add(this.txt_apellido_p);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_nombre);
-            this.groupBox1.Location = new System.Drawing.Point(20, 66);
+            this.groupBox1.Location = new System.Drawing.Point(30, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(692, 446);
             this.groupBox1.TabIndex = 4;
@@ -490,7 +490,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.Location = new System.Drawing.Point(22, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(499, 39);
             this.label1.TabIndex = 3;
@@ -502,7 +502,7 @@
             this.panel1.Controls.Add(this.dgv_pensionados);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(749, 0);
+            this.panel1.Location = new System.Drawing.Point(769, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(617, 563);
             this.panel1.TabIndex = 5;
@@ -648,7 +648,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 563);
+            this.ClientSize = new System.Drawing.Size(1386, 563);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);

@@ -17,7 +17,7 @@ namespace ParkingMat.DAO
 
         public MySqlConnection ConectarBD()
         {
-            string cadena = "datasource = localhost; username = root; password =; database = parking-mat;";
+            string cadena = "datasource = localhost; username = root; password =; database = parking-mat; Convert zero datetime = true;";
 
             Conex = new MySqlConnection(cadena);
             return Conex;

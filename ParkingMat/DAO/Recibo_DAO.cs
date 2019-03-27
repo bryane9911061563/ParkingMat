@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 using ParkingMat.BO;
+using System.Collections;
+
 namespace ParkingMat.DAO
 {
     class Recibo_DAO
@@ -24,12 +26,28 @@ namespace ParkingMat.DAO
 
             return (virtual_pen);
         }
+
+        public ArrayList lista_tiposRecivo()
+        {
+            instruccion_SQL = "Select tipo_recibo from tipo_recibo";
+            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+            obj_conec.AbrirBD();
+            MySqlDataReader leer;
+            ArrayList lisDivision = new ArrayList();
+            leer = cmd.ExecuteReader();
+            while (leer.Read())
+            {
+                lisDivision.Add(leer["tipo_recibo"].ToString());
+            }
+            obj_conec.CerrarBD();
+            return lisDivision;
+        }
         public int Agregar_Recibo(Recibo_BO objRecibo)
         {
             reciboBO = (Recibo_BO)objRecibo;
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
-            instruccion_SQL = "Insert into recibos (Costo,Descripcion,Fecha_Creacion,id_Sucursal,id_Tipo_Recibo,motivo) values ('" + objRecibo.Costo + "','" + objRecibo.Descripcion + "','" + objRecibo.Fecha_creacion + "','" + objRecibo.Id_sucu + "','" + objRecibo.Id_tipo + "','" + objRecibo.Motivo + "')";
+            instruccion_SQL = "Insert into recibos (Fecha_Creacion,Costo,id_Tipo_Recibo,id_Scursal,descripcion,motivo) values ('" + objRecibo.Fecha_creacion.ToString("yyyy/mm/dd") + "','" + objRecibo.Costo + "','" + objRecibo.Id_tipo + "','" + objRecibo.Id_sucu + "','" + objRecibo.Descripcion + "','" + objRecibo.Motivo + "')";
             cmd.CommandText = instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             obj_conec.CerrarBD();

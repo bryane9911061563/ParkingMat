@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ParkingEmpleado));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbx_cajones = new System.Windows.Forms.GroupBox();
+            this.pnl_cajones = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_cajones = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.gbx_cajones.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -49,7 +49,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1334, 530);
+            this.panel2.Size = new System.Drawing.Size(1331, 530);
             this.panel2.TabIndex = 1;
             // 
             // gbx_cajones
@@ -61,6 +61,14 @@
             this.gbx_cajones.TabIndex = 0;
             this.gbx_cajones.TabStop = false;
             this.gbx_cajones.Enter += new System.EventHandler(this.gbx_cajones_Enter);
+            // 
+            // pnl_cajones
+            // 
+            this.pnl_cajones.AutoScroll = true;
+            this.pnl_cajones.Location = new System.Drawing.Point(0, 19);
+            this.pnl_cajones.Name = "pnl_cajones";
+            this.pnl_cajones.Size = new System.Drawing.Size(1304, 469);
+            this.pnl_cajones.TabIndex = 0;
             // 
             // comboBox1
             // 
@@ -125,7 +133,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 40D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(973, 5);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(971, 5);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.DodgerBlue;
@@ -149,22 +157,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1334, 39);
+            this.panel1.Size = new System.Drawing.Size(1331, 39);
             this.panel1.TabIndex = 0;
-            // 
-            // pnl_cajones
-            // 
-            this.pnl_cajones.AutoScroll = true;
-            this.pnl_cajones.Location = new System.Drawing.Point(0, 19);
-            this.pnl_cajones.Name = "pnl_cajones";
-            this.pnl_cajones.Size = new System.Drawing.Size(1304, 469);
-            this.pnl_cajones.TabIndex = 0;
             // 
             // frm_ParkingEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 569);
+            this.ClientSize = new System.Drawing.Size(1331, 569);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
