@@ -82,3 +82,6 @@ C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProye
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_AdmTiposRecibo.resources
 C:\Users\lovom\Desktop\ParkingMat-master\ParkingMat\obj\Debug\ParkingMat.GUI.frm_PuestosEmpleados.resources
 >>>>>>> master
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_tipoEstado.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_tipoVehiculo.resources
+C:\Users\bryan\Documents\UTM\Segundo Cuatrimestre\PROYECTO INTEGRADOR\ReposProyect\ParkingMatLocal\ParkingMat\obj\Debug\ParkingMat.GUI.frm_ADMINREPORTE_FINAL.resources

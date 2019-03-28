@@ -42,8 +42,6 @@
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cbx_Sucursal = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btn_actualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_eliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -171,8 +169,6 @@
             this.groupBox1.Controls.Add(this.txt_correo);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.cbx_Sucursal);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btn_actualizar);
             this.groupBox1.Controls.Add(this.bunifuFlatButton2);
             this.groupBox1.Controls.Add(this.btn_eliminar);
@@ -257,26 +253,6 @@
             this.label11.Size = new System.Drawing.Size(173, 24);
             this.label11.TabIndex = 25;
             this.label11.Text = "Correo Electronico:";
-            // 
-            // cbx_Sucursal
-            // 
-            this.cbx_Sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.cbx_Sucursal.FormattingEnabled = true;
-            this.cbx_Sucursal.Location = new System.Drawing.Point(418, 442);
-            this.cbx_Sucursal.Name = "cbx_Sucursal";
-            this.cbx_Sucursal.Size = new System.Drawing.Size(187, 32);
-            this.cbx_Sucursal.TabIndex = 24;
-            this.cbx_Sucursal.Text = "Seleccione";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(307, 445);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 24);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Sucursal: ";
             // 
             // btn_actualizar
             // 
@@ -664,8 +640,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv_Empleados;
-        private System.Windows.Forms.ComboBox cbx_Sucursal;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label label12;

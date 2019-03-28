@@ -27,7 +27,7 @@ namespace ParkingMat.GUI
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
-            if (mtx_Sueldo.Text!=""&& txt_apellido1.Text != "" && txt_apellido2.Text != "" && txt_nombre.Text != "" && cbx_Cargo.Text != "Seleccione" && cbx_Sucursal.Text != "Seleccione" && txt_correo.Text != "" && txt_contraseña.Text !="")
+            if (mtx_Sueldo.Text!=""&& txt_apellido1.Text != "" && txt_apellido2.Text != "" && txt_nombre.Text != "" && cbx_Cargo.Text != "Seleccione" &&  txt_correo.Text != "" && txt_contraseña.Text !="")
             {
                 Empleado_DAO crear = new Empleado_DAO();
                 Sucursal_DAO verificar = new Sucursal_DAO();
@@ -49,7 +49,6 @@ namespace ParkingMat.GUI
                 try
                 {
                     nuevo.Puesto = verificar.Asignar_Puesto(cbx_Cargo.Text);
-                    nuevo.Id_sucursal = verificar.Asignar_Sucursal(cbx_Sucursal.Text);
                 }
                 catch (Exception ex)
                 {
@@ -152,11 +151,7 @@ namespace ParkingMat.GUI
         //Metodo para mostrar las sucursales
         private void Cargar()
         {
-            sucursal = suc.lista_Sucursales();
-            for (int i = 0; i < sucursal.Count; i++)
-            {
-                cbx_Sucursal.Items.Add(sucursal[i].ToString());
-            }
+           
             sucursal = suc.lista_Puestos();
             for (int i = 0; i < sucursal.Count; i++)
             {
@@ -224,7 +219,6 @@ namespace ParkingMat.GUI
                 dtp_nacimiento.Text = dgv_Empleados.Rows[Fila].Cells["Fecha_Nacimiento"].Value.ToString();
                 //TURNO CON UN IF PERO NO HAY TIEMPO XD
                 cbx_Cargo.Text = dgv_Empleados.Rows[Fila].Cells["Puesto"].Value.ToString();
-                cbx_Sucursal.Text = dgv_Empleados.Rows[Fila].Cells["Nombre_Sucursal"].Value.ToString();
                 datos.Id_Empleado = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Empleado"].Value.ToString().TrimEnd());
                 id_empleado = datos.Id_Empleado;
             }
@@ -272,7 +266,6 @@ namespace ParkingMat.GUI
                 dtp_nacimiento.Text = dgv_Empleados.Rows[Fila].Cells["Fecha_Nacimiento"].Value.ToString();
                 //TURNO CON UN IF PERO NO HAY TIEMPO XD
                 cbx_Cargo.Text = dgv_Empleados.Rows[Fila].Cells["Puesto"].Value.ToString();
-                cbx_Sucursal.Text = dgv_Empleados.Rows[Fila].Cells["Nombre_Sucursal"].Value.ToString();
                 datos.Id_Empleado = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Empleado"].Value.ToString().TrimEnd());
                 id_empleado = datos.Id_Empleado;
             }
@@ -294,12 +287,11 @@ namespace ParkingMat.GUI
             mtx_Sueldo.Clear();
             dtp_nacimiento.ResetText();
             cbx_Cargo.SelectedValue = 0;
-            cbx_Sucursal.SelectedValue = 0;
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            if (mtx_Sueldo.Text != "" && txt_apellido1.Text != "" && txt_apellido2.Text != "" && txt_nombre.Text != "" && cbx_Cargo.Text != "Seleccione" && cbx_Sucursal.Text != "Seleccione" && txt_correo.Text != "" && txt_contraseña.Text != "")
+            if (mtx_Sueldo.Text != "" && txt_apellido1.Text != "" && txt_apellido2.Text != "" && txt_nombre.Text != "" && cbx_Cargo.Text != "Seleccione"  && txt_correo.Text != "" && txt_contraseña.Text != "")
             {
                 Empleado_DAO crear = new Empleado_DAO();
                 Sucursal_DAO verificar = new Sucursal_DAO();
@@ -322,7 +314,6 @@ namespace ParkingMat.GUI
                 try
                 {
                     nuevo.Puesto = verificar.Asignar_Puesto(cbx_Cargo.Text);
-                    nuevo.Id_sucursal = verificar.Asignar_Sucursal(cbx_Sucursal.Text);
                 }
                 catch (Exception ex)
                 {

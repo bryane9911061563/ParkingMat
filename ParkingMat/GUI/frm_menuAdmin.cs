@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -17,6 +17,7 @@ namespace ParkingMat.GUI
         int panelHeight;
         bool Hidden;
         Cls_ADMIN_DAO obAdminDAO = new Cls_ADMIN_DAO();
+        Sucursal_DAO sucu = new Sucursal_DAO();
         
         
 
@@ -29,7 +30,7 @@ namespace ParkingMat.GUI
             //MessageBox.Show(obAdminDAO.num_Empleados().ToString());
 
             lbl_NumEmpleados.Text = obAdminDAO.num_Empleados();
-
+            lbl_nombre_sucursal.Text = sucu.Mostrar_nombre_sucursal_seleccionada();
             panelHeight = pnl_top.Height;
             Hidden = false;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
@@ -266,6 +267,16 @@ namespace ParkingMat.GUI
         private void pnl_tarjetaCoches_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        Sucursal_DAO suc = new Sucursal_DAO();
+        ArrayList sucursal = new ArrayList();
+
+        private void btn_selecSucu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_MenuSelectSucursales sucursales = new frm_MenuSelectSucursales();
+            sucursales.Show();
         }
     }
 }

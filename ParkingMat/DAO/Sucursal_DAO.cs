@@ -112,5 +112,22 @@ namespace ParkingMat.DAO
             return id;
         }
 
+        public string Mostrar_nombre_sucursal_seleccionada()
+        {
+            instruccion_SQL = "Select Nombre_Sucursal from sucursales where id_Sucursal='"+Cls_Static_UsuarioRunningThisMoment.id_Sucursal+"'";
+            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+            obj_conec.AbrirBD();
+            MySqlDataReader leer;
+            string nombre="";
+            leer = cmd.ExecuteReader();
+            while (leer.Read())
+            {
+                nombre = (leer["Nombre_Sucursal"]).ToString();
+            }
+            obj_conec.CerrarBD();
+            return nombre;
+        }
+
+
     }
 }

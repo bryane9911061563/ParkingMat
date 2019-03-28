@@ -85,5 +85,10 @@ namespace ParkingMat.GUI
                 e.Handled = true;
             }
         }
+
+        private void dgv_sucursales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
