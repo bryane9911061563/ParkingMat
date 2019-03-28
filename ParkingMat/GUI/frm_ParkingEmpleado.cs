@@ -51,7 +51,7 @@ namespace ParkingMat.GUI
         {
 
         }
-
+       
         private void actualizar()
         {
             cajones_lista = cajon.info_Cajones(Sucursal1);
@@ -63,31 +63,48 @@ namespace ParkingMat.GUI
 
                     String estado = "";
                     int lugar = contador + 1;
+                    int cajon_id = 0;
+                    bool ocupado = false;
                     // Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#000");
+                    
+
                     if (cajones_lista.Count < 1)
                     {
-                        Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
+                        Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#32cd32");
+                        Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
+                        Vehiculo_Botton[contador].Text = "Hora Inicial: --:-- \nMatricula: ------\nHora Final --:-- ";
                     }
                     for (int z = 0; z < cajones_lista.Count; z++)
                     {
                         String[] info = cajones_lista[z].ToString().Split('|');
                         if (info[0] == "ocupado" && int.Parse(info[4].ToString()) - 1 == contador)
                         {
-                            Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#e68e8a");
-                            Vehiculo_Botton[contador].Text = info[2].ToString();
+                            Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#dc143c");
+                            Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#db7093");
+                            Vehiculo_Botton[contador].Text = info[2].ToString() + "\n Matricula: " + info[6].ToString() + "\nHora Final: --:--";
                             estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                            cajon_id = int.Parse(info[5].ToString());
+                            ocupado = true;
                             break;
                         }
                         else if (info[0] == "recerbado" && int.Parse(info[4].ToString()) - 1 == contador)
                         {
-                            Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#fffae2");
-                            Vehiculo_Botton[contador].Text = info[2].ToString() + "-" + info[3].ToString();
-                            estado = "El lugar se encuentra ocupado \n intenta otro por favor";
+                            Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#ffa500");
+                            Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#ff8c00");
+                            cajon_id = int.Parse(info[5].ToString());
+                            String nombre = cajon.nombre(cajon_id);
+                            Vehiculo_Botton[contador].Text = "Espacio recerbado";// a nombre de: " + nombre + "\nPlacas: " + info[6].ToString();
+                            ocupado = true;
                             break;
                         }
                         else
                         {
-                            Vehiculo_Botton[contador].BackColor = System.Drawing.ColorTranslator.FromHtml("#73c27d");
+
+                            Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#32cd32");
+                            Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
+                            Vehiculo_Botton[contador].Text = "Hora Inicial: --:-- \nMatricula: ------\nHora Final --:-- ";
+                            ocupado = false;
+                            cajon_id = int.Parse(info[5].ToString());
                         }
 
                     }
@@ -128,46 +145,49 @@ namespace ParkingMat.GUI
                     aprentemente este ciclo for es el create de el boton*/
                     String estado ="";
                     int lugar = contador+1;
-                    int cajon_id =0;
-                   
+                    int cajon_id = 0;
+                    bool ocupado = false;
+
                     if (cajones_lista.Count < 1)
                     {
                         Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#32cd32");
                         Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
+                        Vehiculo_Botton[contador].Text = "Hora Inicial: --:-- \nMatricula: ------\nHora Final --:-- ";
                     }
-                    for (int z = 0; z<cajones_lista.Count ;z++)
-                        {
+                    for (int z = 0; z < cajones_lista.Count; z++)
+                    {
                         String[] info = cajones_lista[z].ToString().Split('|');
-                            if (info[0] == "ocupado"  && int.Parse(info[4].ToString())-1 == contador)
-                            {
+                        if (info[0] == "ocupado" && int.Parse(info[4].ToString()) - 1 == contador)
+                        {
                             Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#dc143c");
                             Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#db7093");
-                            Vehiculo_Botton[contador].Text = info[2].ToString() + "\n\nMatricula: ";
-                            estado = "El lugar se encuentra ocupado \n intenta otro por favor";
-                                cajon_id = int.Parse(info[5].ToString());
+                            Vehiculo_Botton[contador].Text = info[2].ToString() + "\n Matricula: " + info[6].ToString() + "\nHora Final: --:--";
+                            cajon_id = int.Parse(info[5].ToString());
 
                             break;
-                            }
-                            else if(info[0] == "recerbado" && int.Parse(info[4].ToString()) - 1 == contador)
-                            {
+                        }
+                        else if (info[0] == "recerbado" && int.Parse(info[4].ToString()) - 1 == contador)
+                        {
                             Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#ffa500");
                             Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#ff8c00");
-                            Vehiculo_Botton[contador].Text = info[2].ToString() + " -" + info[3].ToString() + "\nNombre: ";
-                                estado = "El lugar se encuentra ocupado \n intenta otro por favor";
-                                cajon_id = int.Parse(info[5].ToString());
-                                break;
-                            }
-                            else
-                            {
+                            cajon_id = int.Parse(info[5].ToString());
+                            String nombre=cajon.nombre(cajon_id);
+                            Vehiculo_Botton[contador].Text = "Espacio recerbado a nombre de: "+nombre+"\nPlacas: "+ info[6].ToString();
+                            ocupado = true;
+                            break;
+                        }
+                        else
+                        {
 
                             Vehiculo_Botton[contador].Normalcolor = System.Drawing.ColorTranslator.FromHtml("#32cd32");
                             Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
+                            Vehiculo_Botton[contador].Text = "Hora Inicial: --:-- \nMatricula: ------\nHora Final --:-- ";
                             cajon_id = int.Parse(info[5].ToString());
-                            }
-                           
                         }
 
-                    Vehiculo_Botton[contador].Click += delegate {/* MessageBox.Show(lugar.ToString()); };/*/frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(Sucursal1,lugar,1,"", estado_cajon); vehiculo.ShowDialog(); if (estado_cajon==3) { Cajon_seleccionado = cajon_id; Matricula = vehiculo.Matricla; tipo_vehiculo = vehiculo.Id_tipo; this.Close(); }; actualizar(); };
+                    }
+
+                    Vehiculo_Botton[contador].Click += delegate { if (!ocupado) { frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(Sucursal1, lugar, 1, "", estado_cajon); vehiculo.ShowDialog(); if (estado_cajon == 3) { Cajon_seleccionado = cajon_id; Matricula = vehiculo.Matricla; tipo_vehiculo = vehiculo.Id_tipo; this.Close(); }; actualizar(); } else { frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente otro espacio"); error.ShowDialog(); } };
                     pnl_cajones.Controls.Remove(Vehiculo_Botton[contador]);
                     pnl_cajones.Controls.Add(Vehiculo_Botton[contador]);
                     contador = contador + 1;

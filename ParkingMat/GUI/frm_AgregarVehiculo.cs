@@ -60,6 +60,10 @@ namespace ParkingMat.GUI
             }
         }
 
+        private int sucursal, cajon, Id_cliente, Estado, id_tipo,costo,hora_inicial,hora_final;
+        private String nombre_cliente = "", matricla = "";
+
+
         public int Sucursal { get => Sucursal1; set => Sucursal1 = value; }
         public int Cajon { get => Cajon1; set => Cajon1 = value; }
         public int Id_cliente1 { get => Id_cliente2; set => Id_cliente2 = value; }
@@ -71,6 +75,8 @@ namespace ParkingMat.GUI
         public int Id_cliente2 { get => Id_cliente; set => Id_cliente = value; }
         public int Estado2 { get => Estado; set => Estado = value; }
         public int Id_tipo { get => id_tipo; set => id_tipo = value; }
+        public int Hora_inicial { get => hora_inicial; set => hora_inicial = value; }
+        public int Hora_final { get => hora_final; set => hora_final = value; }
 
         private bool CheckAeroEnabled()
         {
@@ -104,8 +110,6 @@ namespace ParkingMat.GUI
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-        private int sucursal, cajon,Id_cliente,Estado,id_tipo;
-        private String nombre_cliente = "", matricla = "";
         public frm_AgregarVehiculo(int id_sucursal, int numero_cajon, int id_cliente, String nombre, int estado)
         {
             Sucursal = id_sucursal;
@@ -190,6 +194,36 @@ namespace ParkingMat.GUI
                         nuevo.Hora_final1 = "Hora salida:" + mtx_entrada.Text;
                         nuevo.Estado_cajon = 2;
                         guardar = crear.Actualizar_Datos(nuevo);
+                        if (guardar == 0)
+                        {
+                            nuevo.Hora_final1 = "Hora salida: --:--";
+                            nuevo.Estado_cajon = 1;
+                            guardar = crear.Guardar_Datos(nuevo);
+                            if (guardar == 0)
+                            {
+                                frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("Intente nuevamente");
+                                ERROR.ShowDialog();
+                            }else
+                            {
+                                if (guardar != 0)
+                                {
+                                    String hini = mtx_salida.Text.Substring(0, 2);
+                                    String hfin = mtx_entrada.Text.Substring(0, 2);
+                                    int x = int.Parse(hini);
+                                    int y = int.Parse(hfin);
+                                    if (x > 12)
+                                    {
+                                        x = x - y + 12; //
+                                    }
+                                    else
+                                    {
+                                        x = x - y;//en estos 2 se genera el costo , x es el costo por usar el aparcamiento 
+                                        // necesito que se habra un dialogo o puedas brincar a recibos y se active el recibo por el vehiculo 
+                                    }
+                                }
+                            }
+                        }
+
 
                     }
                     catch (Exception ex)
@@ -220,41 +254,48 @@ namespace ParkingMat.GUI
             }
             else
             {
-                Cajones_BO nuevo = new Cajones_BO();
-                Cajones_DAO crear = new Cajones_DAO();
-                nuevo.Id_sucursal = Sucursal;
-                nuevo.Lugar1 = Cajon;
-                nuevo.Hora_inicio1 = mtx_salida.Text;
-                int guardar;
-                nuevo.Hora_final1 = "Espacio Recerbado a nombre de:";
-                nuevo.Matricula1 = Nombre_cliente;
-                nuevo.Tipo_vehiculo = cmb_tipo_vehiculo.SelectedIndex + 1;
-                //este metodo guarda, pero para un cliente que sea pensionado
-                try
+                if (txt_matricula.Text != "" && cmb_tipo_vehiculo.Text != "Seleccione")
                 {
+                    Cajones_BO nuevo = new Cajones_BO();
+                    Cajones_DAO crear = new Cajones_DAO();
+                    nuevo.Id_sucursal = Sucursal;
+                    nuevo.Lugar1 = Cajon;
+                    nuevo.Hora_inicio1 = mtx_salida.Text;
+                    int guardar;
+                    nuevo.Hora_final1 = "Espacio Recerbado a nombre de:";
+                    nuevo.Matricula1 = Nombre_cliente;
+                    nuevo.Tipo_vehiculo = cmb_tipo_vehiculo.SelectedIndex + 1;
+                    //este metodo guarda, pero para un cliente que sea pensionado
+                    try
+                    {
 
-                    nuevo.Estado_cajon = 3;
-                    guardar = crear.Actualizar_Datos(nuevo);
+                        nuevo.Estado_cajon = 3;
+                        guardar = crear.Guardar_Datos(nuevo);
+                        if (guardar == 0)
+                        {
+                            frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("Intente nuevamente");
+                            ERROR.ShowDialog();
+                        }
+                        else
+                        {
+                            frm_pruebaDialog exito = new frm_pruebaDialog();
+                            id_tipo = cmb_tipo_vehiculo.SelectedIndex + 1;
+                            this.Close();
 
-                }
-                catch (Exception ex)
-                {
-                    nuevo.Estado_cajon = 3;
-                    guardar = crear.Guardar_Datos(nuevo);
-                }
+                        }
 
-                if (guardar == 0)
-                {
-                    frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("Intente nuevamente");
-                    ERROR.ShowDialog();
+                    }
+                    catch (Exception ex)
+                    {
+                        guardar = 0;
+                    }
                 }
                 else
                 {
-                    frm_pruebaDialog exito = new frm_pruebaDialog();
-                    id_tipo = cmb_tipo_vehiculo.SelectedIndex + 1;
-                    this.Close();
-
+                    frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("LLene todos los campos");
+                    ERROR.ShowDialog();
                 }
+                
 
             }
         }

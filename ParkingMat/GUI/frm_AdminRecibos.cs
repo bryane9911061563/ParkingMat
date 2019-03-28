@@ -18,7 +18,11 @@ namespace ParkingMat.GUI
         public frm_AdminRecibos()
         {
             InitializeComponent();
-            //dtp_fecha.Text = DateTime.Today.ToString("dd/mm/yy");
+            int costo=0;
+            if (dialogo)
+            {
+                cobrar_temporal(costo ,true);
+            }
         }
         Recibo_DAO recibo = new Recibo_DAO();
         Recibo_BO nuevo = new Recibo_BO();
@@ -54,6 +58,10 @@ namespace ParkingMat.GUI
                 frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("llene todos los campos");
                 error.ShowDialog();
             }
+            if (dialogo)
+            {
+                this.Close();
+            }
 
         }
         public void empleado (int id)
@@ -61,6 +69,18 @@ namespace ParkingMat.GUI
             id_sucu = id;
             cmb_sucursales.Visible = false;
             label6.Visible = false;
+        }
+        private bool dialogo = false;
+        public void cobrar_temporal(int horas,bool esdialogo)
+        {
+            int tiempo = horas;
+            txt_motivo.Text = "fin de aparcamiento";
+            txt_descripcion.Text = "el cliente ha llegado por su vehiculo \ndespues de aparcar por "+tiempo.ToString()+"horas";
+            int aux = tiempo * 22;
+            txt_costo.Text = aux.ToString();
+            cmb_tipo.SelectedIndex = 1;
+            dialogo = esdialogo;
+            this.ShowDialog();
         }
 
         private void cmb_tipo_SelectedIndexChanged(object sender, EventArgs e)

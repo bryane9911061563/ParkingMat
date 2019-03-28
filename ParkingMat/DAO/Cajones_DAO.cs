@@ -25,7 +25,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
-            instruccion_SQL = "Insert into cajones (id_sucursal,Hora_inicio,Hora_final,Lugar,id_tipo_vehiculo,id_estado_cajon) values ('" + datos.Id_sucursal + "','" + datos.Hora_inicio1 + "','"+datos.Hora_final1+"','" +datos.Lugar1 + "','" + datos.Tipo_vehiculo + "',"+datos.Estado_cajon+")";
+            instruccion_SQL = "Insert into cajones (id_sucursal,Hora_inicio,Hora_final,Lugar,id_tipo_vehiculo,id_estado_cajon,matricula) values ('" + datos.Id_sucursal + "','" + datos.Hora_inicio1 + "','"+datos.Hora_final1+"','" +datos.Lugar1 + "','" + datos.Tipo_vehiculo + "',"+datos.Estado_cajon+",'"+datos.Matricula1+"')";
             cmd.CommandText = instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             obj_conec.CerrarBD();
@@ -44,7 +44,7 @@ namespace ParkingMat.DAO
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
             //modif access to BD
-            instruccion_SQL = "Update  cajones set Hora_final= '" + datos.Hora_final1 + "',id_estado_cajon='2'  where id_sucursal ='" + datos.Id_sucursal + "' and Lugar = "+datos.Lugar1+ " and matricula = "+datos.Matricula1+"";
+            instruccion_SQL = "Update  cajones set Hora_final= '" + datos.Hora_final1 + "',id_estado_cajon='2'  where id_sucursal =" + datos.Id_sucursal + " and Lugar = "+datos.Lugar1+ " and matricula = '"+datos.Matricula1+"'";
             //exe cmd
             cmd.CommandText = instruccion_SQL;
             //gdr vlr
@@ -90,10 +90,9 @@ namespace ParkingMat.DAO
             obj_conec.CerrarBD();
             return hora;
         }
-
-       /* public int asignar_tipo(String tipo)
+        public String nombre(int cajonid)
         {
-            instruccion_SQL = "Select tipo_vehiculo from tipos_vehiculos where id_tipo_vehiculo = " + sucursal + " and Lugar = " + cajon + " and id_estado_cajon = 1";
+            instruccion_SQL = "Select pensionados.* from vehiculos,pensionados where vehiculos.id_Cajon = " + cajonid + " and vehiculos.id_Cliente = pensionados.id_pensionado";
             MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
             obj_conec.AbrirBD();
             MySqlDataReader leer;
@@ -101,11 +100,28 @@ namespace ParkingMat.DAO
             leer = cmd.ExecuteReader();
             while (leer.Read())
             {
-                hora = leer["Hora_inicio"].ToString();
+                hora = leer["nombre"].ToString();
             }
             obj_conec.CerrarBD();
             return hora;
-        }*/
+        }
+
+
+        /* public int asignar_tipo(String tipo)
+         {
+             instruccion_SQL = "Select tipo_vehiculo from tipos_vehiculos where id_tipo_vehiculo = " + sucursal + " and Lugar = " + cajon + " and id_estado_cajon = 1";
+             MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+             obj_conec.AbrirBD();
+             MySqlDataReader leer;
+             String hora = "";
+             leer = cmd.ExecuteReader();
+             while (leer.Read())
+             {
+                 hora = leer["Hora_inicio"].ToString();
+             }
+             obj_conec.CerrarBD();
+             return hora;
+         }*/
 
         public String matricula (int sucursal, int cajon)
         {
@@ -163,6 +179,7 @@ namespace ParkingMat.DAO
                 auxiliar = auxiliar + "|" + leer["Hora_final"].ToString();
                 auxiliar = auxiliar + "|" + leer["Lugar"].ToString();
                 auxiliar = auxiliar + "|" + leer["id_cajon"].ToString();
+                auxiliar = auxiliar + "|" + leer["matricula"].ToString();
                 cajas.Add(auxiliar);
             }
             obj_conec.CerrarBD();
