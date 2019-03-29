@@ -229,6 +229,8 @@ namespace ParkingMat.GUI
                                 cobrar.cobrar_temporal(x,true,sucursal);
                                 cobrar.ShowDialog();
 
+                                //Aqui se ya se genera el ticket de cobro
+
                             }
                         }
 
@@ -247,6 +249,9 @@ namespace ParkingMat.GUI
                     }
                     else
                     {
+                        
+
+
                         frm_pruebaDialog exito = new frm_pruebaDialog();
                         exito.ShowDialog();
                         id_tipo = cmb_tipo_vehiculo.SelectedIndex + 1;
@@ -286,6 +291,7 @@ namespace ParkingMat.GUI
                         }
                         else
                         {
+                            //Aqui creo el ticket para el cliente esporadico que llega por primera vez
                             frm_pruebaDialog exito = new frm_pruebaDialog();
                             id_tipo = cmb_tipo_vehiculo.SelectedIndex + 1;
                             this.Close();

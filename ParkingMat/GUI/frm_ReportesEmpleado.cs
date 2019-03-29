@@ -49,11 +49,11 @@ namespace ParkingMat.GUI
             {
                 AbrirFormularios<frm_AdmTiposRecibo>();
             }
-            if (comboBox1.Text == "Tipos de vehiculos")
+            if (comboBox1.Text == "Tipos de Vehiculos")
             {
                 AbrirFormularios<frm_tipoVehiculo>();
             }
-            if (comboBox1.Text == "Tipos de estados de cajones")
+            if (comboBox1.Text == "Estados de cajones")
             {
                 AbrirFormularios<frm_tipoEstado>();
             }
