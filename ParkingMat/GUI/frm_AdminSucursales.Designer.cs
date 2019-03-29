@@ -35,6 +35,9 @@
             this.mtx_apertura = new System.Windows.Forms.MaskedTextBox();
             this.mtx_cierre = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.mtx_Cajones = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.mtx_Telefono = new System.Windows.Forms.MaskedTextBox();
@@ -55,9 +58,7 @@
             this.Horario_Cierre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_Telefonico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad_Cajones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.tarifa_hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sucursales)).BeginInit();
@@ -147,6 +148,34 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion general";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(321, 95);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 24);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "$";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(235, 92);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(80, 29);
+            this.textBox1.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(84, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 24);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Tarifa por hora:";
             // 
             // mtx_Cajones
             // 
@@ -387,7 +416,8 @@
             this.Horario_Apertura,
             this.Horario_Cierre,
             this.Numero_Telefonico,
-            this.Cantidad_Cajones});
+            this.Cantidad_Cajones,
+            this.tarifa_hora});
             this.dgv_sucursales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_sucursales.Location = new System.Drawing.Point(683, 0);
             this.dgv_sucursales.Name = "dgv_sucursales";
@@ -437,33 +467,11 @@
             this.Cantidad_Cajones.HeaderText = "Capacidad";
             this.Cantidad_Cajones.Name = "Cantidad_Cajones";
             // 
-            // label8
+            // tarifa_hora
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(84, 95);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 24);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Tarifa por hora:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(235, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 29);
-            this.textBox1.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(321, 95);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 24);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "$";
+            this.tarifa_hora.DataPropertyName = "tarifa_hora";
+            this.tarifa_hora.HeaderText = "Tarifa";
+            this.tarifa_hora.Name = "tarifa_hora";
             // 
             // frm_AdminSucursales
             // 
@@ -476,6 +484,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_AdminSucursales";
             this.Text = "frm_AdminSucursales";
+            this.Load += new System.EventHandler(this.frm_AdminSucursales_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -506,6 +515,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cerrar;
         private System.Windows.Forms.DataGridView dgv_sucursales;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_Sucursal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Sucursal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion_Sucursal;
@@ -513,8 +525,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Horario_Cierre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Telefonico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Cajones;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tarifa_hora;
     }
 }

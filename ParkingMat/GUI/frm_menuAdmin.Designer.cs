@@ -34,37 +34,33 @@
             this.pnl_tarjetaReportes = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaRecibos = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaPensionados = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaEmpleados = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_NumEmpleados = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_tarjetaCoches = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_expandir_contraer = new System.Windows.Forms.Button();
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_centro = new System.Windows.Forms.Panel();
             this.pnl_barratop = new System.Windows.Forms.Panel();
-            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btn_selecSucu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lbl_nombre_sucursal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_expandir_contraer = new System.Windows.Forms.Button();
+            this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btn_adminReportMinimal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_adminRecibosminimal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_adminPensionadosMinimal = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -73,24 +69,28 @@
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_expandir_contraer2 = new System.Windows.Forms.Button();
-            this.lbl_nombre_sucursal = new System.Windows.Forms.Label();
-            this.btn_selecSucu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ElipsetarjetaCoches = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.RlipseEmpleados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnl_top.SuspendLayout();
             this.pnl_tarjetaReportes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnl_tarjetaRecibos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnl_tarjetaPensionados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_tarjetaEmpleados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_tarjetaCoches.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_barratop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_selecSucu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -150,6 +150,16 @@
             this.label10.Text = "0";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
             // pnl_tarjetaRecibos
             // 
             this.pnl_tarjetaRecibos.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -191,6 +201,16 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "0";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // pnl_tarjetaPensionados
             // 
@@ -234,6 +254,16 @@
             this.label4.Text = "0";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // pnl_tarjetaEmpleados
             // 
             this.pnl_tarjetaEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -275,6 +305,16 @@
             this.lbl_NumEmpleados.TabIndex = 1;
             this.lbl_NumEmpleados.Text = "0";
             this.lbl_NumEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(17, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // pnl_tarjetaCoches
             // 
@@ -319,6 +359,30 @@
             this.label6.Text = "0";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_expandir_contraer
+            // 
+            this.btn_expandir_contraer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_expandir_contraer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_expandir_contraer.FlatAppearance.BorderSize = 0;
+            this.btn_expandir_contraer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_expandir_contraer.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer.Image")));
+            this.btn_expandir_contraer.Location = new System.Drawing.Point(574, 136);
+            this.btn_expandir_contraer.Name = "btn_expandir_contraer";
+            this.btn_expandir_contraer.Size = new System.Drawing.Size(75, 14);
+            this.btn_expandir_contraer.TabIndex = 0;
+            this.btn_expandir_contraer.UseVisualStyleBackColor = true;
+            this.btn_expandir_contraer.Click += new System.EventHandler(this.btn_expandir_contraer_Click);
+            // 
             // pnl_contenedor
             // 
             this.pnl_contenedor.Controls.Add(this.pnl_centro);
@@ -361,6 +425,49 @@
             this.pnl_barratop.Size = new System.Drawing.Size(1222, 46);
             this.pnl_barratop.TabIndex = 1;
             // 
+            // btn_selecSucu
+            // 
+            this.btn_selecSucu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_selecSucu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_selecSucu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selecSucu.Image = ((System.Drawing.Image)(resources.GetObject("btn_selecSucu.Image")));
+            this.btn_selecSucu.ImageActive = null;
+            this.btn_selecSucu.Location = new System.Drawing.Point(935, 7);
+            this.btn_selecSucu.Name = "btn_selecSucu";
+            this.btn_selecSucu.Size = new System.Drawing.Size(30, 30);
+            this.btn_selecSucu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_selecSucu.TabIndex = 28;
+            this.btn_selecSucu.TabStop = false;
+            this.toolTip1.SetToolTip(this.btn_selecSucu, "Seleccionar sucursal");
+            this.btn_selecSucu.Zoom = 0;
+            this.btn_selecSucu.Click += new System.EventHandler(this.btn_selecSucu_Click);
+            // 
+            // lbl_nombre_sucursal
+            // 
+            this.lbl_nombre_sucursal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_nombre_sucursal.AutoSize = true;
+            this.lbl_nombre_sucursal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_nombre_sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_sucursal.ForeColor = System.Drawing.Color.Black;
+            this.lbl_nombre_sucursal.Location = new System.Drawing.Point(557, 10);
+            this.lbl_nombre_sucursal.Name = "lbl_nombre_sucursal";
+            this.lbl_nombre_sucursal.Size = new System.Drawing.Size(197, 24);
+            this.lbl_nombre_sucursal.TabIndex = 27;
+            this.lbl_nombre_sucursal.Text = "nombre de la sucursal";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(469, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 24);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Sucursal:";
+            // 
             // btn_Salir
             // 
             this.btn_Salir.Activecolor = System.Drawing.Color.DimGray;
@@ -398,6 +505,17 @@
             this.btn_Salir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(8, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -409,124 +527,6 @@
             this.label11.Size = new System.Drawing.Size(91, 24);
             this.label11.TabIndex = 22;
             this.label11.Text = "arkingMat";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 30;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ElipsetarjetaCoches
-            // 
-            this.ElipsetarjetaCoches.ElipseRadius = 12;
-            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
-            // 
-            // RlipseEmpleados
-            // 
-            this.RlipseEmpleados.ElipseRadius = 12;
-            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
-            // 
-            // elipsePensionados
-            // 
-            this.elipsePensionados.ElipseRadius = 12;
-            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
-            // 
-            // ElipseRecibos
-            // 
-            this.ElipseRecibos.ElipseRadius = 12;
-            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
-            // 
-            // ElipseReportes
-            // 
-            this.ElipseReportes.ElipseRadius = 12;
-            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(415, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 24);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Seleccionar sucursal:";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_expandir_contraer
-            // 
-            this.btn_expandir_contraer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_expandir_contraer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_expandir_contraer.FlatAppearance.BorderSize = 0;
-            this.btn_expandir_contraer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_expandir_contraer.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer.Image")));
-            this.btn_expandir_contraer.Location = new System.Drawing.Point(574, 136);
-            this.btn_expandir_contraer.Name = "btn_expandir_contraer";
-            this.btn_expandir_contraer.Size = new System.Drawing.Size(75, 14);
-            this.btn_expandir_contraer.TabIndex = 0;
-            this.btn_expandir_contraer.UseVisualStyleBackColor = true;
-            this.btn_expandir_contraer.Click += new System.EventHandler(this.btn_expandir_contraer_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(8, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 23;
-            this.pictureBox6.TabStop = false;
             // 
             // btn_adminReportMinimal
             // 
@@ -797,35 +797,35 @@
             this.btn_expandir_contraer2.Visible = false;
             this.btn_expandir_contraer2.Click += new System.EventHandler(this.btn_expandir_contraer2_Click);
             // 
-            // lbl_nombre_sucursal
+            // timer1
             // 
-            this.lbl_nombre_sucursal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_nombre_sucursal.AutoSize = true;
-            this.lbl_nombre_sucursal.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_nombre_sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre_sucursal.ForeColor = System.Drawing.Color.Black;
-            this.lbl_nombre_sucursal.Location = new System.Drawing.Point(611, 10);
-            this.lbl_nombre_sucursal.Name = "lbl_nombre_sucursal";
-            this.lbl_nombre_sucursal.Size = new System.Drawing.Size(197, 24);
-            this.lbl_nombre_sucursal.TabIndex = 27;
-            this.lbl_nombre_sucursal.Text = "nombre de la sucursal";
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btn_selecSucu
+            // ElipsetarjetaCoches
             // 
-            this.btn_selecSucu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_selecSucu.BackColor = System.Drawing.Color.Transparent;
-            this.btn_selecSucu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_selecSucu.Image = ((System.Drawing.Image)(resources.GetObject("btn_selecSucu.Image")));
-            this.btn_selecSucu.ImageActive = null;
-            this.btn_selecSucu.Location = new System.Drawing.Point(935, 7);
-            this.btn_selecSucu.Name = "btn_selecSucu";
-            this.btn_selecSucu.Size = new System.Drawing.Size(30, 30);
-            this.btn_selecSucu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_selecSucu.TabIndex = 28;
-            this.btn_selecSucu.TabStop = false;
-            this.toolTip1.SetToolTip(this.btn_selecSucu, "Seleccionar sucursal");
-            this.btn_selecSucu.Zoom = 0;
-            this.btn_selecSucu.Click += new System.EventHandler(this.btn_selecSucu_Click);
+            this.ElipsetarjetaCoches.ElipseRadius = 12;
+            this.ElipsetarjetaCoches.TargetControl = this.pnl_tarjetaCoches;
+            // 
+            // RlipseEmpleados
+            // 
+            this.RlipseEmpleados.ElipseRadius = 12;
+            this.RlipseEmpleados.TargetControl = this.pnl_tarjetaEmpleados;
+            // 
+            // elipsePensionados
+            // 
+            this.elipsePensionados.ElipseRadius = 12;
+            this.elipsePensionados.TargetControl = this.pnl_tarjetaPensionados;
+            // 
+            // ElipseRecibos
+            // 
+            this.ElipseRecibos.ElipseRadius = 12;
+            this.ElipseRecibos.TargetControl = this.pnl_tarjetaRecibos;
+            // 
+            // ElipseReportes
+            // 
+            this.ElipseReportes.ElipseRadius = 12;
+            this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
             // 
             // toolTip1
             // 
@@ -845,24 +845,24 @@
             this.pnl_top.ResumeLayout(false);
             this.pnl_tarjetaReportes.ResumeLayout(false);
             this.pnl_tarjetaReportes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnl_tarjetaRecibos.ResumeLayout(false);
             this.pnl_tarjetaRecibos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnl_tarjetaPensionados.ResumeLayout(false);
             this.pnl_tarjetaPensionados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_tarjetaEmpleados.ResumeLayout(false);
             this.pnl_tarjetaEmpleados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_tarjetaCoches.ResumeLayout(false);
             this.pnl_tarjetaCoches.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_barratop.ResumeLayout(false);
             this.pnl_barratop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_selecSucu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 using ParkingMat.BO;
+using System.Windows.Forms;
 
 namespace ParkingMat.DAO
 {
@@ -21,13 +22,34 @@ namespace ParkingMat.DAO
 
         public DataTable MostrarSucursales()
         {
-            instruccion_SQL = "Select * from sucursales";
+            instruccion_SQL = "Select id_Scurusal from sucursales";
             MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
             DataTable virtual_Sucursal = new DataTable();
             
             adp.Fill(virtual_Sucursal);
 
             return (virtual_Sucursal);
+        }
+
+        public DataTable tabla_sucursales()
+        {
+            
+
+            instruccion_SQL = "SELECT id_Sucursal,Nombre_Sucursal,Direccion_Sucursal,Horario_Apertura,Horario_Cierre FROM sucursales where id_Sucursal > 0";
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
+            obj_conec.AbrirBD();
+            MySqlDataReader leer;
+            leer = cmd.ExecuteReader();
+            while (leer.Read())
+            {
+                //MessageBox.Show((leer["Nombre_Sucursal"]).ToString());
+            }
+            DataTable virtual_pen = new DataTable();
+            
+            adp.Fill(virtual_pen);
+            obj_conec.CerrarBD();
+            return (virtual_pen);
         }
 
         public int Guardar_Datos(Sucursal_BO obj_div)

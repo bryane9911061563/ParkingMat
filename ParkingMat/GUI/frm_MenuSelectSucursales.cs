@@ -127,7 +127,6 @@ namespace ParkingMat.GUI
             Cls_Static_UsuarioRunningThisMoment.id_Sucursal = suc.Asignar_Sucursal(cmb_sucursal_admin.Text);
             frm_menuAdmin admin = new frm_menuAdmin();
             admin.Show();
-            MessageBox.Show(suc.Mostrar_nombre_sucursal_seleccionada());
             this.Hide();
         }
     }
