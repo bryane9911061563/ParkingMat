@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AdminEmpleados));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_Empleados = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -64,12 +63,14 @@
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dgv_Empleados = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,18 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(617, 606);
             this.panel1.TabIndex = 0;
-            // 
-            // dgv_Empleados
-            // 
-            this.dgv_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Empleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Empleados.Location = new System.Drawing.Point(0, 39);
-            this.dgv_Empleados.Name = "dgv_Empleados";
-            this.dgv_Empleados.Size = new System.Drawing.Size(617, 567);
-            this.dgv_Empleados.TabIndex = 26;
-            this.dgv_Empleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Empleados_CellContentClick);
-            this.dgv_Empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Empleados_CellMouseClick);
             // 
             // panel2
             // 
@@ -409,6 +398,7 @@
             this.btn_Img_Examinar.TabIndex = 18;
             this.btn_Img_Examinar.Text = "Examinar";
             this.btn_Img_Examinar.UseVisualStyleBackColor = true;
+            this.btn_Img_Examinar.Click += new System.EventHandler(this.btn_Img_Examinar_Click);
             // 
             // label9
             // 
@@ -582,6 +572,22 @@
             this.txt_nombre.TabIndex = 4;
             this.txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_KeyPress);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // dgv_Empleados
+            // 
+            this.dgv_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Empleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Empleados.Location = new System.Drawing.Point(0, 39);
+            this.dgv_Empleados.Name = "dgv_Empleados";
+            this.dgv_Empleados.Size = new System.Drawing.Size(617, 567);
+            this.dgv_Empleados.TabIndex = 26;
+            this.dgv_Empleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Empleados_CellContentClick);
+            this.dgv_Empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Empleados_CellMouseClick);
+            // 
             // frm_AdminEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,7 +602,6 @@
             this.Text = "frm_AdminEmpleados";
             this.Load += new System.EventHandler(this.frm_AdminEmpleados_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -604,6 +609,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,12 +645,13 @@
         private System.Windows.Forms.TextBox textBox4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgv_Empleados;
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox mtx_Sueldo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dgv_Empleados;
     }
 }

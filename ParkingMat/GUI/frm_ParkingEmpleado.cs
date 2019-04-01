@@ -120,6 +120,63 @@ namespace ParkingMat.GUI
             }
             this.Refresh();
         }
+
+        private void txt_Placas_TextChanged(object sender, EventArgs e)
+        {
+            int count=0, posision_x = 0 , posision_y=0;
+            if (txt_Placas.Text != "")
+            {
+                for (int x = 0; x < Vehiculo_Botton.Count(); x++)
+                {
+                    for (int y = 0; x < Vehiculo_Botton.Count(); y++)
+                    {
+
+                        if (Vehiculo_Botton[count].Text.Contains("Matricula: " + txt_Placas.Text))
+                        {
+                            Vehiculo_Botton[count].Visible = true;
+                            Vehiculo_Botton[count].Top = posision_y * 115;
+                            Vehiculo_Botton[count].Left = posision_x * 265;
+                            posision_x = posision_x + 1;
+                            if(posision_x >= 5)
+                            {
+                                posision_x = 0;
+                                posision_y = posision_y + 1;
+                            }
+
+                        }
+                        else
+                        {
+                            Vehiculo_Botton[count].Visible = false;
+                        }
+                        count = count + 1;
+                        if (count >= cantidad1)
+                        {
+                            x = cantidad1 + 1;
+                            y = cantidad1 + 1;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int y = 0; y < Vehiculo_Botton.Count(); y++)
+                {
+                    for (int x = 0; x < 5; x++)
+                    {
+                            Vehiculo_Botton[count].Visible = true;
+                            Vehiculo_Botton[count].Top = y * 115;
+                            Vehiculo_Botton[count].Left = x * 265;
+                        count = count + 1;
+                        if (count >= cantidad1)
+                        {
+                            x = cantidad1 + 1;
+                            y = cantidad1 + 1;
+                        }
+                    }
+                }
+            }
+        }
+
         private void Mostrar_Cajones(int cantidad)
         {
            
@@ -172,7 +229,7 @@ namespace ParkingMat.GUI
                             Vehiculo_Botton[contador].OnHovercolor = System.Drawing.ColorTranslator.FromHtml("#ff8c00");
                             cajon_id = int.Parse(info[5].ToString());
                             String nombre=cajon.nombre(cajon_id);
-                            Vehiculo_Botton[contador].Text = "Espacio recerbado a nombre de: "+nombre+"\nPlacas: "+ info[6].ToString();
+                            Vehiculo_Botton[contador].Text = "Espacio recerbado ";// a nombre de: "+nombre+"\nPlacas: "+ info[6].ToString();
                             ocupado = true;
                             break;
                         }
@@ -187,7 +244,7 @@ namespace ParkingMat.GUI
 
                     }
 
-                    Vehiculo_Botton[contador].Click += delegate { if (!ocupado) { frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(Sucursal1, lugar, 1, "", estado_cajon); vehiculo.ShowDialog(); if (estado_cajon == 3) { Cajon_seleccionado = cajon_id; Matricula = vehiculo.Matricla; tipo_vehiculo = vehiculo.Id_tipo; this.Close(); }; actualizar(); } else { frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente otro espacio"); error.ShowDialog(); } };
+                    Vehiculo_Botton[contador].Click += delegate { if (!ocupado) { frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(Sucursal1, lugar, 1, "", estado_cajon, cajon_id); vehiculo.ShowDialog(); if (estado_cajon == 3) { Cajon_seleccionado = cajon_id; Matricula = vehiculo.Matricla; tipo_vehiculo = vehiculo.Id_tipo; this.Close(); }; actualizar(); } else { frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente otro espacio"); error.ShowDialog(); } };
                     pnl_cajones.Controls.Remove(Vehiculo_Botton[contador]);
                     pnl_cajones.Controls.Add(Vehiculo_Botton[contador]);
                     contador = contador + 1;

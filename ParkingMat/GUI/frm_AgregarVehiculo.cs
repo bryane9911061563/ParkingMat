@@ -60,9 +60,10 @@ namespace ParkingMat.GUI
             }
         }
 
-        private int sucursal, cajon, Id_cliente, Estado, id_tipo,costo,hora_inicial,hora_final;
+        private int sucursal,cajon_id, cajon, Id_cliente, Estado, id_tipo,costo,hora_inicial,hora_final;
         private String nombre_cliente = "", matricla = "";
-
+        Vehiculo_BO auto = new Vehiculo_BO();
+        Vehiculos_DAO vehic = new Vehiculos_DAO();
 
         public int Sucursal { get => Sucursal1; set => Sucursal1 = value; }
         public int Cajon { get => Cajon1; set => Cajon1 = value; }
@@ -77,6 +78,7 @@ namespace ParkingMat.GUI
         public int Id_tipo { get => id_tipo; set => id_tipo = value; }
         public int Hora_inicial { get => hora_inicial; set => hora_inicial = value; }
         public int Hora_final { get => hora_final; set => hora_final = value; }
+        public int Cajon_id { get => cajon_id; set => cajon_id = value; }
 
         private bool CheckAeroEnabled()
         {
@@ -110,7 +112,7 @@ namespace ParkingMat.GUI
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-        public frm_AgregarVehiculo(int id_sucursal, int numero_cajon, int id_cliente, String nombre, int estado)
+        public frm_AgregarVehiculo(int id_sucursal, int numero_cajon, int id_cliente, String nombre, int estado, int cajonid)
         {
             Sucursal = id_sucursal;
             Cajon = numero_cajon;
@@ -120,6 +122,7 @@ namespace ParkingMat.GUI
             Nombre_cliente = nombre;
             button1.Visible = false;
             label4.Visible = false;
+            cajon_id = cajonid;
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -146,23 +149,18 @@ namespace ParkingMat.GUI
         {
             cargar();
             mtx_numero.Text = Cajon.ToString();
-            if(mtx_entrada.Text == "")
+
+            Cajones_DAO vehiculos = new Cajones_DAO();
+            mtx_salida.Text = DateTime.Now.ToString("hhmm");
+            mtx_entrada.Text = vehiculos.hora_inicio(Sucursal, Cajon);
+            txt_matricula.Text = vehiculos.matricula(Sucursal, Cajon);
+            if (vehiculos.hora_inicio(Sucursal, Cajon) != "")
             {
-                mtx_entrada.Text= DateTime.Now.ToString("hhmm");
+
+                cmb_tipo_vehiculo.Text = vehic.tipo_vehiculo(txt_matricula.Text);
             }
-            else
-            {
-                try
-                {
-                    Cajones_DAO vehiculos = new Cajones_DAO();
-                    mtx_entrada.Text = vehiculos.hora_inicio(Sucursal, Cajon);
-                    mtx_salida.Text = DateTime.Now.ToString("hhmm");
-                    txt_matricula.Text = vehiculos.matricula(Sucursal, Cajon);
-                }
-                catch(Exception ex) {
-                }
-               
-            }
+            
+            
         }
         private void cargar()
         {
@@ -183,6 +181,7 @@ namespace ParkingMat.GUI
                 {
                     Cajones_BO nuevo = new Cajones_BO();
                     Cajones_DAO crear = new Cajones_DAO();
+                   
                     nuevo.Id_sucursal = Sucursal;
                     nuevo.Lugar1 = Cajon;
                     nuevo.Hora_inicio1 = "Hora entrada:"+mtx_salida.Text;
@@ -194,6 +193,11 @@ namespace ParkingMat.GUI
                         nuevo.Hora_final1 = "Hora salida:" + mtx_entrada.Text;
                         nuevo.Estado_cajon = 2;
                         guardar = crear.Actualizar_Datos(nuevo);
+                        auto.Id_cajon = cajon_id;
+                        auto.Id_cliente = 0;
+                        auto.Id_tipo = cmb_tipo_vehiculo.SelectedIndex+1;
+                        auto.Placas = txt_matricula.Text;
+                        vehic.Guardar_Datos(auto);
                         if (guardar == 0)
                         {
                             nuevo.Hora_final1 = "Hora salida: --:--";
@@ -228,8 +232,6 @@ namespace ParkingMat.GUI
                                 frm_AdminRecibos cobrar = new frm_AdminRecibos();
                                 cobrar.cobrar_temporal(x,true,sucursal);
                                 cobrar.ShowDialog();
-
-                                //Aqui se ya se genera el ticket de cobro
 
                             }
                         }

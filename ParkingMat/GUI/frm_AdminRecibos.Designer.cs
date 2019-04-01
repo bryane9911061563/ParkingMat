@@ -48,6 +48,14 @@
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_recibos = new System.Windows.Forms.DataGridView();
+            this.btn_reporte = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.id_Recibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Tipo_Recibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +73,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_reporte);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cmb_sucursales);
             this.groupBox1.Controls.Add(this.label4);
@@ -362,10 +371,100 @@
             // 
             this.dgv_recibos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_recibos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_recibos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_Recibo,
+            this.motivo,
+            this.descripcion,
+            this.Costo,
+            this.Fecha_Creacion,
+            this.id_Tipo_Recibo,
+            this.id_Sucursal});
+            this.dgv_recibos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_recibos.Location = new System.Drawing.Point(0, 0);
             this.dgv_recibos.Name = "dgv_recibos";
-            this.dgv_recibos.Size = new System.Drawing.Size(1350, 291);
+            this.dgv_recibos.Size = new System.Drawing.Size(1360, 217);
             this.dgv_recibos.TabIndex = 0;
+            this.dgv_recibos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_recibos_CellMouseClick);
+            // 
+            // btn_reporte
+            // 
+            this.btn_reporte.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btn_reporte.AllowDrop = true;
+            this.btn_reporte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_reporte.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_reporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_reporte.BorderRadius = 7;
+            this.btn_reporte.ButtonText = "Reporte";
+            this.btn_reporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_reporte.DisabledColor = System.Drawing.Color.White;
+            this.btn_reporte.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_reporte.Iconimage = null;
+            this.btn_reporte.Iconimage_right = null;
+            this.btn_reporte.Iconimage_right_Selected = null;
+            this.btn_reporte.Iconimage_Selected = null;
+            this.btn_reporte.IconMarginLeft = 0;
+            this.btn_reporte.IconMarginRight = 0;
+            this.btn_reporte.IconRightVisible = true;
+            this.btn_reporte.IconRightZoom = 0D;
+            this.btn_reporte.IconVisible = true;
+            this.btn_reporte.IconZoom = 90D;
+            this.btn_reporte.IsTab = false;
+            this.btn_reporte.Location = new System.Drawing.Point(856, 219);
+            this.btn_reporte.Name = "btn_reporte";
+            this.btn_reporte.Normalcolor = System.Drawing.Color.RoyalBlue;
+            this.btn_reporte.OnHovercolor = System.Drawing.Color.DodgerBlue;
+            this.btn_reporte.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_reporte.selected = false;
+            this.btn_reporte.Size = new System.Drawing.Size(100, 48);
+            this.btn_reporte.TabIndex = 45;
+            this.btn_reporte.Text = "Reporte";
+            this.btn_reporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_reporte.Textcolor = System.Drawing.Color.White;
+            this.btn_reporte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reporte.Click += new System.EventHandler(this.btn_reporte_Click);
+            // 
+            // id_Recibo
+            // 
+            this.id_Recibo.DataPropertyName = "id_Recibo";
+            this.id_Recibo.HeaderText = "ID";
+            this.id_Recibo.Name = "id_Recibo";
+            // 
+            // motivo
+            // 
+            this.motivo.DataPropertyName = "motivo";
+            this.motivo.HeaderText = "Motivo";
+            this.motivo.Name = "motivo";
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            // 
+            // Costo
+            // 
+            this.Costo.DataPropertyName = "Costo";
+            this.Costo.HeaderText = "Costo";
+            this.Costo.Name = "Costo";
+            // 
+            // Fecha_Creacion
+            // 
+            this.Fecha_Creacion.DataPropertyName = "Fecha_Creacion";
+            this.Fecha_Creacion.HeaderText = "Fecha";
+            this.Fecha_Creacion.Name = "Fecha_Creacion";
+            // 
+            // id_Tipo_Recibo
+            // 
+            this.id_Tipo_Recibo.DataPropertyName = "id_Tipo_Recibo";
+            this.id_Tipo_Recibo.HeaderText = "Tipo de recibo";
+            this.id_Tipo_Recibo.Name = "id_Tipo_Recibo";
+            // 
+            // id_Sucursal
+            // 
+            this.id_Sucursal.DataPropertyName = "id_Sucursal";
+            this.id_Sucursal.HeaderText = "Sucursal";
+            this.id_Sucursal.Name = "id_Sucursal";
             // 
             // frm_AdminRecibos
             // 
@@ -410,5 +509,13 @@
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmb_sucursales;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_reporte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Recibo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Creacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Tipo_Recibo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Sucursal;
     }
 }

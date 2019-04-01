@@ -18,6 +18,7 @@ namespace ParkingMat.GUI
     public partial class frm_AdminRecibos : Form
     {
         Recibo_DAO reciboDAO = new Recibo_DAO();
+        Recibo_BO datos = new Recibo_BO();
         public frm_AdminRecibos()
         {
             InitializeComponent();
@@ -103,6 +104,44 @@ namespace ParkingMat.GUI
             if (e.KeyChar == '.' || e.KeyChar == ' ' ||!a && e.KeyChar != (char)Keys.Delete && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btn_reporte_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_PrevCobro frmPrev = new frm_PrevCobro(datos.Id_recibo, cmb_sucursales.Text, cmb_tipo.Text, txt_motivo.Text, txt_descripcion.Text, decimal.Parse(txt_costo.Text));
+                frmPrev.ShowDialog();
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        private void dgv_recibos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int Fila = e.RowIndex;
+
+                txt_motivo.Text = dgv_recibos.Rows[Fila].Cells["motivo"].Value.ToString();
+                txt_descripcion.Text = dgv_recibos.Rows[Fila].Cells["descripcion"].Value.ToString();
+                txt_costo.Text = dgv_recibos.Rows[Fila].Cells["Costo"].Value.ToString();
+                dtp_fecha.Text = dgv_recibos.Rows[Fila].Cells["Fecha_Creacion"].Value.ToString();
+                cmb_sucursales.Text = dgv_recibos.Rows[Fila].Cells["id_Sucursal"].Value.ToString();
+                cmb_tipo.Text = dgv_recibos.Rows[Fila].Cells["id_Tipo_Recibo"].Value.ToString();
+
+
+                
+                
+                datos.Id_recibo = Convert.ToInt32(dgv_recibos.Rows[Fila].Cells["id_Recibo"].Value.ToString().TrimEnd());
+            }
+            catch
+            {
+
             }
         }
 

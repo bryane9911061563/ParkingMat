@@ -33,11 +33,12 @@
             this.gbx_cajones = new System.Windows.Forms.GroupBox();
             this.pnl_cajones = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_Placas = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.gbx_cajones.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,26 +75,17 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(533, 4);
+            this.comboBox1.Location = new System.Drawing.Point(806, 6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(159, 32);
             this.comboBox1.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(808, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 32);
-            this.comboBox2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(368, 8);
+            this.label1.Location = new System.Drawing.Point(644, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 2;
@@ -104,11 +96,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(716, 8);
+            this.label2.Location = new System.Drawing.Point(379, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 24);
+            this.label2.Size = new System.Drawing.Size(65, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Sección:";
+            this.label2.Text = "Placas";
             // 
             // bunifuFlatButton4
             // 
@@ -149,6 +141,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txt_Placas);
             this.panel1.Controls.Add(this.bunifuFlatButton4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -159,6 +152,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1331, 39);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1024, 0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(159, 32);
+            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Visible = false;
+            // 
+            // txt_Placas
+            // 
+            this.txt_Placas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_Placas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Placas.Location = new System.Drawing.Point(450, 8);
+            this.txt_Placas.Name = "txt_Placas";
+            this.txt_Placas.Size = new System.Drawing.Size(178, 26);
+            this.txt_Placas.TabIndex = 35;
+            this.txt_Placas.TextChanged += new System.EventHandler(this.txt_Placas_TextChanged);
             // 
             // frm_ParkingEmpleado
             // 
@@ -183,11 +196,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gbx_cajones;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_cajones;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt_Placas;
     }
 }

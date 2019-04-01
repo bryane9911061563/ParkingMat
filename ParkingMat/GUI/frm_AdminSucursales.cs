@@ -95,5 +95,24 @@ namespace ParkingMat.GUI
             dgv_sucursales.DataSource = objSucuDAO.tabla_sucursales();
 
         }
+
+        public void soyventana()
+        {
+            this.Width = 700;
+            dgv_sucursales.Visible = false;
+            bunifuFlatButton2.Visible = true;
+            bunifuFlatButton2.Text = "Cancelar";
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

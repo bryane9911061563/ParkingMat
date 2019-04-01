@@ -73,7 +73,10 @@ namespace ParkingMat.GUI
 
             if (jefe.Nombre==txt_correo.Text && jefe.Clave==txt_contrase.Text) {
                 frm_MenuSelectSucursales obj = new frm_MenuSelectSucursales();
+                frm_Cargando cargando = new frm_Cargando();
+                cargando.Show();
                 obj.Show();
+
                 this.Hide();
             }
             else

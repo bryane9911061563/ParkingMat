@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1386, 121);
+            this.panel1.Size = new System.Drawing.Size(1380, 121);
             this.panel1.TabIndex = 0;
             // 
             // lbl_id_Suc
@@ -118,7 +118,7 @@
             this.pnl_indicador.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_indicador.Location = new System.Drawing.Point(0, 96);
             this.pnl_indicador.Name = "pnl_indicador";
-            this.pnl_indicador.Size = new System.Drawing.Size(1386, 25);
+            this.pnl_indicador.Size = new System.Drawing.Size(1380, 25);
             this.pnl_indicador.TabIndex = 0;
             // 
             // btn_recibos
@@ -143,13 +143,13 @@
             this.btn_recibos.IconVisible = true;
             this.btn_recibos.IconZoom = 45D;
             this.btn_recibos.IsTab = false;
-            this.btn_recibos.Location = new System.Drawing.Point(1013, 64);
+            this.btn_recibos.Location = new System.Drawing.Point(896, 64);
             this.btn_recibos.Name = "btn_recibos";
             this.btn_recibos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
             this.btn_recibos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.btn_recibos.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_recibos.selected = false;
-            this.btn_recibos.Size = new System.Drawing.Size(320, 37);
+            this.btn_recibos.Size = new System.Drawing.Size(434, 37);
             this.btn_recibos.TabIndex = 33;
             this.btn_recibos.Text = "Recibos";
             this.btn_recibos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,13 +179,13 @@
             this.btn_pensionados.IconVisible = true;
             this.btn_pensionados.IconZoom = 45D;
             this.btn_pensionados.IsTab = false;
-            this.btn_pensionados.Location = new System.Drawing.Point(693, 64);
+            this.btn_pensionados.Location = new System.Drawing.Point(475, 64);
             this.btn_pensionados.Name = "btn_pensionados";
             this.btn_pensionados.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
             this.btn_pensionados.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.btn_pensionados.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_pensionados.selected = false;
-            this.btn_pensionados.Size = new System.Drawing.Size(320, 37);
+            this.btn_pensionados.Size = new System.Drawing.Size(432, 37);
             this.btn_pensionados.TabIndex = 32;
             this.btn_pensionados.Text = "Pensionados";
             this.btn_pensionados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,7 +215,7 @@
             this.btn_vehiculos.IconVisible = true;
             this.btn_vehiculos.IconZoom = 45D;
             this.btn_vehiculos.IsTab = false;
-            this.btn_vehiculos.Location = new System.Drawing.Point(373, 64);
+            this.btn_vehiculos.Location = new System.Drawing.Point(757, 16);
             this.btn_vehiculos.Name = "btn_vehiculos";
             this.btn_vehiculos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
             this.btn_vehiculos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
@@ -227,6 +227,7 @@
             this.btn_vehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_vehiculos.Textcolor = System.Drawing.Color.White;
             this.btn_vehiculos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vehiculos.Visible = false;
             this.btn_vehiculos.Click += new System.EventHandler(this.btn_vehiculos_Click);
             // 
             // btn_parquimetro
@@ -251,13 +252,13 @@
             this.btn_parquimetro.IconVisible = true;
             this.btn_parquimetro.IconZoom = 45D;
             this.btn_parquimetro.IsTab = false;
-            this.btn_parquimetro.Location = new System.Drawing.Point(53, 64);
+            this.btn_parquimetro.Location = new System.Drawing.Point(50, 64);
             this.btn_parquimetro.Name = "btn_parquimetro";
             this.btn_parquimetro.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
             this.btn_parquimetro.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.btn_parquimetro.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_parquimetro.selected = false;
-            this.btn_parquimetro.Size = new System.Drawing.Size(320, 37);
+            this.btn_parquimetro.Size = new System.Drawing.Size(454, 37);
             this.btn_parquimetro.TabIndex = 29;
             this.btn_parquimetro.Text = "Parquímetro";
             this.btn_parquimetro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,7 +289,7 @@
             this.btn_Salir.IconVisible = true;
             this.btn_Salir.IconZoom = 35D;
             this.btn_Salir.IsTab = false;
-            this.btn_Salir.Location = new System.Drawing.Point(1137, 2);
+            this.btn_Salir.Location = new System.Drawing.Point(1131, 2);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Normalcolor = System.Drawing.SystemColors.Control;
             this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -324,7 +325,7 @@
             this.btn_minimizar.IconVisible = true;
             this.btn_minimizar.IconZoom = 35D;
             this.btn_minimizar.IsTab = false;
-            this.btn_minimizar.Location = new System.Drawing.Point(1322, 1);
+            this.btn_minimizar.Location = new System.Drawing.Point(1316, 1);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_minimizar.OnHovercolor = System.Drawing.Color.Silver;
@@ -358,7 +359,7 @@
             this.btn_cerrar.IconVisible = true;
             this.btn_cerrar.IconZoom = 50D;
             this.btn_cerrar.IsTab = false;
-            this.btn_cerrar.Location = new System.Drawing.Point(1357, 1);
+            this.btn_cerrar.Location = new System.Drawing.Point(1351, 1);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
@@ -403,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 729);
+            this.ClientSize = new System.Drawing.Size(1380, 729);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,12 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ParkingMat.BO;
-using ParkingMat.DAO;
 
 namespace ParkingMat.GUI
 {
-    public partial class frm_MenuSelectSucursales : Form
+    public partial class frm_Cargando : Form
     {
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -90,53 +88,16 @@ namespace ParkingMat.GUI
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-        public frm_MenuSelectSucursales()
+        public frm_Cargando()
         {
             InitializeComponent();
-            Cargar_sucursales();
         }
 
-        Sucursal_DAO suc = new Sucursal_DAO();
-        ArrayList sucursal = new ArrayList();
-
-        private void Cargar_sucursales()
+        private void tmr_cargandoEspera_Tick(object sender, EventArgs e)
         {
-            sucursal = suc.lista_Sucursales();
-            for (int i = 0; i < sucursal.Count; i++)
-            {
-                cmb_sucursal_admin.Items.Add(sucursal[i].ToString());
-            }
-            //sucursal = suc.lista_Puestos();
-            //for (int i = 0; i < sucursal.Count; i++)
-            //{
-            //    cmb_sucursal_admin.Items.Add(sucursal[i].ToString());
-            //}
-        }
-
-        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_Login login = new frm_Login();
-            login.Show();
-        }
-
-        private void btn_Cerrar_Click(object sender, EventArgs e)
-        {
-            if (cmb_sucursal_admin.Text != "")
-            {
-
-                Cls_Static_UsuarioRunningThisMoment.id_Sucursal = suc.Asignar_Sucursal(cmb_sucursal_admin.Text);
-                frm_menuAdmin admin = new frm_menuAdmin();
-                admin.Show();
-                this.Hide();
-            }
-            else
-            {
-                frm_AdminSucursales nueva = new frm_AdminSucursales();
-                nueva.soyventana();
-                nueva.StartPosition = FormStartPosition.CenterScreen;
-                nueva.ShowDialog();
-            }
+            tmr_cargandoEspera.Stop();
+            this.Close();
+            
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ParkingMat.BO;
 using ParkingMat.DAO;
+using ParkingMat.BO;
 
 namespace ParkingMat.GUI
 {
-    public partial class frm_MenuSelectSucursales : Form
+    public partial class frm_PrevCobro : Form
     {
+
+
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
@@ -90,53 +92,21 @@ namespace ParkingMat.GUI
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-        public frm_MenuSelectSucursales()
+        public frm_PrevCobro(int id_recibo,string sucursal,string tipo,string motivo,string descripcion,decimal costo)
         {
             InitializeComponent();
-            Cargar_sucursales();
+            lbl_no.Text = id_recibo.ToString();
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            lbl_sucursal.Text = sucursal.ToString();
+            lbl_tipo.Text = tipo.ToString();
+            lbl_titulo.Text = motivo;
+            txt_descripcion.Text = descripcion;
+            lbl_costo.Text = costo.ToString();
         }
 
-        Sucursal_DAO suc = new Sucursal_DAO();
-        ArrayList sucursal = new ArrayList();
-
-        private void Cargar_sucursales()
-        {
-            sucursal = suc.lista_Sucursales();
-            for (int i = 0; i < sucursal.Count; i++)
-            {
-                cmb_sucursal_admin.Items.Add(sucursal[i].ToString());
-            }
-            //sucursal = suc.lista_Puestos();
-            //for (int i = 0; i < sucursal.Count; i++)
-            //{
-            //    cmb_sucursal_admin.Items.Add(sucursal[i].ToString());
-            //}
-        }
-
-        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Login login = new frm_Login();
-            login.Show();
-        }
-
-        private void btn_Cerrar_Click(object sender, EventArgs e)
-        {
-            if (cmb_sucursal_admin.Text != "")
-            {
-
-                Cls_Static_UsuarioRunningThisMoment.id_Sucursal = suc.Asignar_Sucursal(cmb_sucursal_admin.Text);
-                frm_menuAdmin admin = new frm_menuAdmin();
-                admin.Show();
-                this.Hide();
-            }
-            else
-            {
-                frm_AdminSucursales nueva = new frm_AdminSucursales();
-                nueva.soyventana();
-                nueva.StartPosition = FormStartPosition.CenterScreen;
-                nueva.ShowDialog();
-            }
         }
     }
 }
