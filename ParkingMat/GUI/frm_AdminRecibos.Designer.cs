@@ -47,11 +47,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_recibos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_recibos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -351,21 +351,21 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgv_recibos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 307);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1360, 217);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgv_recibos
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1350, 291);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_recibos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_recibos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_recibos.Location = new System.Drawing.Point(0, 0);
+            this.dgv_recibos.Name = "dgv_recibos";
+            this.dgv_recibos.Size = new System.Drawing.Size(1350, 291);
+            this.dgv_recibos.TabIndex = 0;
             // 
             // frm_AdminRecibos
             // 
@@ -383,7 +383,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_recibos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,7 +399,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmb_tipo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_recibos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_costo;
         private System.Windows.Forms.Label label2;

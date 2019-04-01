@@ -55,6 +55,9 @@
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_centro = new System.Windows.Forms.Panel();
             this.pnl_barratop = new System.Windows.Forms.Panel();
+            this.btn_selecSucu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lbl_nombre_sucursal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_Salir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,6 +75,7 @@
             this.elipsePensionados = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseRecibos = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ElipseReportes = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnl_top.SuspendLayout();
             this.pnl_tarjetaReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -85,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_barratop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_selecSucu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +105,7 @@
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 46);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(1044, 154);
+            this.pnl_top.Size = new System.Drawing.Size(1222, 154);
             this.pnl_top.TabIndex = 0;
             // 
             // pnl_tarjetaReportes
@@ -111,7 +116,7 @@
             this.pnl_tarjetaReportes.Controls.Add(this.label10);
             this.pnl_tarjetaReportes.Controls.Add(this.pictureBox5);
             this.pnl_tarjetaReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnl_tarjetaReportes.Location = new System.Drawing.Point(928, 2);
+            this.pnl_tarjetaReportes.Location = new System.Drawing.Point(1017, 2);
             this.pnl_tarjetaReportes.Name = "pnl_tarjetaReportes";
             this.pnl_tarjetaReportes.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaReportes.TabIndex = 24;
@@ -163,7 +168,7 @@
             this.pnl_tarjetaRecibos.Controls.Add(this.label8);
             this.pnl_tarjetaRecibos.Controls.Add(this.pictureBox4);
             this.pnl_tarjetaRecibos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnl_tarjetaRecibos.Location = new System.Drawing.Point(660, 2);
+            this.pnl_tarjetaRecibos.Location = new System.Drawing.Point(749, 2);
             this.pnl_tarjetaRecibos.Name = "pnl_tarjetaRecibos";
             this.pnl_tarjetaRecibos.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaRecibos.TabIndex = 23;
@@ -215,7 +220,7 @@
             this.pnl_tarjetaPensionados.Controls.Add(this.label4);
             this.pnl_tarjetaPensionados.Controls.Add(this.pictureBox3);
             this.pnl_tarjetaPensionados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnl_tarjetaPensionados.Location = new System.Drawing.Point(392, 2);
+            this.pnl_tarjetaPensionados.Location = new System.Drawing.Point(481, 2);
             this.pnl_tarjetaPensionados.Name = "pnl_tarjetaPensionados";
             this.pnl_tarjetaPensionados.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaPensionados.TabIndex = 22;
@@ -267,7 +272,7 @@
             this.pnl_tarjetaEmpleados.Controls.Add(this.lbl_NumEmpleados);
             this.pnl_tarjetaEmpleados.Controls.Add(this.pictureBox2);
             this.pnl_tarjetaEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnl_tarjetaEmpleados.Location = new System.Drawing.Point(124, 2);
+            this.pnl_tarjetaEmpleados.Location = new System.Drawing.Point(213, 2);
             this.pnl_tarjetaEmpleados.Name = "pnl_tarjetaEmpleados";
             this.pnl_tarjetaEmpleados.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaEmpleados.TabIndex = 21;
@@ -319,7 +324,7 @@
             this.pnl_tarjetaCoches.Controls.Add(this.label6);
             this.pnl_tarjetaCoches.Controls.Add(this.pictureBox1);
             this.pnl_tarjetaCoches.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnl_tarjetaCoches.Location = new System.Drawing.Point(-144, 2);
+            this.pnl_tarjetaCoches.Location = new System.Drawing.Point(-55, 2);
             this.pnl_tarjetaCoches.Name = "pnl_tarjetaCoches";
             this.pnl_tarjetaCoches.Size = new System.Drawing.Size(260, 135);
             this.pnl_tarjetaCoches.TabIndex = 20;
@@ -371,7 +376,7 @@
             this.btn_expandir_contraer.FlatAppearance.BorderSize = 0;
             this.btn_expandir_contraer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_expandir_contraer.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer.Image")));
-            this.btn_expandir_contraer.Location = new System.Drawing.Point(485, 136);
+            this.btn_expandir_contraer.Location = new System.Drawing.Point(574, 136);
             this.btn_expandir_contraer.Name = "btn_expandir_contraer";
             this.btn_expandir_contraer.Size = new System.Drawing.Size(75, 14);
             this.btn_expandir_contraer.TabIndex = 0;
@@ -386,7 +391,7 @@
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_contenedor.Location = new System.Drawing.Point(0, 0);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1044, 729);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1222, 729);
             this.pnl_contenedor.TabIndex = 1;
             // 
             // pnl_centro
@@ -394,12 +399,15 @@
             this.pnl_centro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_centro.Location = new System.Drawing.Point(0, 200);
             this.pnl_centro.Name = "pnl_centro";
-            this.pnl_centro.Size = new System.Drawing.Size(1044, 529);
+            this.pnl_centro.Size = new System.Drawing.Size(1222, 529);
             this.pnl_centro.TabIndex = 2;
             // 
             // pnl_barratop
             // 
             this.pnl_barratop.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_barratop.Controls.Add(this.btn_selecSucu);
+            this.pnl_barratop.Controls.Add(this.lbl_nombre_sucursal);
+            this.pnl_barratop.Controls.Add(this.label2);
             this.pnl_barratop.Controls.Add(this.btn_Salir);
             this.pnl_barratop.Controls.Add(this.pictureBox6);
             this.pnl_barratop.Controls.Add(this.label11);
@@ -414,8 +422,51 @@
             this.pnl_barratop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_barratop.Location = new System.Drawing.Point(0, 0);
             this.pnl_barratop.Name = "pnl_barratop";
-            this.pnl_barratop.Size = new System.Drawing.Size(1044, 46);
+            this.pnl_barratop.Size = new System.Drawing.Size(1222, 46);
             this.pnl_barratop.TabIndex = 1;
+            // 
+            // btn_selecSucu
+            // 
+            this.btn_selecSucu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_selecSucu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_selecSucu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selecSucu.Image = ((System.Drawing.Image)(resources.GetObject("btn_selecSucu.Image")));
+            this.btn_selecSucu.ImageActive = null;
+            this.btn_selecSucu.Location = new System.Drawing.Point(935, 7);
+            this.btn_selecSucu.Name = "btn_selecSucu";
+            this.btn_selecSucu.Size = new System.Drawing.Size(30, 30);
+            this.btn_selecSucu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_selecSucu.TabIndex = 28;
+            this.btn_selecSucu.TabStop = false;
+            this.toolTip1.SetToolTip(this.btn_selecSucu, "Seleccionar sucursal");
+            this.btn_selecSucu.Zoom = 0;
+            this.btn_selecSucu.Click += new System.EventHandler(this.btn_selecSucu_Click);
+            // 
+            // lbl_nombre_sucursal
+            // 
+            this.lbl_nombre_sucursal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_nombre_sucursal.AutoSize = true;
+            this.lbl_nombre_sucursal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_nombre_sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_sucursal.ForeColor = System.Drawing.Color.Black;
+            this.lbl_nombre_sucursal.Location = new System.Drawing.Point(557, 10);
+            this.lbl_nombre_sucursal.Name = "lbl_nombre_sucursal";
+            this.lbl_nombre_sucursal.Size = new System.Drawing.Size(197, 24);
+            this.lbl_nombre_sucursal.TabIndex = 27;
+            this.lbl_nombre_sucursal.Text = "nombre de la sucursal";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(469, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 24);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Sucursal:";
             // 
             // btn_Salir
             // 
@@ -440,7 +491,7 @@
             this.btn_Salir.IconVisible = true;
             this.btn_Salir.IconZoom = 35D;
             this.btn_Salir.IsTab = false;
-            this.btn_Salir.Location = new System.Drawing.Point(793, 3);
+            this.btn_Salir.Location = new System.Drawing.Point(971, 7);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Normalcolor = System.Drawing.SystemColors.Control;
             this.btn_Salir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -499,7 +550,7 @@
             this.btn_adminReportMinimal.IconVisible = true;
             this.btn_adminReportMinimal.IconZoom = 45D;
             this.btn_adminReportMinimal.IsTab = false;
-            this.btn_adminReportMinimal.Location = new System.Drawing.Point(928, 51);
+            this.btn_adminReportMinimal.Location = new System.Drawing.Point(1017, 51);
             this.btn_adminReportMinimal.Name = "btn_adminReportMinimal";
             this.btn_adminReportMinimal.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
             this.btn_adminReportMinimal.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
@@ -536,7 +587,7 @@
             this.btn_adminRecibosminimal.IconVisible = true;
             this.btn_adminRecibosminimal.IconZoom = 45D;
             this.btn_adminRecibosminimal.IsTab = false;
-            this.btn_adminRecibosminimal.Location = new System.Drawing.Point(660, 51);
+            this.btn_adminRecibosminimal.Location = new System.Drawing.Point(749, 51);
             this.btn_adminRecibosminimal.Name = "btn_adminRecibosminimal";
             this.btn_adminRecibosminimal.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(166)))));
             this.btn_adminRecibosminimal.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
@@ -573,7 +624,7 @@
             this.btn_adminPensionadosMinimal.IconVisible = true;
             this.btn_adminPensionadosMinimal.IconZoom = 45D;
             this.btn_adminPensionadosMinimal.IsTab = false;
-            this.btn_adminPensionadosMinimal.Location = new System.Drawing.Point(392, 51);
+            this.btn_adminPensionadosMinimal.Location = new System.Drawing.Point(481, 51);
             this.btn_adminPensionadosMinimal.Name = "btn_adminPensionadosMinimal";
             this.btn_adminPensionadosMinimal.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(172)))), ((int)(((byte)(222)))));
             this.btn_adminPensionadosMinimal.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
@@ -610,7 +661,7 @@
             this.btn_adminEmpleadosMinimal.IconVisible = true;
             this.btn_adminEmpleadosMinimal.IconZoom = 45D;
             this.btn_adminEmpleadosMinimal.IsTab = false;
-            this.btn_adminEmpleadosMinimal.Location = new System.Drawing.Point(124, 51);
+            this.btn_adminEmpleadosMinimal.Location = new System.Drawing.Point(213, 51);
             this.btn_adminEmpleadosMinimal.Name = "btn_adminEmpleadosMinimal";
             this.btn_adminEmpleadosMinimal.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(138)))));
             this.btn_adminEmpleadosMinimal.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
@@ -647,7 +698,7 @@
             this.btn_adminSucursalMinimal.IconVisible = true;
             this.btn_adminSucursalMinimal.IconZoom = 45D;
             this.btn_adminSucursalMinimal.IsTab = false;
-            this.btn_adminSucursalMinimal.Location = new System.Drawing.Point(-144, 51);
+            this.btn_adminSucursalMinimal.Location = new System.Drawing.Point(-55, 51);
             this.btn_adminSucursalMinimal.Name = "btn_adminSucursalMinimal";
             this.btn_adminSucursalMinimal.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(125)))));
             this.btn_adminSucursalMinimal.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
@@ -684,7 +735,7 @@
             this.btn_minimizar.IconVisible = true;
             this.btn_minimizar.IconZoom = 35D;
             this.btn_minimizar.IsTab = false;
-            this.btn_minimizar.Location = new System.Drawing.Point(978, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(1156, 2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_minimizar.OnHovercolor = System.Drawing.Color.Silver;
@@ -718,7 +769,7 @@
             this.btn_cerrar.IconVisible = true;
             this.btn_cerrar.IconZoom = 50D;
             this.btn_cerrar.IsTab = false;
-            this.btn_cerrar.Location = new System.Drawing.Point(1013, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(1191, 2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_cerrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
@@ -738,7 +789,7 @@
             this.btn_expandir_contraer2.FlatAppearance.BorderSize = 0;
             this.btn_expandir_contraer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_expandir_contraer2.Image = ((System.Drawing.Image)(resources.GetObject("btn_expandir_contraer2.Image")));
-            this.btn_expandir_contraer2.Location = new System.Drawing.Point(485, 34);
+            this.btn_expandir_contraer2.Location = new System.Drawing.Point(574, 34);
             this.btn_expandir_contraer2.Name = "btn_expandir_contraer2";
             this.btn_expandir_contraer2.Size = new System.Drawing.Size(75, 13);
             this.btn_expandir_contraer2.TabIndex = 1;
@@ -776,12 +827,16 @@
             this.ElipseReportes.ElipseRadius = 12;
             this.ElipseReportes.TargetControl = this.pnl_tarjetaReportes;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipTitle = "Seleccionar sucursal";
+            // 
             // frm_menuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1044, 729);
+            this.ClientSize = new System.Drawing.Size(1222, 729);
             this.Controls.Add(this.pnl_contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_menuAdmin";
@@ -806,6 +861,7 @@
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_barratop.ResumeLayout(false);
             this.pnl_barratop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_selecSucu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
@@ -855,5 +911,9 @@
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Salir;
         private System.Windows.Forms.Panel pnl_centro;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_nombre_sucursal;
+        private Bunifu.Framework.UI.BunifuImageButton btn_selecSucu;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

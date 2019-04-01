@@ -52,7 +52,10 @@ namespace ParkingMat.GUI
             objPenBO.Fecha_nac_pensionado = DateTime.Parse(dtp_fecha_nac.Text);
             objPenBO.Fecha_registro_pensionado = DateTime.Parse(dtp_fecha_reg.Text);
             objPenBO.Fecha_vencimiento_pensionado = DateTime.Parse(dtp_fecha_ven.Text);
-            
+            objPenBO.Num_telefono_pensionado = mtxt_telefono.Text;
+            objPenBO.Correo_pensionado = txt_nombre.Text;
+
+
             if (objPenDAO.Guardar_pensionado(objPenBO) == 0)
             {
                 frm_ERROR_DIALOG frmError = new frm_ERROR_DIALOG(mensaje_error);

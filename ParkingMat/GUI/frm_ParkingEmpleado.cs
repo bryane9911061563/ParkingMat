@@ -136,7 +136,7 @@ namespace ParkingMat.GUI
                     Vehiculo_Botton[contador].Top = y * 115;
                     Vehiculo_Botton[contador].Left = x * 265;
                     Vehiculo_Botton[contador].BorderRadius = 7;
-                    Vehiculo_Botton[contador].Iconimage = Image.FromFile("..\\..\\bin\\debug\\sedan-car-front.png");
+                    Vehiculo_Botton[contador].Iconimage = Image.FromFile("..\\..\\bin\\debug\\Car_52px.png");
                     Vehiculo_Botton[contador].Text = "Hora Inicial: --:-- \nHora Final --:-- \nMatricula: ------";
 
                     /*recuerda que si el boonton va a tener }

@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Cls_tipoVehiculo.cs" />
+    <Compile Include="BO\Cls_tipo_estado_BO.cs" />
     <Compile Include="BO\Vehiculo_BO.cs" />
     <Compile Include="BO\Cajones_BO.cs" />
     <Compile Include="BO\Cliente_BO.cs" />
@@ -69,6 +71,8 @@
     <Compile Include="BO\Empleado_BO.cs" />
     <Compile Include="BO\Jefe_BO.cs" />
     <Compile Include="BO\Recibo_BO.cs" />
+    <Compile Include="DAO\Cls_tipoVehiculoDAO.cs" />
+    <Compile Include="DAO\Cls_tipo_estado_DAO.cs" />
     <Compile Include="DAO\Vehiculo_DAO.cs" />
     <Compile Include="DAO\Cliente_DAO.cs" />
     <Compile Include="DAO\Cls_ADMIN_DAO.cs" />
@@ -116,6 +120,12 @@
     </Compile>
     <Compile Include="GUI\frm_AdminRecibos.Designer.cs">
       <DependentUpon>frm_AdminRecibos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_ADMINREPORTE_FINAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_ADMINREPORTE_FINAL.Designer.cs">
+      <DependentUpon>frm_ADMINREPORTE_FINAL.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_AdminSucursales.cs">
       <SubType>Form</SubType>
@@ -201,6 +211,18 @@
     <Compile Include="GUI\frm_SalirDialog.Designer.cs">
       <DependentUpon>frm_SalirDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_tipoEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_tipoEstado.Designer.cs">
+      <DependentUpon>frm_tipoEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_tipoVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_tipoVehiculo.Designer.cs">
+      <DependentUpon>frm_tipoVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_UsiarioInvalidoDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AdminRecibos.resx">
       <DependentUpon>frm_AdminRecibos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_ADMINREPORTE_FINAL.resx">
+      <DependentUpon>frm_ADMINREPORTE_FINAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_AdminSucursales.resx">
       <DependentUpon>frm_AdminSucursales.cs</DependentUpon>
@@ -274,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_SalirDialog.resx">
       <DependentUpon>frm_SalirDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_tipoEstado.resx">
+      <DependentUpon>frm_tipoEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_tipoVehiculo.resx">
+      <DependentUpon>frm_tipoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_UsiarioInvalidoDialog.resx">
       <DependentUpon>frm_UsiarioInvalidoDialog.cs</DependentUpon>

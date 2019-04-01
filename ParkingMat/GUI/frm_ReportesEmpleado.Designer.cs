@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ReportesEmpleado));
-            this.login = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Agregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -51,21 +47,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // login
-            // 
-            this.login.ElipseRadius = 25;
-            this.login.TargetControl = this;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 25;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 25;
-            this.bunifuElipse2.TargetControl = this;
             // 
             // panel1
             // 
@@ -140,11 +121,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 45);
+            this.label1.Location = new System.Drawing.Point(111, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 73);
+            this.label1.Size = new System.Drawing.Size(314, 73);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ParkingMat";
+            this.label1.Text = "arkingMat";
             // 
             // panel2
             // 
@@ -248,9 +229,6 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuElipse login;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;

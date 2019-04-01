@@ -21,7 +21,7 @@ namespace ParkingMat.DAO
         //Mostrar empleados
         public DataTable tabla_empleado()
         {
-            instruccion_SQL = "SELECT empleados.id_Empleado,empleados.Nombre_Empleado,empleados.Apellido_1_Empleado,empleados.Apellido_2_Empleado,empleados.Fecha_Nacimiento,tipo_puesto.Puesto,empleados.Salario_Base,empleados.Correo_Electronico,empleados.Clave_Sesion,empleados.Horario, sucursales.Nombre_Sucursal from empleados,sucursales,tipo_puesto where empleados.id_Sucursal=sucursales.id_Sucursal and empleados.id_puesto = tipo_puesto.id_puesto GROUP BY empleados.id_Empleado";
+            instruccion_SQL = "select empleados.Nombre_Empleado,empleados.Apellido_1_Empleado,empleados.Apellido_2_Empleado,empleados.id_Sucursal,empleados.Fecha_Nacimiento,empleados.id_puesto,empleados.Salario_Base,empleados.Correo_Electronico,empleados.Clave_Sesion,empleados.Horario,empleados.Horario,empleados.id_Sucursal from empleados inner join sucursales on empleados.id_Sucursal=sucursales.id_Sucursal INNER JOIN tipo_puesto ON empleados.id_puesto=tipo_puesto.id_puesto WHERE sucursales.id_Sucursal='"+Cls_Static_UsuarioRunningThisMoment.id_Sucursal+"' ";
             MySqlDataAdapter adp = new MySqlDataAdapter(instruccion_SQL, obj_conec.ConectarBD());
             DataTable virtual_pen = new DataTable();
             adp.Fill(virtual_pen);
@@ -36,7 +36,7 @@ namespace ParkingMat.DAO
 
             cmd.Connection = obj_conec.ConectarBD();
             obj_conec.AbrirBD();
-            instruccion_SQL = "Insert into empleados (Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,id_puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario,id_Sucursal) values ('" + datos.Nombre + "','" + datos.Apellido_11 + "','" +datos.Apellido_21 + "','" +datos.Fecha_nacimiento + "','" + datos.Puesto + "','"+datos.Salario_Base+"','" +datos.Correo_Electronico1 + "','" +datos.Clave_Sesion1 + "','" +datos.Horario_Trabajo1 + "','" +datos.Id_sucursal+"')";
+            instruccion_SQL = "Insert into empleados (Nombre_Empleado,Apellido_1_Empleado,Apellido_2_Empleado,Fecha_Nacimiento,id_puesto,Salario_Base,Correo_Electronico,Clave_Sesion,Horario,id_Sucursal) values ('" + datos.Nombre + "','" + datos.Apellido_11 + "','" +datos.Apellido_21 + "','" +datos.Fecha_nacimiento + "','" + datos.Puesto + "','"+datos.Salario_Base+"','" +datos.Correo_Electronico1 + "','" +datos.Clave_Sesion1 + "','" +datos.Horario_Trabajo1 + "','" +Cls_Static_UsuarioRunningThisMoment.id_Sucursal+"')";
             cmd.CommandText = instruccion_SQL;
             int valor = cmd.ExecuteNonQuery();
             obj_conec.CerrarBD();

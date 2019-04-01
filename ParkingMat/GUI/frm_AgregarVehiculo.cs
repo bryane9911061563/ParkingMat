@@ -203,24 +203,34 @@ namespace ParkingMat.GUI
                             {
                                 frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("Intente nuevamente");
                                 ERROR.ShowDialog();
-                            }else
+                            }
+                        }
+                        else
+                        {
+                            if (guardar != 0)
                             {
-                                if (guardar != 0)
+                                String hini = mtx_salida.Text.Substring(0, 2);
+                                String hfin = mtx_entrada.Text.Substring(0, 2);
+                                int x = int.Parse(hini);
+                                int y = int.Parse(hfin);
+                                if (x > 12)
                                 {
-                                    String hini = mtx_salida.Text.Substring(0, 2);
-                                    String hfin = mtx_entrada.Text.Substring(0, 2);
-                                    int x = int.Parse(hini);
-                                    int y = int.Parse(hfin);
-                                    if (x > 12)
-                                    {
-                                        x = x - y + 12; //
-                                    }
-                                    else
-                                    {
-                                        x = x - y;//en estos 2 se genera el costo , x es el costo por usar el aparcamiento 
-                                        // necesito que se habra un dialogo o puedas brincar a recibos y se active el recibo por el vehiculo 
-                                    }
+                                    x = x - y + 12; //
                                 }
+                                else if(x-y==0){
+
+                                }
+                                else
+                                {
+                                    x = x - y;//en estos 2 se genera el costo , x es el costo por usar el aparcamiento 
+                                              // necesito que se habra un dialogo o puedas brincar a recibos y se active el recibo por el vehiculo 
+                                }
+                                frm_AdminRecibos cobrar = new frm_AdminRecibos();
+                                cobrar.cobrar_temporal(x,true,sucursal);
+                                cobrar.ShowDialog();
+
+                                //Aqui se ya se genera el ticket de cobro
+
                             }
                         }
 
@@ -239,6 +249,9 @@ namespace ParkingMat.GUI
                     }
                     else
                     {
+                        
+
+
                         frm_pruebaDialog exito = new frm_pruebaDialog();
                         exito.ShowDialog();
                         id_tipo = cmb_tipo_vehiculo.SelectedIndex + 1;
@@ -278,6 +291,7 @@ namespace ParkingMat.GUI
                         }
                         else
                         {
+                            //Aqui creo el ticket para el cliente esporadico que llega por primera vez
                             frm_pruebaDialog exito = new frm_pruebaDialog();
                             id_tipo = cmb_tipo_vehiculo.SelectedIndex + 1;
                             this.Close();

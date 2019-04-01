@@ -21,7 +21,6 @@ namespace ParkingMat.GUI
         public frm_AdminSucursales()
         {
             InitializeComponent();
-            dgv_sucursales.DataSource = objSucuDAO.MostrarSucursales();
         }
 
         private void btn_vervehiculo_Click(object sender, EventArgs e)
@@ -84,6 +83,17 @@ namespace ParkingMat.GUI
             {
                 e.Handled = true;
             }
+        }
+
+        private void dgv_sucursales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frm_AdminSucursales_Load(object sender, EventArgs e)
+        {
+            dgv_sucursales.DataSource = objSucuDAO.tabla_sucursales();
+
         }
     }
 }
