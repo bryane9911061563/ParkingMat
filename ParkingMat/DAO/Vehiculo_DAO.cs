@@ -90,10 +90,9 @@ namespace ParkingMat.DAO
             obj_conec.CerrarBD();
             return hora;
         }
-
-       /* public int asignar_tipo(String tipo)
+        public String tipo_vehiculo(String matri)
         {
-            instruccion_SQL = "Select tipo_vehiculo from tipos_vehiculos where id_tipo_vehiculo = " + sucursal + " and Lugar = " + cajon + " and id_estado_cajon = 1";
+            instruccion_SQL = "Select vehiculos.id_Tipo,tipos_vehiculos.tipo_vehiculo from vehiculos,tipos_vehiculos where vehiculos.Placas = '"+matri+ "' and  vehiculos.id_Tipo = tipos_vehiculos.id_tipo_vehiculo";
             MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
             obj_conec.AbrirBD();
             MySqlDataReader leer;
@@ -101,11 +100,12 @@ namespace ParkingMat.DAO
             leer = cmd.ExecuteReader();
             while (leer.Read())
             {
-                hora = leer["Hora_inicio"].ToString();
+                hora = leer["tipo_vehiculo"].ToString();
             }
             obj_conec.CerrarBD();
             return hora;
-        }*/
+        }
+
 
         public String matricula (int sucursal, int cajon)
         {
@@ -122,27 +122,6 @@ namespace ParkingMat.DAO
             obj_conec.CerrarBD();
             return hora;
         }
-        public int Cajones_por_Sucursal(int id)
-        {
-            instruccion_SQL = "Select Cantidad_Cajones from sucursales where id_Sucursal = '"+id.ToString()+"'";
-            MySqlCommand cmd = new MySqlCommand(instruccion_SQL, obj_conec.ConectarBD());
-            obj_conec.AbrirBD();
-            MySqlDataReader leer;
-            int match=0;
-            leer = cmd.ExecuteReader();
-            while (leer.Read())
-            {
-                match = int.Parse(leer["Cantidad_Cajones"].ToString());
-            }
-            obj_conec.CerrarBD();
-            if (match >0)
-            {
-                return match;
-            }
-            else
-            {
-                return 0;
-            }
-        }
+
     }
 }

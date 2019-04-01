@@ -45,6 +45,11 @@ namespace ParkingMat.GUI
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+            if (!vehiculoagregado)
+            {
+                frm_ERROR_DIALOG frmError = new frm_ERROR_DIALOG("primero agregue un vehiculo");
+                frmError.ShowDialog();
+            }
             string mensaje_error="Error al guardar los datos";
             objPenBO.Nombre_pensionado = txt_nombre.Text;
             objPenBO.Apellido_p_pensionado = txt_apellido_p.Text;
@@ -99,9 +104,11 @@ namespace ParkingMat.GUI
 
 
         }
+        private bool vehiculoagregado = false;
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
+            vehiculoagregado = true;
             if (Sucursal_id > 0)
             {
                 frm_ParkingEmpleado jefe = new frm_ParkingEmpleado(Sucursal_id, 3);

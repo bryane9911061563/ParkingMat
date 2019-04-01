@@ -244,7 +244,7 @@ namespace ParkingMat.GUI
 
                     }
 
-                    Vehiculo_Botton[contador].Click += delegate { if (!ocupado) { frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(Sucursal1, lugar, 1, "", estado_cajon); vehiculo.ShowDialog(); if (estado_cajon == 3) { Cajon_seleccionado = cajon_id; Matricula = vehiculo.Matricla; tipo_vehiculo = vehiculo.Id_tipo; this.Close(); }; actualizar(); } else { frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente otro espacio"); error.ShowDialog(); } };
+                    Vehiculo_Botton[contador].Click += delegate { if (!ocupado) { frm_AgregarVehiculo vehiculo = new frm_AgregarVehiculo(Sucursal1, lugar, 1, "", estado_cajon, cajon_id); vehiculo.ShowDialog(); if (estado_cajon == 3) { Cajon_seleccionado = cajon_id; Matricula = vehiculo.Matricla; tipo_vehiculo = vehiculo.Id_tipo; this.Close(); }; actualizar(); } else { frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente otro espacio"); error.ShowDialog(); } };
                     pnl_cajones.Controls.Remove(Vehiculo_Botton[contador]);
                     pnl_cajones.Controls.Add(Vehiculo_Botton[contador]);
                     contador = contador + 1;
