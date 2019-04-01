@@ -35,6 +35,13 @@ namespace ParkingMat.GUI
             //objAgregarVehiculo.ShowDialog();
         }
 
+        public void soyventana()
+        {
+            dgv_sucursales.Visible = false;
+            bunifuFlatButton2.Visible = true;
+            this.Width = 700;
+        }
+
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             if (txt_direccion.Text != "" && txt_nombre.Text != "" && mtx_apertura.Text != "" && mtx_cierre.Text != "" && mtx_Telefono.Text != "" && mtx_Cajones.Text != "")
@@ -94,6 +101,16 @@ namespace ParkingMat.GUI
         {
             dgv_sucursales.DataSource = objSucuDAO.tabla_sucursales();
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

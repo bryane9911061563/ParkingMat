@@ -181,6 +181,12 @@
     <Compile Include="GUI\frm_MenuEmpleado.Designer.cs">
       <DependentUpon>frm_MenuEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_MenuSelectSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_MenuSelectSucursales.Designer.cs">
+      <DependentUpon>frm_MenuSelectSucursales.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_ParkingEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,7 @@
     <EmbeddedResource Include="GUI\frm_AdminSucursales.resx">
       <DependentUpon>frm_AdminSucursales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_AdminSucursales2.resx" />
     <EmbeddedResource Include="GUI\frm_AdmiReportes.resx">
       <DependentUpon>frm_AdmiReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_MenuEmpleado.resx">
       <DependentUpon>frm_MenuEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_MenuSelectSucursales.resx">
+      <DependentUpon>frm_MenuSelectSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_ParkingEmpleado.resx">
       <DependentUpon>frm_ParkingEmpleado.cs</DependentUpon>

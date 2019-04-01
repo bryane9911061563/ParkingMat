@@ -122,12 +122,21 @@ namespace ParkingMat.GUI
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
-            
+            if (cmb_sucursal_admin.Text != "")
+            {
 
-            Cls_Static_UsuarioRunningThisMoment.id_Sucursal = suc.Asignar_Sucursal(cmb_sucursal_admin.Text);
-            frm_menuAdmin admin = new frm_menuAdmin();
-            admin.Show();
-            this.Hide();
+                Cls_Static_UsuarioRunningThisMoment.id_Sucursal = suc.Asignar_Sucursal(cmb_sucursal_admin.Text);
+                frm_menuAdmin admin = new frm_menuAdmin();
+                admin.Show();
+                this.Hide();
+            }
+            else
+            {
+                frm_AdminSucursales nueva = new frm_AdminSucursales();
+                nueva.soyventana();
+                nueva.StartPosition = FormStartPosition.CenterScreen;
+                nueva.ShowDialog();
+            }
         }
     }
 }

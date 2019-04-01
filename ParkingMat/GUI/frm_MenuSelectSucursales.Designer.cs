@@ -136,20 +136,20 @@
             // 
             this.cmb_sucursal_admin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmb_sucursal_admin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_sucursal_admin.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sucursal_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sucursal_admin.FormattingEnabled = true;
             this.cmb_sucursal_admin.Location = new System.Drawing.Point(149, 44);
             this.cmb_sucursal_admin.Name = "cmb_sucursal_admin";
-            this.cmb_sucursal_admin.Size = new System.Drawing.Size(216, 31);
+            this.cmb_sucursal_admin.Size = new System.Drawing.Size(216, 32);
             this.cmb_sucursal_admin.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(48, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(600, 82);
+            this.label1.Size = new System.Drawing.Size(624, 73);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccionar sucursal";
             // 

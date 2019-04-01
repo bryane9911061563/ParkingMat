@@ -341,9 +341,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(8, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 25);
+            this.label7.Size = new System.Drawing.Size(119, 25);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Vehiculos";
+            this.label7.Text = "Sucursales";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
