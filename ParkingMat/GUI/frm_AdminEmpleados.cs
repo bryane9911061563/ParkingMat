@@ -50,6 +50,7 @@ namespace ParkingMat.GUI
                
                 nuevo.Correo_Electronico1 = txt_correo.Text;
                 nuevo.Clave_Sesion1 = txt_contraseña.Text;
+                nuevo.Fecha_nacimiento = dtp_nacimiento.Text.ToString();
                 try
                 {
                     nuevo.Puesto = verificar.Asignar_Puesto(cbx_Cargo.Text);
@@ -179,7 +180,8 @@ namespace ParkingMat.GUI
         private void dgv_Empleados_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            
+            try
+            {
                 int Fila = e.RowIndex;
                 datos.Id_Empleado = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Empleado"].Value.ToString().TrimEnd());
                 try
@@ -203,8 +205,7 @@ namespace ParkingMat.GUI
                 datos.Id_Empleado = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Empleado"].Value.ToString().TrimEnd());
                 idsucu = Convert.ToInt32(dgv_Empleados.Rows[Fila].Cells["id_Sucursal"].Value.ToString().TrimEnd());
             id_empleado = datos.Id_Empleado;
-            try
-            {
+            
             }
             catch
             {
@@ -258,6 +259,8 @@ namespace ParkingMat.GUI
                 }
                 nuevo.Correo_Electronico1 = txt_correo.Text;
                 nuevo.Clave_Sesion1 = txt_contraseña.Text;
+                nuevo.Fecha_nacimiento = dtp_nacimiento.Text.ToString();
+
                 try
                 {
                     nuevo.Puesto = verificar.Asignar_Puesto(cbx_Cargo.Text);

@@ -120,12 +120,12 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pick_USNOVALID.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAEESURBVDhPndIxS0JhFMbx11CJ3HITmwIJhEZnd0db/ARGW+UmOCtuRkvgF3ANd8HNvaVF/ABG
-        4FJU2v/cjnI6oHY78Bvu8z7ncrn3hl2zCuEcJ3oZb1isYYlXnGn8t2Ehixes1BgJPd4/lHtmea2qx7uH
-        YgHveMMlupAbPCOtte1D6VEXRnp9gE/NGlFp21CoaFHMNMubbIFcVPbDQRJPWhTyBY5QNpl40JXfw8GN
-        Kwr5D+ou+0JJ136G4BhzLVjyNYYuE9H72QzBnSuIDzTRN5l1sV4uQsq+MNbzFOSx/fkUh1IYmNCS/+Aa
-        9ybzruQGExfG0ZEbnKKFdky3yETv4f8TwjdotA5dDsS5kgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQRJREFUOE+d
+        0jFLQmEUxvHXUIncchObAgmERmd3R1v8BEZb5SY4K25GS+AXcA13wc29pUX8AEbgUlTa/9yOcjqgdjvw
+        G+7zPudyufeGXbMK4RwnehlvWKxhiVecafy3YSGLF6zUGAk93j+Ue2Z5rarHu4diAe94wyW6kBs8I621
+        7UPpURdGen2AT80aUWnbUKhoUcw0y5tsgVxU9sNBEk9aFPIFjlA2mXjQld/DwY0rCvkP6i77QknXfobg
+        GHMtWPI1hi4T0fvZDMGdK4gPNNE3mXWxXi5Cyr4w1vMU5LH9+RSHUhiY0JL/4Br3JvOu5AYTF8bRkRuc
+        ooV2TLfIRO/h/xPCN2i0Dl0OxLmSAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -362,6 +362,9 @@
   </data>
   <metadata name="login.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>96, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>74</value>

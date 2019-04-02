@@ -36,6 +36,11 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\..\..\..\..\..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\POO\Parcial2\ABC\MySql.Data.dll</HintPath>
@@ -43,6 +48,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -151,6 +158,12 @@
     <Compile Include="GUI\frm_AgregarVehiculo.Designer.cs">
       <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_Cargando.Designer.cs">
+      <DependentUpon>frm_Cargando.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_CerrarSesionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,11 +194,23 @@
     <Compile Include="GUI\frm_MenuEmpleado.Designer.cs">
       <DependentUpon>frm_MenuEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_MenuSelectSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_MenuSelectSucursales.Designer.cs">
+      <DependentUpon>frm_MenuSelectSucursales.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_ParkingEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frm_ParkingEmpleado.Designer.cs">
       <DependentUpon>frm_ParkingEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_PrevCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_PrevCobro.Designer.cs">
+      <DependentUpon>frm_PrevCobro.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_pruebaDialog.cs">
       <SubType>Form</SubType>
@@ -270,6 +295,9 @@
     <EmbeddedResource Include="GUI\frm_AgregarVehiculo.resx">
       <DependentUpon>frm_AgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_Cargando.resx">
+      <DependentUpon>frm_Cargando.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_CerrarSesionDialog.resx">
       <DependentUpon>frm_CerrarSesionDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,8 +313,14 @@
     <EmbeddedResource Include="GUI\frm_MenuEmpleado.resx">
       <DependentUpon>frm_MenuEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_MenuSelectSucursales.resx">
+      <DependentUpon>frm_MenuSelectSucursales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_ParkingEmpleado.resx">
       <DependentUpon>frm_ParkingEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_PrevCobro.resx">
+      <DependentUpon>frm_PrevCobro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_pruebaDialog.resx">
       <DependentUpon>frm_pruebaDialog.cs</DependentUpon>
@@ -335,9 +369,76 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="CRDESIGNERLib">
+      <Guid>{C0AA5023-C763-4A4B-AFED-ADCF78D6C08B}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRREPORTSOURCEBRIDGELib">
+      <Guid>{80F19574-9245-4DFA-A0A6-8A21874282D3}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCommonObjectModelLib">
+      <Guid>{FDB9B69E-BA79-4B13-9E96-8373AF162AEA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCubeDefModelLib">
+      <Guid>{44AD71D4-4905-491D-B179-B5D91EB57374}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsDataDefModelLib">
+      <Guid>{9B2F3E7B-8D45-47E8-95D3-3A9C1B22437F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsReportDefModelLib">
+      <Guid>{BF40B97D-06EA-4AB1-91DE-18CB29A2B25A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

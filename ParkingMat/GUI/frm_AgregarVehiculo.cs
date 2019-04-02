@@ -151,13 +151,21 @@ namespace ParkingMat.GUI
             mtx_numero.Text = Cajon.ToString();
 
             Cajones_DAO vehiculos = new Cajones_DAO();
-            mtx_salida.Text = DateTime.Now.ToString("hhmm");
-            mtx_entrada.Text = vehiculos.hora_inicio(Sucursal, Cajon);
+            //mtx_entrada.Text = DateTime.Now.ToString("hhmm");
+            
             txt_matricula.Text = vehiculos.matricula(Sucursal, Cajon);
             if (vehiculos.hora_inicio(Sucursal, Cajon) != "")
             {
 
                 cmb_tipo_vehiculo.Text = vehic.tipo_vehiculo(txt_matricula.Text);
+                string aux = vehiculos.hora_inicio(Sucursal, Cajon);
+                String[] auxfragmentos = aux.Split(':');
+                mtx_salida.Text = auxfragmentos[1] + ":" + auxfragmentos[2];
+                mtx_entrada.Text = DateTime.Now.ToString("hhmm");
+            }
+            else
+            {
+                mtx_salida.Text = DateTime.Now.ToString("hhmm");
             }
             
             
@@ -188,8 +196,7 @@ namespace ParkingMat.GUI
                     int guardar;
                     nuevo.Matricula1 =txt_matricula.Text;
                     nuevo.Tipo_vehiculo = cmb_tipo_vehiculo.SelectedIndex + 1;
-                    try
-                    {
+                    
                         nuevo.Hora_final1 = "Hora salida:" + mtx_entrada.Text;
                         nuevo.Estado_cajon = 2;
                         guardar = crear.Actualizar_Datos(nuevo);
@@ -222,7 +229,7 @@ namespace ParkingMat.GUI
                                     x = x - y + 12; //
                                 }
                                 else if(x-y==0){
-
+                                x = 1;
                                 }
                                 else
                                 {
@@ -236,7 +243,8 @@ namespace ParkingMat.GUI
                             }
                         }
 
-
+                    try
+                    {
                     }
                     catch (Exception ex)
                     {

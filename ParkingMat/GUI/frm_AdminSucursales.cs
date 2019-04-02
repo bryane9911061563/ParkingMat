@@ -114,5 +114,36 @@ namespace ParkingMat.GUI
         {
 
         }
+
+        private void btn_Cerrar_Click_1(object sender, EventArgs e)
+        {
+            if (txt_direccion.Text != "" && txt_nombre.Text != "" && mtx_apertura.Text != "" && mtx_cierre.Text != "" && mtx_Telefono.Text != "" && mtx_Cajones.Text != "")
+            {
+                Sucursal_BO sucursal = new Sucursal_BO();
+                sucursal.Nombre = txt_nombre.Text;
+                sucursal.Direccion = txt_direccion.Text;
+                sucursal.Horario_apaertura = mtx_apertura.Text;
+                sucursal.Horario_cierre = mtx_cierre.Text;
+                sucursal.Numerotelefonico = mtx_Telefono.Text;
+                sucursal.Cantidad_Cajones = int.Parse(mtx_Cajones.Text);
+                Sucursal_DAO sucursal_nube = new Sucursal_DAO();
+                int respuesta = sucursal_nube.Guardar_Datos(sucursal);
+                if (respuesta == 0)
+                {
+                    frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("Intente de nuevo en un momento");
+                    ERROR.ShowDialog();
+                }
+                else
+                {
+                    frm_pruebaDialog EXITO = new frm_pruebaDialog();
+                    EXITO.ShowDialog();
+                }
+            }
+            else
+            {
+                frm_ERROR_DIALOG ERROR = new frm_ERROR_DIALOG("Verifique llenar los campos");
+                ERROR.ShowDialog();
+            }
+        }
     }
 }

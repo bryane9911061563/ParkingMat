@@ -49,9 +49,9 @@ namespace ParkingMat.GUI
             objPenBO.Nombre_pensionado = txt_nombre.Text;
             objPenBO.Apellido_p_pensionado = txt_apellido_p.Text;
             objPenBO.Apellido_m_pensionado = txt_apellido_m.Text;
-            objPenBO.Fecha_nac_pensionado = DateTime.Parse(dtp_fecha_nac.Text);
-            objPenBO.Fecha_registro_pensionado = DateTime.Parse(dtp_fecha_reg.Text);
-            objPenBO.Fecha_vencimiento_pensionado = DateTime.Parse(dtp_fecha_ven.Text);
+            objPenBO.Fecha_nac_pensionado = dtp_fecha_nac.Text;
+            objPenBO.Fecha_registro_pensionado = dtp_fecha_reg.Text;
+            objPenBO.Fecha_vencimiento_pensionado = dtp_fecha_ven.Text;
             objPenBO.Num_telefono_pensionado = mtxt_telefono.Text;
             objPenBO.Correo_pensionado = txt_nombre.Text;
 
@@ -93,8 +93,7 @@ namespace ParkingMat.GUI
             dtp_fecha_nac.Text = dgv_pensionados.Rows[Fila].Cells["fecha_nac"].Value.ToString();
             dtp_fecha_reg.Text = dgv_pensionados.Rows[Fila].Cells["fecha_registro"].Value.ToString();
             dtp_fecha_ven.Text = dgv_pensionados.Rows[Fila].Cells["fecha_vencimiento"].Value.ToString();
-            objPenBO.Id_pensionado=Convert.ToInt32( dgv_pensionados.Rows[Fila].Cells["id_pensionado"]);
-            MessageBox.Show(objPenBO.Id_pensionado.ToString());
+            objPenBO.Id_pensionado=Convert.ToInt32( dgv_pensionados.Rows[Fila].Cells["id_pensionado"].Value.ToString());
 
 
 
@@ -124,6 +123,27 @@ namespace ParkingMat.GUI
             {
                 comboBox2.Items.Add(sucursal[i].ToString());
             }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (objPenBO.Id_pensionado == 0)
+            {
+                string texto = "No se ha seleccionado a un pensionado";
+                frm_ERROR_DIALOG error = new frm_ERROR_DIALOG(texto);
+                error.ShowDialog();
+            }
+            else
+            {
+                objPenDAO.Eliminar_pensionado(objPenBO);
+                frm_pruebaDialog exto = new frm_pruebaDialog();
+                exto.ShowDialog();
+                dgv_pensionados.DataSource = objPenDAO.Mostrar_pensionados();
+                
+
+            }
+
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

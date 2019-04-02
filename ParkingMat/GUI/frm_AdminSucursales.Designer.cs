@@ -397,6 +397,7 @@
             this.btn_Cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cerrar.Textcolor = System.Drawing.Color.White;
             this.btn_Cerrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click_1);
             // 
             // label5
             // 

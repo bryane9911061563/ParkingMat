@@ -43,15 +43,23 @@ namespace ParkingMat.GUI
                 try
                 {
                     recibo.Agregar_Recibo(nuevo);
-                    frm_pruebaDialog exito = new frm_pruebaDialog();
+                  /*  frm_pruebaDialog exito = new frm_pruebaDialog();
+
                     txt_motivo.Text = "";
                     txt_descripcion.Text = "";
                     txt_costo.Text = "";
-                    exito.ShowDialog();
+                    exito.ShowDialog();*/
+                if (dialogo)
+                {
+                    frm_PrevCobro frmPrev = new frm_PrevCobro(1, idSucursalstring, cmb_tipo.Text, txt_motivo.Text, txt_descripcion.Text, decimal.Parse(txt_costo.Text));
+                    frmPrev.ShowDialog();
+                }
+
+                
                 }
                 catch
                 {
-                    frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente nuevamente ");
+                    frm_ERROR_DIALOG error = new frm_ERROR_DIALOG("intente nuevamente");
                     error.ShowDialog();
                 }
             }
@@ -64,6 +72,8 @@ namespace ParkingMat.GUI
             {
                 this.Close();
             }
+            dgv_recibos.DataSource = reciboDAO.Mostrar_Recibos();
+
 
         }
         public void empleado (int id)
@@ -144,7 +154,7 @@ namespace ParkingMat.GUI
 
             }
         }
-
+        private string idSucursalstring ="";
         private void frm_AdminRecibos_Load(object sender, EventArgs e)
         {
             ArrayList tipos = new ArrayList();
@@ -165,6 +175,10 @@ namespace ParkingMat.GUI
                     for (int y = 0; y < tipos.Count; y++)
                     {
                         cmb_sucursales.Items.Add(tipos[y].ToString());
+                        if (id_sucu-1 == y)
+                        {
+                            idSucursalstring = tipos[y].ToString();
+                        }
                     }
 
 
